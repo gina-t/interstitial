@@ -1,6 +1,40 @@
 node_modules
 .env
 
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Build output
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Vite specific
+# .vite
+# .vite/deps
+# .vite/cache
+
+# Tailwind css
+# tailwind.config.js
+# postcss.config.js
+
 # User-specific files
 *.rsuser
 *.suo
