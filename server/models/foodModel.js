@@ -3,6 +3,12 @@ import mongoose from 'mongoose';
 const { Schema } = mongoose;
 
 const foodItemSchema = Schema({
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    required: true,
+    ref: 'User',
+  },
+
   name: {
     type: String,
     required: true,
@@ -21,15 +27,15 @@ const foodItemSchema = Schema({
   },
   protein: {
     type: Number,
-    required: true,
+    required: false,
   },
   carbohydrate: {
     type: Number,
-    required: true,
+    required: false,
   },
   fat: {
     type: Number,
-    required: true,
+    required: false,
   },
   servingSize: {
     amount: { type: Number, required: false },
