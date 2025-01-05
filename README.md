@@ -73,7 +73,7 @@ npm create vite@latest
 
 ```zsh
 cd interstitial-vite
-npm install
+npm install react-icons
 npm run dev
 ```
 
@@ -122,7 +122,7 @@ export default {
 15. In client directory, install:
 
 ```zsh
-npm install react-router-dom @tailwindcss/forms @tailwindcss/line-clamp
+npm install react-router-dom @tailwindcss/forms @tailwindcss/line-clamp @headlessui/react @heroicons/react
 ```
 
 
