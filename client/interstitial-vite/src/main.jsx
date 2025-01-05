@@ -7,7 +7,6 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Nutrition from './pages/Nutrition';
-import { AcceptedUsersProvider } from './context/AcceptedUsers.jsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([
@@ -40,9 +39,9 @@ const rootElement = document.getElementById('root');
 if (rootElement) {
   createRoot(rootElement).render(
     <StrictMode>
-      <AcceptedUsersProvider>
+    
         <RouterProvider router={router} />
-      </AcceptedUsersProvider>
+    
     </StrictMode>
   );
 }
