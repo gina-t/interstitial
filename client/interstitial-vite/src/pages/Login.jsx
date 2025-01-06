@@ -1,9 +1,17 @@
-// import React from 'react'
+// import React from 'react';
+import AuthForm from '../components/AuthForm';
 
 const Login = () => {
-  return (
-    <div>Login</div>
-  )
-}
+  const handleLogin = (data) => {
+    console.log('Login data:', data);
+    // Handle login logic here
+  };
 
-export default Login
+  return (
+    <div className="min-h-screen flex items-center justify-center">
+      <AuthForm type="login" onSubmit={handleLogin} />
+    </div>
+  );
+};
+
+export default Login;

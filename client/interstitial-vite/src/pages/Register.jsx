@@ -1,9 +1,17 @@
-// import React from 'react'
+// import React from 'react';
+import AuthForm from '../components/AuthForm';
 
 const Register = () => {
-  return (
-    <div>Register</div>
-  )
-}
+  const handleRegister = (data) => {
+    console.log('Register data:', data);
+    // Handle registration logic here
+  };
 
-export default Register
+  return (
+    <div className="min-h-screen flex items-center justify-center">
+      <AuthForm type="register" onSubmit={handleRegister} />
+    </div>
+  );
+};
+
+export default Register;

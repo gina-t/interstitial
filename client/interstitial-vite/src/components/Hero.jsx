@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { ChevronRightIcon } from '@heroicons/react/20/solid';
 import { PiHeartbeat } from "react-icons/pi";
 
@@ -33,8 +33,8 @@ export default function Hero() {
                 A paradigm for health
               </span>
               <span className="inline-flex items-center space-x-2 text-sm/6 font-medium text-gray-600">
-                <span>Recent publications</span>
-                <ChevronRightIcon aria-hidden="true" className="size-5 text-gray-400" />
+                <span>Scholarly articles</span>
+                <ChevronRightIcon aria-hidden="true" className="size-5 text-gray-600" />
               </span>
             </a>
           </div>
@@ -51,8 +51,8 @@ export default function Hero() {
             >
               Get started
             </a>
-            <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-              Learn more <span aria-hidden="true">→</span>
+            <a href="#" className="text-sm font-semibold leading-6 text-gray-600">
+              Learn more <ChevronRightIcon aria-hidden="true" className="inline-block h-5 w-5 text-gray-600" />
             </a>
           </div>
         </div>
