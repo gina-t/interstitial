@@ -6,7 +6,10 @@ import App from './App.jsx'
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
-import Nutrition from './pages/Nutrition';
+import NutritionSearch from './pages/NutritionSearch';
+import NutritionGuide from './pages/NutritionGuide';
+import Profile from './pages/Profile';
+import Settings from './pages/Settings';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([
@@ -28,9 +31,26 @@ const router = createBrowserRouter([
         element: <Register />,
       },
       {
-        path: 'nutrition',
-        element: <Nutrition />,
+        path: 'nutrition-guide',
+        element: <NutritionGuide />,
       },
+      {
+        path: 'nutrition-search',
+        element: <NutritionSearch />,
+      },
+      {
+        path: 'profile',
+        element: <Profile />,
+      },
+      {
+        path: 'settings',
+        element: <Settings />,
+
+      },
+      {
+        path: 'signout',
+        element: <div>Sign Out</div>,
+      }
     ],
   }
 ]);
