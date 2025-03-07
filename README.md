@@ -22,6 +22,7 @@ A full-stack health app featuring vite + react + tailwindcss + mongoDB + mongoos
 npm install express dotenv mongoose colors express-async-handler bcryptjs jsonwebtoken
 npm install nodemon --save-dev
 ```
+
 Add the following scripts:
 
 ```javascript
@@ -39,37 +40,42 @@ node_modules
 3. In root directory create .env file:
 
 ```javascript
-NODE_ENV = development
-PORT = 3001
+NODE_ENV = development;
+PORT = 3001;
 ```
 
-4. Generate secret token for JWT
+4. In server folder, generate secret token for JWT:
 
 ```zsh
 node -e "console.log(require('crypto').randomBytes(64).toString('hex'))"
 ```
-5. In server directory, create the following folders:
+
+5. Copy the generated secret token and paste into JWT_SECRET_KEY field in the .env file.
+
+6. In server directory, create the following folders:
+
 - `config`
 - `controllers`
 - `middleware`
 - `models`
 - `utils`
 
-6. In server.js, define routes and middleware:
+7. In server.js, define routes and middleware:
 
 ```javascript
 app.use('/api/food', foodRoutes);
-app.use ('/api/user', userRoutes);
+app.use('/api/user', userRoutes);
 app.use(express.json());
 ```
 
-7. In client directory, initialize a new Vite + React project:
+8. In client directory, initialize a new Vite + React project:
 
 ```zsh
 cd client
 npm create vite@latest
 ```
-8. In client directory, install dependancies:
+
+9. In client directory, install dependancies:
 
 ```zsh
 cd interstitial-vite
@@ -77,54 +83,54 @@ npm install react-icons
 npm run dev
 ```
 
-9. In client directory, install Tailwind CSS and its dependancies:
+10. In client directory, install Tailwind CSS and its dependancies:
 
 ```zsh
 npm install -D tailwindcss postcss autoprefixer
 ```
-10. In client directory, initialise Tailwind CSS:
+
+11. In client directory, initialise Tailwind CSS:
 
 ```zsh
 npx tailwindcss init -p
 ```
-11. Update tailwind.config.js file to specify the paths to template files:
+
+12. Update tailwind.config.js file to specify the paths to template files:
 
 ```javascript
 export default {
-      content: [
-        "./index.html",
-        "./src/**/*.{js,ts,jsx,tsx}",
-      ],
-      theme: {
-        extend: {},
-      },
-      plugins: [],
-    }
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
 ```
 
-12. Create a CSS file src/index.css and add @tailwind directives:
+13. Create a CSS file src/index.css and add @tailwind directives:
 
 ```css
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 ```
-13. In client directory delete App.css and vite.svg.
 
-14. In `client/src`, create the following folders:
-- `components` 
+14. In client directory delete App.css and vite.svg.
+
+15. In `client/src`, create the following folders:
+
+- `components`
 - `context`
 - `hooks`
 - `pages`
 - `routes`
-- `utils` 
+- `utils`
 
-15. In client directory, install:
+16. In client directory, install:
 
 ```zsh
 npm install react-router-dom @tailwindcss/forms @tailwindcss/line-clamp @headlessui/react @heroicons/react
 ```
-
 
 ## Usage
 
@@ -157,7 +163,6 @@ Screenshots of app demonstrating functionality:
 ### screenshot-6
 
 ![spotify api page](./client/src/assets/screenshot-6.png)
-
 
 ## License
 
