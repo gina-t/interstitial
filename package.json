@@ -1,7 +1,7 @@
 {
   "name": "interstitial",
   "version": "1.0.0",
-  "description": "full stack health app using vite + react + tailwindcss + mongoDB",
+  "description": "Full stack health app using vite + react + tailwindcss + mongoDB + express.js",
   "keywords": [
     "MERN"
   ],
@@ -19,9 +19,14 @@
   "main": "server.js",
   "scripts": {
     "start": "node server/server.js",
-    "server": "nodemon server/server.js"
+    "server": "nodemon server/server.js",
+    "dev": "concurrently \"npm run server\" \"cd client && npm run dev\"",
+    "install": "cd client && npm i",
+    "build": "cd client && npm run build",
+    "render-build": "npm install && npm run build"
   },
   "dependencies": {
+    "axios": "^1.8.1",
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
     "dotenv": "^16.4.7",
@@ -31,6 +36,7 @@
     "mongoose": "^8.9.2"
   },
   "devDependencies": {
+    "concurrently": "^9.1.2",
     "nodemon": "^3.1.9"
   }
 }
