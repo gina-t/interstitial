@@ -12,7 +12,7 @@
 
 ## Description
 
-A full-stack health app featuring vite + react + tailwindcss + mongoDB + mongoose and calling a nutrition API with user authentication
+A responsive, full-stack health application built on the MERN stack with TypeScript. Interstitial features real-time nutrition data through the FatSecret API, secure user authentication, and a modern UI built with Vite and Tailwind CSS. The app helps users make informed dietary choices by providing detailed nutritional information and educational content about food processing.
 
 ## Installation
 
