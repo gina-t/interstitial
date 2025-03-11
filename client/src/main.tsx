@@ -9,7 +9,8 @@ import FoodSearchPage from './pages/FoodSearchPage.tsx';
 import FoodDetailPage from './pages/FoodDetailPage.tsx';
 import LoginPage from './pages/LoginPage.tsx';
 import RegisterPage from './pages/RegisterPage.tsx';
-import BlogPage from './pages/BlogPage.tsx';
+import DiabetesPage from './pages/DiabetesPage.tsx';
+import UltraProcessedFoodsPage from "./pages/UltraProcessedFoodsPage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -35,8 +36,8 @@ const router = createBrowserRouter([
       },
       
       { 
-        path: 'blog',
-        element: <BlogPage />,
+        path: 'diabetes',
+        element: <DiabetesPage />,
       },
       {
         path: 'foodsearch',
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
       {
         path: 'food/:foodId', 
         element: <FoodDetailPage />
+      },
+      {
+        path: 'ultraprocessed-foods',
+        element: <UltraProcessedFoodsPage />,
       },
       
     ],

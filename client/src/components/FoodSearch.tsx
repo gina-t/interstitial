@@ -46,7 +46,7 @@ export default function FoodSearch() {
   }
 
   return (
-    <div className="bg-white shadow-sm sm:rounded-lg">
+    <div className="bg-transparent">
         {/* Search form */}
       <div className="px-4 py-5 sm:p-6">
         <h3 className="text-base font-semibold text-gray-900">

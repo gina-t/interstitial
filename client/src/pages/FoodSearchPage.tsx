@@ -1,12 +1,15 @@
 import { GradientBackground } from '../components/Gradient'
+import GridPattern from '../components/GridPattern'
 import FoodSearch from '../components/FoodSearch'
-
 
 const FoodSearchPage = () => {
   return (
-    <div>
+    <div className='relative min-h-screen'>
+      <GridPattern />
       <GradientBackground />
-      <FoodSearch />
+      <div className='relative z-0 px-6 py-24'>
+        <FoodSearch />
+      </div>
       
     </div>
   )
