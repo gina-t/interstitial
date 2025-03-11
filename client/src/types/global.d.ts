@@ -14,5 +14,6 @@ declare global {
 declare module '@vitejs/plugin-react';
 declare module '@tailwindcss/vite';
 declare module 'react/jsx-runtime';
+declare module 'react-dom/client';
 
 export {};
