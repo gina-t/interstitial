@@ -32,6 +32,7 @@ app.use('/api/fatsecret', fatsecretRoutes);
 if (process.env.NODE_ENV === 'production') {
   // Set static folder
   const clientBuildPath = path.resolve(__dirname, '../client/dist');
+  console.log(`Serving static assets from: ${clientBuildPath}`);
 
   app.use(express.static(clientBuildPath));
 
