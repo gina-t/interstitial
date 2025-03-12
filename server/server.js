@@ -31,17 +31,54 @@ app.use('/api/fatsecret', fatsecretRoutes);
 
 // Serve static assets in production
 if (process.env.NODE_ENV === 'production') {
-  // Set static folder
-  const clientBuildPath = path.resolve(__dirname, '../client/dist');
-  console.log(`Serving static assets from: ${clientBuildPath}`);
+  // Try multiple possible paths
+  const possiblePaths = [
+    path.resolve(__dirname, '../client/dist'), // Your expected path
+    path.resolve(__dirname, '../../client/dist'), // One level up
+    path.resolve(process.cwd(), 'client/dist'), // From current working dir
+    path.resolve(process.cwd(), 'dist'), // Direct dist folder
+    '/opt/render/project/src/client/dist', // Absolute Render path
+  ];
 
-  app.use(express.static(clientBuildPath));
+  let clientBuildPath = null;
 
-  // Any route that is not an API route should be handled by React
-  app.get('*', (req, res) => {
-    console.log(`Serving React app for path: ${req.originalUrl}`);
-    res.sendFile(path.resolve(clientBuildPath, 'index.html'));
-  });
+  // Find the first path that has index.html
+  for (const testPath of possiblePaths) {
+    try {
+      console.log(`Testing path: ${testPath}`);
+      if (fs.existsSync(path.join(testPath, 'index.html'))) {
+        console.log(`✅ Found build at: ${testPath}`);
+        clientBuildPath = testPath;
+        break;
+      }
+    } catch (error) {
+      console.log(`Error checking path ${testPath}: ${error.message}`);
+    }
+  }
+
+  // Use the found path or show a helpful error
+  if (clientBuildPath) {
+    app.use(express.static(clientBuildPath));
+    app.get('*', (req, res) => {
+      if (!req.path.startsWith('/api')) {
+        console.log(`Serving React app for path: ${req.originalUrl}`);
+        res.sendFile(path.join(clientBuildPath, 'index.html'));
+      }
+    });
+  } else {
+    console.error('❌ ERROR: Could not find client build files');
+    // Return a more helpful error to the browser
+    app.get('*', (req, res) => {
+      if (!req.path.startsWith('/api')) {
+        res.status(404).json({
+          error: 'Client build not found',
+          checkedPaths: possiblePaths,
+          serverDir: __dirname,
+          workingDir: process.cwd(),
+        });
+      }
+    });
+  }
 } else {
   app.get('/', (_req, res) => {
     res.send('API is running...');
