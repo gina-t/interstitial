@@ -8,6 +8,7 @@ import foodRoutes from './routes/foodRoutes.js';
 import userRoutes from './routes/userRoutes.js';
 import fatsecretRoutes from './routes/fatsecretRoutes.js';
 import { errorHandler } from './middleware/errorMiddleware.js';
+import fs from 'fs';
 
 dotenv.config();
 
