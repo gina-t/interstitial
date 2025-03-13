@@ -23,7 +23,7 @@
     "dev": "concurrently \"npm run server\" \"cd client && npm run dev\"",
     "client": "cd client && npm run dev",
     "client:build": "cd client && npm run build",
-    "render-build": "cd client && npm install && npm run build:skip"
+    "render-build": "cd client && npm install --include=dev && npm run build:skip"
   },
   "dependencies": {
     "axios": "^1.8.1",
