@@ -11,6 +11,7 @@ import LoginPage from './pages/LoginPage.tsx';
 import RegisterPage from './pages/RegisterPage.tsx';
 import DiabetesPage from './pages/DiabetesPage.tsx';
 import UltraProcessedFoodsPage from "./pages/UltraProcessedFoodsPage.tsx";
+import WholeFoodsPage from "./pages/WholeFoodsPage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
       {
         path: 'ultraprocessed-foods',
         element: <UltraProcessedFoodsPage />,
+      },
+      {
+        path: 'whole-foods',
+        element: <WholeFoodsPage />,
       },
       
     ],
