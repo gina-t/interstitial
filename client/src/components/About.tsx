@@ -1,4 +1,4 @@
-import { HeartIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
+import { LinkIcon, HeartIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 import { Link } from 'react-router-dom';
 
 import exercise from '../assets/exercise.jpg';
@@ -30,14 +30,7 @@ export default function About() {
           </div>
         </div>
 
-        {/* <div className="-mt-12 -ml-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
-          <img
-            alt="woman weight training"
-            src={exercise}
-            className="w-[48rem] max-w-none rounded-xl bg-gray-900 ring-1 shadow-xl ring-gray-400/10 sm:w-[57rem] opacity-50"
-          />
-        </div> */}
-
+        {/* image */}
         <div className="p-4 mx-auto sm:p-6 md:p-8 lg:-mt-12 lg:-ml-12 lg:p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
           <img
             alt="woman weight training"
@@ -46,45 +39,65 @@ export default function About() {
           />
         </div>
 
+        {/* list section */}
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             <div className="max-w-xl text-base/7 text-gray-700 lg:max-w-lg">
-              {/* list section */}
               <ul role="list" className="mt-0 space-y-8 text-gray-600">
+                
                 {/* ultra-processed foods */}
                 <li className="flex gap-x-3">
-                  <HeartIcon
-                    aria-hidden="true"
-                    className="mt-1 size-5 flex-none text-indigo-600"
-                  />
+                  <Link 
+                    to="/ultraprocessed-foods"
+                    className="mt-1 flex-none text-indigo-600 hover:text-indigo-900"
+                    aria-label="Learn more about Ultra-Processed Foods"
+                    >
+                    <LinkIcon
+                      aria-hidden="true"
+                      className="mt-1 size-4 flex-none text-indigo-600"
+                    />
+                  </Link>
                   <span>
-                    <strong className="font-semibold text-gray-900">
+                    <Link
+                      to='/ultraprocessed-foods'
+                      >
+                    <strong className="font-semibold text-gray-900 hover:text-indigo-600">
                       Ultra-Processed Foods.
                     </strong>{' '}
-                    Fractionation is an industrial food processing technique that separates whole foods (typically mono-sourced from corn, wheat, soybeans, cane, and remnants of intensive live-stock farming) into base components, for eg. fructose, lactose, hydrogenated oils, hydrolysed proteins, soya protein isolate, gluten and whey protein. Fractionated components do not retain the matrix of the food from which it is milled, or its nutrients. These components, typically not found in your pantry, are submitted to a series of industrial processing techniques such as hydrolysis and hydrogenation, followed by re-assembly using extrusion and moulding, and lastly addition of colours, flavour enhancers, emulsifiers and micro-plastics. These industrial processes result in hyper-palatable products with high calorific and low nutritional value, and are combined with sophisticated packaging and labels highlighting positive components, to attract and obfuscate consumers. Ultra-processed foods are contributing to an obesity epidemic and associated morbidities such as type 2 diabetes mellitus, and alarmingly an increase in its prevalence in childern. Furthermore, fractionation of whole foods is resource intensive, promotes loss of biodiversity due to monoculture crops, is unsustainable, and detrimental to the environment.
-                    <Link
-                      to="/ultraprocessed-foods"
-                      className="ml-2 inline-flex items-center text-indigo-600 hover:text-indigo-900"
-                    >
-                      <ChevronRightIcon
-                        aria-hidden="true"
-                        className="size-4 flex-none align-bottom relative bottom-[-4px]"
-                      />
                     </Link>
+                    Fractionation is an industrial food processing technique that separates whole foods (typically mono-sourced from corn, wheat, soybeans, cane, and remnants of intensive live-stock farming) into base components, for eg. fructose, lactose, hydrogenated oils, hydrolysed proteins, soya protein isolate, gluten and whey protein. Fractionated components do not retain the matrix of the food from which it is milled, or its nutrients. These components, typically not found in your pantry, are submitted to a series of industrial processing techniques such as hydrolysis and hydrogenation, followed by re-assembly using extrusion and moulding, and lastly addition of colours, flavour enhancers, emulsifiers and micro-plastics. These industrial processes result in hyper-palatable products with high calorific and low nutritional value, and are combined with sophisticated packaging and labels highlighting positive components, to attract and obfuscate consumers. Ultra-processed foods are contributing to an obesity epidemic and associated morbidities such as type 2 diabetes mellitus, and alarmingly an increase in its prevalence in childern. Furthermore, fractionation of whole foods is resource intensive, promotes loss of biodiversity due to monoculture crops, is unsustainable, and detrimental to the environment.
+                    <span className="ml-1 inline-flex items-center text-indigo-600">
+                      <Link to="/ultraprocessed-foods" className="inline-flex items-center hover:text-indigo-900">
+                        Read more
+                        <ChevronRightIcon
+                          aria-hidden="true"
+                          className="size-4 ml-1 align-text-bottom"
+                        />
+                      </Link>
+                    </span>
                   </span>
                 </li>
-                {/* accessibility to whole foods */}
+
+                {/* accessibility to whole-foods */}
                 <li className="flex gap-x-3">
-                  <HeartIcon
-                    aria-hidden="true"
-                    className="mt-1 size-5 flex-none text-indigo-600"
-                  />
+                  <Link 
+                    to="/whole-foods"
+                    className="mt-1 flex-none text-indigo-600 hover:text-indigo-900"
+                    aria-label="Learn more about Whole-Foods"
+                    >
+                    <LinkIcon
+                      aria-hidden="true"
+                      className="mt-1 size-4 flex-none text-indigo-600"
+                    />
+                  </Link>
                   <span>
-                    <strong className="font-semibold text-gray-900">
-                      Accessibility to whole foods.
+                    <Link
+                      to='/whole-foods'>
+                    <strong className="font-semibold text-gray-900 hover:text-indigo-600">
+                      Accessibility to Whole Foods.
                     </strong>{' '}
-                    Ac tincidunt sapien vehicula erat auctor pellentesque
-                    rhoncus. Et magna sit morbi lobortis.
+                    </Link>
+                    Whole foods are obtained directly from plants and animals and do not undergo any alteration.
                     <Link
                       to="/accessibility-to-whole-foods"
                       className="ml-2 inline-flex items-center text-indigo-600 hover:text-indigo-900"
