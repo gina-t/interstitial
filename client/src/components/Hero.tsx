@@ -14,17 +14,16 @@ export default function Hero() {
 
       {/* Semi-transparent gradient overlay */}
       <div className="absolute inset-0 bg-linear-115 from-[#fff1be]/80 from-28% via-[#ee87cb]/80 via-70% to-[#b060ff]/80 sm:bg-linear-145 z-10 mix-blend-multiply">
-        {/* No content here */}
       </div>
 
       {/* Main content on top */}
       <div className="relative z-20 mx-auto max-w-7xl px-6 pt-10 pb-24 sm:pb-32 lg:flex lg:px-8 lg:py-40">
-        {/* Rest of your content remains the same */}
+       
         <div className="mx-auto max-w-2xl lg:mx-0 lg:shrink-0 lg:pt-8">
           <img alt="Interstitial logo" src={logo} className="h-12" />
           <div className="mt-24 sm:mt-32 lg:mt-16">
             <Link to="/about" className="inline-flex space-x-6">
-              <span className="rounded-full bg-indigo-600/10 px-3 py-1 text-sm/6 font-semibold text-indigo-600 ring-1 ring-indigo-600/10 ring-inset whitespace-nowrap">
+              <span className="rounded-full bg-indigo-600/10 px-3 py-1 text-sm/6 font-semibold text-indigo-600 ring-1 ring-indigo-600/10 ring-inset whitespace-nowrap flex items-center justify-center">
                 A Paradigm for Well-Being
               </span>
               <span className="inline-flex items-center space-x-2 text-sm/6 font-medium text-gray-600">
