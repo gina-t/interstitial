@@ -3,7 +3,7 @@ const GridPattern = () => {
     <div className="absolute inset-0 -z-20 overflow-hidden">
       <svg
         aria-hidden="true"
-        className="absolute top-0 left-[max(50%,25rem)] h-[64rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
+        className="absolute top-0 left-[max(50%,25rem)] h-[64rem] w-[128rem] -translate-x-1/2 stroke-gray-100 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
       >
         <defs>
           <pattern
