@@ -1,13 +1,54 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as fatsecretService from '../services/fatsecretService';
 import { type FoodItem } from '../interfaces/FoodSearchResult';
+import { isFavourite, addToFavourites, removeFromFavourites } from '../utils/favourites';
+import { HeartIcon as HeartOutline } from '@heroicons/react/24/outline';
+import { HeartIcon as HeartSolid } from '@heroicons/react/24/solid';
 
 export default function FoodSearch() {
   const navigate = useNavigate();
   const [searchResults, setSearchResults] = useState<FoodItem[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
+  const [favourites, setFavourites] = useState<Record<string, boolean>>({});
+
+  useEffect(() => {
+    // Skip if no search results
+    if (searchResults.length === 0) return;
+  
+    // Track if component is mounted to avoid state updates after unmount
+    let isMounted = true;
+    
+    // Async function to check favorites status
+    const checkFavourites = async () => {
+      try {
+        const favStatus: Record<string, boolean> = {};
+        
+        // Option 1: Individual checks (not recommended for many items)
+        for (const food of searchResults) {
+          // Only continue if component is still mounted
+          if (!isMounted) return;
+          
+          const isFav = await isFavourite(food.food_id);
+          favStatus[food.food_id] = isFav;
+        }
+        
+        // Update state if component is still mounted
+        if (isMounted) {
+          setFavourites(favStatus);
+        }
+      } catch (error) {
+        console.error('Error checking favourites status:', error);
+      }
+    };
+    
+    checkFavourites();
+    return () => {
+      isMounted = false;
+    };
+  }, [searchResults]);
+    
 
   async function search(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -45,6 +86,27 @@ export default function FoodSearch() {
     navigate(`/food/${foodId}`, { state: { foodName } });
   }
 
+  async function handleToggleFavourite(food: FoodItem) {
+    if (favourites[food.food_id]) {
+      // Remove from favorites
+      const success = await removeFromFavourites(food.food_id);
+      if (success) {
+        setFavourites(prev => ({
+          ...prev,
+          [food.food_id]: false
+        }));
+      }
+    } else {
+      // Add to favorites
+      const success = await addToFavourites(food);
+      if (success) {
+        setFavourites(prev => ({
+          ...prev,
+          [food.food_id]: true
+        }));
+      }
+    }
+  }
   return (
     <div className="bg-transparent">
         {/* Search form */}
@@ -81,7 +143,7 @@ export default function FoodSearch() {
         {/* Search results */}
         {searchResults.length > 0 && (
           <div className="mt-6">
-            <h4 className="text-sm font-medium text-gray-900">
+            <h4 className="text-base font-semibold text-gray-900">
               Search Results
             </h4>
             <ul className="mt-3 divide-y divide-gray-100 border-t border-gray-200">
@@ -96,15 +158,33 @@ export default function FoodSearch() {
                         {food.food_description || 'No description available'}
                       </p>
                     </div>
-                    <button
-                      type="button"
-                      className="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-                      onClick={() =>
-                        handleViewDetails(food.food_id, food.food_name)
-                      }
-                    >
-                      View Details
-                    </button>
+
+                    <div className="flex items-center space-x-2">
+                      {/* View details button */}
+                      <button
+                        type="button"
+                        className="rounded-md bg-white px-2.5 py-1.5 text-xs font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:text-indigo-600"
+                        onClick={() =>
+                          handleViewDetails(food.food_id, food.food_name)
+                        }
+                      >
+                        View 
+                      </button>
+                      {/* Add to Favourites button */}
+                      <button
+                        type="button"
+                        className="rounded-md bg-white px-2.5 py-1.5 text-xs font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:text-indigo-600"
+                        onClick={() => handleToggleFavourite(food)}
+                        aria-label={favourites[food.food_id] ? "Remove from favorites" : "Add to favorites"}
+                      >
+                        {favourites[food.food_id] ? (
+                          <HeartSolid className="h-4 w-4 text-indigo-600" />
+                        ) : (
+                          <HeartOutline className="h-4 w-4 text-gray-400" />
+                        )}  
+                      </button>
+                    </div>
+                    
                   </div>
                 </li>
               ))}
@@ -112,11 +192,6 @@ export default function FoodSearch() {
           </div>
         )}
 
-        {/* {searchResults.length === 0 && !isLoading && !error && (
-          <div className="mt-4 text-sm text-gray-500">
-            No results found. Try a different search term.
-          </div>
-        )} */}
       </div>
     </div>
   );

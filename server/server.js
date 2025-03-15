@@ -7,6 +7,7 @@ import cors from 'cors';
 import foodRoutes from './routes/foodRoutes.js';
 import userRoutes from './routes/userRoutes.js';
 import fatsecretRoutes from './routes/fatsecretRoutes.js';
+import favouriteRoutes from './routes/favouriteRoutes.js';
 import { errorHandler } from './middleware/errorMiddleware.js';
 import fs from 'fs';
 
@@ -28,6 +29,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api/food', foodRoutes);
 app.use('/api/user', userRoutes);
 app.use('/api/fatsecret', fatsecretRoutes);
+app.use('/api/favourites', favouriteRoutes);
 
 // Serve static assets in production
 if (process.env.NODE_ENV === 'production') {
