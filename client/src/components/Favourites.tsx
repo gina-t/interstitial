@@ -61,7 +61,6 @@ export default function Favourites() {
     };
   }, []);
 
-  // Change from synchronous to async function
   async function loadFavourites() {
     try {
       setIsLoading(true);
@@ -76,6 +75,17 @@ export default function Favourites() {
       setIsLoading(false);
     }
   }
+
+  // async function checkMultipleFavorites(foodIds: string[]): Promise<Record<string, boolean>> {
+  //   const result: Record<string, boolean> = {};
+  //   const allFavorites = await getAllFavorites();
+    
+  //   foodIds.forEach(id => {
+  //     result[id] = allFavorites.some(fav => fav.food_id === id);
+  //   });
+    
+  //   return result;
+  // }
 
   function handleAddCalories(food: FavouriteFoodItem) {
     // Extract calories from food description
@@ -112,6 +122,13 @@ export default function Favourites() {
           My Favourite Foods
         </h1>
 
+        <div className="flex items-center text-xs text-gray-500">
+          <CheckIcon className="h-3 w-3 text-green-600 mr-1" />
+          <span> Add calories</span>
+          <XMarkIcon className="h-3 w-3 ml-2 mr-1 text-indigo-600" />
+          <span> Remove food</span>
+        </div>
+
         {isLoading ? (
           <div className="text-center py-12">
             <p className="text-gray-500">Loading your favourite foods...</p>
@@ -128,7 +145,7 @@ export default function Favourites() {
           </div>
         ) : favourites.length === 0 ? (
           <div className="text-center py-12">
-            <p className="text-gray-500">No favourite foods saved.</p>
+            <p className="text-gray-500">No favourite foods saved</p>
             <button
               onClick={() => navigate('/foodsearch')}
               className="mt-4 inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white"
@@ -163,37 +180,32 @@ export default function Favourites() {
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-3">
+                <div className="flex items-center space-x-2">
+                  {/* CheckIcon Button */}
                   <button
                     type="button"
-                    className={`rounded-md ${
-                      addedFoods[food.food_id]
-                        ? 'bg-green-100 text-green-700'
-                        : 'bg-white text-gray-900'
-                    } px-2.5 py-1.5 text-xs font-semibold shadow-sm ring-1 ring-inset ${
-                      addedFoods[food.food_id]
-                        ? 'ring-green-600'
-                        : 'ring-gray-300 hover:bg-gray-50'
+                    className={`rounded-md bg-white p-1.5 shadow-sm ring-1 ring-inset ring-gray-300 ${
+                      addedFoods[food.food_id] ? 'text-green-600' : 'hover:bg-gray-50'
                     }`}
                     onClick={() => handleAddCalories(food)}
                     disabled={addedFoods[food.food_id]}
-                    title="Add to calorie tracker" // This adds a tooltip on hover
+                    title="Add to Calorie Tracker"
                   >
                     {addedFoods[food.food_id] ? (
-                      'Added!'
+                      'Added'
                     ) : (
-                      <span className="relative flex items-center">
-                        <CheckIcon className="h-4 w-4 text-green-600" />
-                      </span>
+                      <CheckIcon className="h-4 w-4 text-green-600" />
                     )}
                   </button>
+
+                  {/* XMarkIcon Button */}
                   <button
                     type="button"
-                    className="rounded-md bg-white p-1.5 text-xs font-semibold text-indigo-600 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                    className="rounded-md bg-white p-1.5 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
                     onClick={() => handleRemoveFavourite(food.food_id)}
                     aria-label="Remove from favorites"
                   >
-                    <XMarkIcon className="h-4 w-4" />
+                    <XMarkIcon className="h-4 w-4 text-indigo-600" />
                   </button>
                 </div>
               </li>
