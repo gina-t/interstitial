@@ -1,69 +1,47 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import * as fatsecretService from '../services/fatsecretService';
 import { type FoodItem } from '../interfaces/FoodSearchResult';
-import { isFavourite, addToFavourites, removeFromFavourites } from '../utils/favourites';
+import {
+  isFavourite,
+  addToFavourites,
+  removeFromFavourites,
+} from '../utils/favourites';
 import { HeartIcon as HeartOutline } from '@heroicons/react/24/outline';
 import { HeartIcon as HeartSolid } from '@heroicons/react/24/solid';
 
 export default function FoodSearch() {
   const navigate = useNavigate();
+  const location = useLocation();
   const [searchResults, setSearchResults] = useState<FoodItem[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
   const [favourites, setFavourites] = useState<Record<string, boolean>>({});
 
+  // useEffect to handle URL query parameters
   useEffect(() => {
-    // Skip if no search results
-    if (searchResults.length === 0) return;
-  
-    // Track if component is mounted to avoid state updates after unmount
-    let isMounted = true;
-    
-    // Async function to check favorites status
-    const checkFavourites = async () => {
-      try {
-        const favStatus: Record<string, boolean> = {};
-        
-        // Option 1: Individual checks (not recommended for many items)
-        for (const food of searchResults) {
-          // Only continue if component is still mounted
-          if (!isMounted) return;
-          
-          const isFav = await isFavourite(food.food_id);
-          favStatus[food.food_id] = isFav;
-        }
-        
-        // Update state if component is still mounted
-        if (isMounted) {
-          setFavourites(favStatus);
-        }
-      } catch (error) {
-        console.error('Error checking favourites status:', error);
+    const params = new URLSearchParams(location.search);
+    const queryParam = params.get('q');
+
+    if (queryParam) {
+      // Set the search input value
+      const searchInput = document.getElementById('search') as HTMLInputElement;
+      if (searchInput) {
+        searchInput.value = queryParam;
+        performSearch(queryParam);
       }
-    };
-    
-    checkFavourites();
-    return () => {
-      isMounted = false;
-    };
-  }, [searchResults]);
-    
-
-  async function search(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-
-    const searchTerm = (event.target as HTMLFormElement).search.value;
-
-    if (!searchTerm.trim()) {
-      return;
     }
+  }, [location.search]); 
+
+  // handles the actual search operation
+  const performSearch = async (query: string) => {
+    if (!query.trim()) return;
 
     setIsLoading(true);
     setError(null);
 
     try {
-      const response = await fatsecretService.searchFoods(searchTerm);
+      const response = await fatsecretService.searchFoods(query);
       if (response?.foods?.food) {
         // Handle both single result and array of results
         const foods = Array.isArray(response.foods.food)
@@ -80,10 +58,74 @@ export default function FoodSearch() {
     } finally {
       setIsLoading(false);
     }
+  };
+  // useEffect to check favourites status
+  useEffect(() => {
+    // Skip if no search results
+    if (searchResults.length === 0) return;
+
+    let isMounted = true;
+
+    // Async function to check favorites status
+    const checkFavourites = async () => {
+      try {
+        const favStatus: Record<string, boolean> = {};
+
+        for (const food of searchResults) {
+          if (!isMounted) return;
+          const isFav = await isFavourite(food.food_id);
+          favStatus[food.food_id] = isFav;
+        }
+
+        // Update state if component is still mounted
+        if (isMounted) {
+          setFavourites(favStatus);
+        }
+      } catch (error) {
+        console.error('Error checking favourites status:', error);
+      }
+    };
+
+    checkFavourites();
+    return () => {
+      isMounted = false;
+    };
+  }, [searchResults]);
+
+  // event handler that handles the form submission event
+  async function search(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    const searchTerm = (event.target as HTMLFormElement).search.value;
+
+    if (!searchTerm.trim()) {
+      return;
+    }
+
+    // Update URL to include search query 
+    navigate(`/foodsearch?q=${encodeURIComponent(searchTerm)}`, {
+      replace: true,
+    });
+
+    // Store in localStorage for persistence
+    localStorage.setItem('lastSearchQuery', searchTerm);
+
+    // Use the common search function
+    performSearch(searchTerm);
   }
 
   function handleViewDetails(foodId: string, foodName: string) {
-    navigate(`/food/${foodId}`, { state: { foodName } });
+    // Get current search from URL
+    const params = new URLSearchParams(location.search);
+    const searchQuery = params.get('q') || '';
+
+    // Navigate with search query in state
+    navigate(`/food/${foodId}`, {
+      state: {
+        foodName,
+        searchQuery,
+      },
+    });
   }
 
   async function handleToggleFavourite(food: FoodItem) {
@@ -91,29 +133,40 @@ export default function FoodSearch() {
       // Remove from favorites
       const success = await removeFromFavourites(food.food_id);
       if (success) {
-        setFavourites(prev => ({
+        setFavourites((prev) => ({
           ...prev,
-          [food.food_id]: false
+          [food.food_id]: false,
         }));
       }
     } else {
       // Add to favorites
       const success = await addToFavourites(food);
       if (success) {
-        setFavourites(prev => ({
+        setFavourites((prev) => ({
           ...prev,
-          [food.food_id]: true
+          [food.food_id]: true,
         }));
       }
     }
-  }
+  };
+  // const checkFavourites = async () => {
+  //   try {
+  //     const foodIds = searchResults.map(food => food.food_id);
+  //     const favStatus = await checkMultipleFavorites(foodIds);
+      
+  //     if (isMounted) {
+  //       setFavourites(favStatus);
+  //     }
+  //   } catch (error) {
+  //     console.error('Error checking favourites status:', error);
+  //   }
+  // };
+
   return (
     <div className="bg-transparent">
-        {/* Search form */}
+      {/* Search form */}
       <div className="px-4 py-5 sm:p-6">
-        <h3 className="text-base font-semibold text-gray-900">
-          Food Search
-        </h3>
+        <h3 className="text-base font-semibold text-gray-900">Food Search</h3>
         <div className="mt-2 max-w-xl text-sm text-gray-500">
           <p>To display its nutritional value, search for a food item.</p>
         </div>
@@ -168,30 +221,32 @@ export default function FoodSearch() {
                           handleViewDetails(food.food_id, food.food_name)
                         }
                       >
-                        View 
+                        View
                       </button>
                       {/* Add to Favourites button */}
                       <button
                         type="button"
                         className="rounded-md bg-white px-2.5 py-1.5 text-xs font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:text-indigo-600"
                         onClick={() => handleToggleFavourite(food)}
-                        aria-label={favourites[food.food_id] ? "Remove from favorites" : "Add to favorites"}
+                        aria-label={
+                          favourites[food.food_id]
+                            ? 'Remove from favorites'
+                            : 'Add to favorites'
+                        }
                       >
                         {favourites[food.food_id] ? (
                           <HeartSolid className="h-4 w-4 text-indigo-600" />
                         ) : (
                           <HeartOutline className="h-4 w-4 text-gray-400" />
-                        )}  
+                        )}
                       </button>
                     </div>
-                    
                   </div>
                 </li>
               ))}
             </ul>
           </div>
         )}
-
       </div>
     </div>
   );
