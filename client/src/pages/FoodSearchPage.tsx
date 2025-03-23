@@ -9,8 +9,7 @@ const FoodSearchPage = () => {
       <GradientBackground />
       <div className='relative z-0 px-6 py-24'>
         <FoodSearch />
-      </div>
-      
+      </div> 
     </div>
   )
 }
