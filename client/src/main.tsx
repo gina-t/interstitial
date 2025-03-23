@@ -13,6 +13,8 @@ import DiabetesPage from './pages/DiabetesPage.tsx';
 import UltraProcessedFoodsPage from "./pages/UltraProcessedFoodsPage.tsx";
 import WholeFoodsPage from "./pages/WholeFoodsPage.tsx";
 import FavouritesPage from "./pages/FavouritesPage.tsx";
+import ResourcesPage from "./pages/ResourcesPage.tsx";
+import MarketingStrategiesPage from "./pages/MarketingStrategiesPage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -61,6 +63,14 @@ const router = createBrowserRouter([
       {
         path: 'favourites',
         element: <FavouritesPage />,
+      },
+      {
+        path: 'resources',
+        element: <ResourcesPage />,
+      },
+      {
+        path: 'marketing-strategies',
+        element: <MarketingStrategiesPage />,
       },
       
     ],

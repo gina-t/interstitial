@@ -11,6 +11,7 @@ const navigation = [
   { name: 'Food Search', href: '/foodsearch' },
   { name: 'Favourites', href: '/favourites' },
   { name: 'Diabetes Mellitus', href: '/diabetes' },
+  { name: 'Resources', href: '/resources' },
 ]
 
 export default function Header() {
