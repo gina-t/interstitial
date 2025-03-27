@@ -1,18 +1,7 @@
 import { ChevronRightIcon } from "@heroicons/react/20/solid"
 
 const resources = [
-  {
-    title: 'Ultra-processed foods: what they are and how to identify them', 
-    href: "https://www.cambridge.org/core/journals/public-health-nutrition/article/ultraprocessed-foods-what-they-are-and-how-to-identify-them/E6D744D714B1FF09D5BCA3E74D53A185"
-  },
-  {
-    title: 'The NOVA Food Classification System', 
-    href: "https://educhange.com/wp-content/uploads/2018/09/NOVA-Food-Classification-EduChange.pdf"
-  },
-  {
-    title: 'The State of Diabetes Mellitus in Australia in 2024', 
-    href: 'https://westernsydneydiabetes.com.au/uploads/2024/07/The-State-of-Diabetes-Mellitus-in-Australia-in-2024.pdf'
-  },
+  
   {
     title: 'Total Daily Energy Expenditure Calculator Australia', 
     href: 'https://tdeecalculator.com.au/'
@@ -21,14 +10,7 @@ const resources = [
     title: 'Total Daily Energy Expenditure Calculator', 
     href: 'https://tdeecalculator.net/'
   },
-  {
-    title: 'Ultraprocessed food consumption and dietary nutrient profiles associated with obesity: A multicountry study of children and adolescents', 
-    href: 'https://pubmed.ncbi.nlm.nih.gov/34889015/'
-  },
-  {
-    title: 'Australian Government: Australian Institute of Health and Welfare', 
-    href: 'https://www.aihw.gov.au/'
-  },
+  
 ]
 
 export default function ResourceCard() {
@@ -39,12 +21,12 @@ export default function ResourceCard() {
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
               <h4 className="text-base/7 font-semibold text-indigo-600">
-                Nutrition and Exercise Resources
+                Total Daily Energy Expenditure Calculator
               </h4>
 
               <div className="mt-2 max-w-xl text-sm text-gray-500">
                 <p>
-                Explore these evidence-based articles to understand more about the multitude of factors contributing to your choices around nutrition, exercise and well-being.
+                  Total daily energy expenditure (TDEE) is the number of calories your body needs to maintain your current weight. It is an estimate of the number of calories you burn per day, and is calculated by factoring your basal metabolic rate at rest, physical activity and thermic qualities of food consumed.
                 </p>
               </div>
     

@@ -15,6 +15,9 @@ import WholeFoodsPage from "./pages/WholeFoodsPage.tsx";
 import FavouritesPage from "./pages/FavouritesPage.tsx";
 import ResourcesPage from "./pages/ResourcesPage.tsx";
 import MarketingStrategiesPage from "./pages/MarketingStrategiesPage.tsx";
+import BehaviouralApproachesPage from "./pages/BehaviouralApproachesPage.tsx";
+import FoodLabelsPage from "./pages/FoodLabelsPage.tsx";
+import ExercisePage from "./pages/ExercisePage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -72,7 +75,18 @@ const router = createBrowserRouter([
         path: 'marketing-strategies',
         element: <MarketingStrategiesPage />,
       },
-      
+      {
+        path: 'behavioural-economics',
+        element: <BehaviouralApproachesPage />,
+      },
+      {
+        path: 'food-labels',
+        element: <FoodLabelsPage />,
+      },
+      {
+        path: 'exercise',
+        element: <ExercisePage />,
+      },  
     ],
   },
 ]);
