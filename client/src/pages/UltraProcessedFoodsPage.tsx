@@ -74,18 +74,17 @@ const UltraProcessedFoodsPage = () => {
                   className="absolute top-1/2 left-1/2 -ml-16 -translate-x-1/2 -translate-y-1/2 transform-gpu blur-3xl"
                 >
                 </div>
-
-                {/* quote */}
-                <div className="absolute inset-x-0 top-[15%] px-6 sm:px-12 lg:px-8 xl:px-10">
-                  <figure className="relative isolate">
-                    <blockquote className="text-base/8 font-bold text-white text-center bg-black/20 backdrop-blur-[2px] p-3 rounded-lg">
-                      <p>
-                        “Always choose whole or minimally processed foods and meals with freshly made ingredients.”
-                      </p>
-                    </blockquote>  
-                  </figure>
-                </div>
               </div>
+
+              {/* quote */}
+              <figure className="mt-6 lg:max-w-lg">
+                <blockquote className="text-base/7 font-bold text-gray-900 sm:text-lg/8">
+                  <p>
+                    “Always choose whole or minimally processed foods and meals with freshly made ingredients.”
+                  </p>
+                </blockquote>  
+              </figure>
+
             </div>
 
             {/* text */}
@@ -100,26 +99,20 @@ const UltraProcessedFoodsPage = () => {
                     The <strong>NOVA</strong> classification system groups assigns foods to one of four groups based upon the extent and purpose of processing. Food processing is identified as physical, biological, or chemical. 
                   </p> 
                   <p className="mt-8"> 
-                    <strong>Group 1</strong> includes unprocessed or minimally processed foods. Unprocessed foods are obtained directly from plants and animals and do not undergo any alteration, for eg. fruits, frseh or frozen vegetables, potatoes, mushrooms, poultry, fish. Minimally processed foods are those submitted to cleaning, removal of inedible parts, grinding, fermentation, pasteurisation and other processes that do not add substances for eg, fruit juices, wheat grains, oats, eggs, milk, yoghurt, flour, pasta, nuts.
+                    <strong>Group 1</strong> includes unprocessed or minimally processed foods. Unprocessed foods are obtained directly from plants and animals and do not undergo any alteration, for eg. fruits, frseh or frozen vegetables, potatoes, mushrooms, fresh meat, poultry, fish. Minimally processed foods are those submitted to cleaning, removal of inedible parts, grinding, fermentation, pasteurisation and other processes that do not add substances for eg, fruit juices, dried fruits, wheat grains, oats, eggs, milk, yoghurt, flour, pasta, nuts.
                   </p>
                   <p className="mt-8">
-                    <strong>Group 2</strong> includes processed culinary ingredients. These are substances obtained directly from group 1 foods or from nature by processes such as pressing, grinding, milling and pulverising, for eg. vegetable oils made from seeds, nuts, or fruits, sugar and molasses obtained from cane or beet, honey, maple syrup, butter, lard, salt.
+                    <strong>Group 2</strong> includes processed culinary ingredients. These are substances obtained directly from group 1 foods or from nature by processes such as pressing, refining, grinding, milling and pulverising, for eg. vegetable oils made from seeds, nuts, or fruits, sugar and molasses obtained from cane or beet, honey, maple syrup, butter, lard, salt. The purpose of processing in group 2 is to make products used in home and restaurant kitchens to prepare, season and cook group 1 foods. Group 2 ingredients are rarely consumed in the absence of group 1 foods. 
                   </p>
                   <p className="mt-8">
-                    <strong>Group 3 </strong>includes processed foods. These products manufactured by industry with the use of salt, sugar, oil or other  (Group 2) substances added to natural or minimally processed foods (Group1) to preserve or make more palatable, for eg. canned legumes, fruits or tomatoes, salted nuts, salted or cured meat or fish, cheeses, breads, beer, wine.
+                    <strong>Group 3 </strong>includes processed foods. These products are manufactured by industry with the use of sugar, oil, salt, or other group 2 substances added to group 1 foods, to preserve, ferment or make more palatable for eg. canned legumes, fruits or tomatoes, salted nuts, salted or cured meat or fish, cheeses, breads, beer, wine. Processed foods typically contain 3 ingredients. The purpose of processing in group 3 is to increase the durability of group 1 foods, or to modify or enhance their sensory qualities. (4)
                   </p>
                   <p className="mt-8">
-                    <strong>Group 4</strong> includes ultra-processed foods. These are industrial formulations typically with five or more ingredients, made entirely from base substances extracted from whole foods, or derived from de-structured constituents, or synthesised in laboratories. Ingredients only found in ultra-processed products include hydrogenated oils, hydrolysed proteins, protein isolates, maltodextrin, invert sugar, high fructose corn syrup, artificial sweeteners, colourants, flavour enhancers, emulsifiers, humectants, sequestrants, and firming, bulking, de-foaming, anti-caking and glazing agents.
-                    These substances are not found in your pantry! Additives whose purpose is to imitate sensorial qualities of unprocessed foods and to disguise undesirable odours, combined with sophisticated and convenient packaging, make ultra-processed (non) foods hyper-palatble and attractive to the consumer. Examples of ultra-processed foods are packaged snacks, biscuits, ice cream, confectionery, energy and sports drinks, flavoured milk, instant soups and noodles, flavoured yoghurts, margarines and spreads, packaged pizza and pasta, burgers, sausages, nuggets, bread, cereals, muesli bars, infant formulas, pastries, soft drinks, supermarket ready-to-eat meals, dips.
+                    <strong>Group 4</strong> includes ultra-processed foods. These are industrial formulations typically with five or more cheap ingredients, manufactured entirely from base substances extracted from whole foods, or derived from de-structured constituents, or synthesised in laboratories. Ingredients only found in ultra-processed products include hydrogenated oils, hydrolysed proteins, protein isolates, maltodextrin, invert sugar, high fructose corn syrup, artificial sweeteners, colourants, flavour enhancers, emulsifiers, humectants, sequestrants, and firming, bulking, de-foaming, anti-caking and glazing agents. These substances are not found in your pantry! Additives whose purpose is to imitate sensory qualities of group 1 foods and to disguise undesirable odours, combined with sophisticated, convenient and practical packaging, make ultra-processed (non) foods hyper-palatable and attractive to the consumer. The purpose of processing in group 4 is to manufacture products that are ready to eat, to drink or to heat, hyper-palatable, and to replace freshly prepared traditional meals. Examples of ultra-processed foods are packaged snacks, biscuits, ice cream, confectionery, energy and sports drinks, flavoured milk, instant soups and noodles, flavoured yoghurts, margarines and spreads, packaged pizza and pasta, burgers, sausages, nuggets, bread, cereals, muesli bars, infant formulas, pastries, soft drinks, supermarket ready-to-eat meals, dips.
                   </p>
                   <p className="mt-8">
-                    Ultra-processed foods are derived from ingredients that undergo fractionation of whole foods (typically mono-sourced from corn, wheat, soya, cane, and remnants of intensive live-stock farming) into base subtances such as fructose, lactose, hydrogenated oils,
-                    hydrolysed proteins, soya protein isolate, gluten and whey
-                    protein. Base substances are subsequently submitted to
-                    a series of industrial processing techniques such as
-                    hydrolysis and hydrogenation, followed by reassembly using
-                    extrusion and moulding, and lastly addition of colours,
-                    flavour enhancers, emulsifiers and micro-plastics.
+                    Ultra-processed foods are industrial formulations of substances extracted from whole foods (mono-sourced from corn, wheat, soybean, cane, and remnants of intensive live-stock farming) and fractionated into fructose, lactose, hydrogenated oils,
+                    hydrolysed proteins, soy protein isolate, gluten and whey protein. Base substances are subsequently submitted to a series of industrial processing techniques such as hydrolysis and hydrogenation, followed by reassembly using extrusion and moulding, and lastly addition of colours,flavour enhancers, emulsifiers and micro-plastics. Group 1 foods are thus absent from ultra-processed products.
                   </p>
                   <p className="mt-8">
                     Ultra-processed foods comprise 42% of total energy intake in modern Australian eating patterns. Children and adolescents, adults experiencing greater levels of disadvantage, and those with lower levels of education and income are the leading consumers of ultra-processed foods in Australia.

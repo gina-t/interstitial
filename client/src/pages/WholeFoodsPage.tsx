@@ -11,12 +11,12 @@ const WholeFoodsPage = () => {
   ];
   const resources = [
     {
-      title: '',
-      href: '',
+      title: 'Minimally processed foods are more satiating and less hyperglycemic than ultraprocessed foods: a preliminary study with 98 ready-to-eat foods',
+      href: 'https://pubmed.ncbi.nlm.nih.gov/27125637/',
     },
     {
-      title: '',
-      href: '',
+      title: 'A satiety index of common foods',
+      href: 'https://pubmed.ncbi.nlm.nih.gov/7498104/',
     },
     {
       title: '',
@@ -33,10 +33,11 @@ const WholeFoodsPage = () => {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div className="lg:pr-4">
+
               {/* image */}
               <div className="relative overflow-hidden rounded-3xl bg-gray-900 px-6 pt-64 pb-9 shadow-2xl sm:px-12 lg:max-w-lg lg:px-8 lg:pb-8 xl:px-10 xl:pb-10">
                 <img
-                  alt='Whole Foods'
+                  alt='broccoli, kale, cabbage'
                   src={wholefoods}
                   className="absolute inset-0 size-full object-cover brightness-100 object-center"
                 />
@@ -46,19 +47,19 @@ const WholeFoodsPage = () => {
                 <div
                   aria-hidden="true"
                   className="absolute top-1/2 left-1/2 -ml-16 -translate-x-1/2 -translate-y-1/2 transform-gpu blur-3xl"
-                ></div>
-
-                {/* quote */}
-                <div className="absolute inset-x-0 top-[15%] px-6 sm:px-12 lg:px-8 xl:px-10">
-                  <figure className="relative isolate">
-                    <blockquote className="text-base/8 font-bold text-white text-center backdrop-blur-[2px] p-3 rounded-lg">
-                      <p>
-                        "A diet of whole foods is more satiating"
-                      </p>
-                    </blockquote>
-                  </figure>
+                >
                 </div>
               </div>
+
+              {/* quote */}
+              <figure className="mt-6 lg:max-w-lg">
+                <blockquote className="text-base/7 font-bold text-gray-900 sm:text-lg/8">
+                  <p>
+                    "Raw or minimally processed foods correlate with decreased glycaemic glucose equivalent and increased satiety index, compared to ultra-processed foods."
+                  </p>
+                </blockquote>
+              </figure>
+                
             </div>
 
             {/* text */}
@@ -72,18 +73,10 @@ const WholeFoodsPage = () => {
                 </h1>
                 <div className="max-w-xl">
                   <p className="mt-8">
-                    <strong>Whole foods</strong> 
-                    
+                    <strong>Food structure or matrix</strong> contributes to satiety and glycaemic responses. Whole foods or minimally processed foods (NOVA Group 1) maintain their original structure and contents such as water. Ultra-processed foods (NOVA Group 4) are industrially assembled from multiple fractionated substances and additives, with the matrix of the original food, including water, entirely replaced or depleted. A study by Fardet (2016) found that highly deconstructed foods register higher glycaemic responses, measured through glycaemic index (related to carbohydrates), glycaemic load (related to amount of food consumed) and glycaemic glucose equivalent (GGE). GGE is a newer concept that can be used quantitatively and is explained as follows: if a serving of food contributes 15 GGE (g per 100 g), it is equivalent to consuming 15 grams of glucose. Higher glycaemic responses produce a 'sugar high', release of insulin, followed by a 'sugar crash', resulting in a cyclical increase in hunger and decrease in satiety. The GGE is significantly and positively correlated with the processing group, and significantly and inversely correlated with the satiety index. Raw and minimally proceessed foods are associated with decreased GGE, and increased satiety index, compared to ultra-processed foods.
                      
                   </p>
-                  <p className="mt-8">
-                   {' '}
-                    <strong>Whole foods</strong> 
-                  </p>
-                  <p className="mt-8">
-                    <strong>Whole foods</strong> 
-                  </p>
-                  <p></p>
+                  
                 </div>
               </div>
 
