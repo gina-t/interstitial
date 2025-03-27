@@ -1,9 +1,9 @@
 import { GradientBackground } from '../components/Gradient';
 import GridPattern from '../components/GridPattern';
-import diabetes from '../assets/diabetes.jpg';
+import exercise from '../assets/exercise-unsplash.jpg';
 import { ChevronRightIcon } from '@heroicons/react/20/solid';
 
-const DiabetesPage = () => {
+const ExercisePage = () => {
   const stats = [
     { label: '', value: '' },
     { label: '', value: '' },
@@ -11,18 +11,17 @@ const DiabetesPage = () => {
   ];
   const resources = [
     {
-      title: 'Behavioral approaches to nutrition and eating patterns for managing type 2 diabetes: A review',
-      href: 'https://www.sciencedirect.com/science/article/pii/S2667036423000043',
+      title: '',
+      href: '',
     },
     {
-      title: 'The State of Diabetes Mellitus in Australia in 2024',
-      href: 'https://westernsydneydiabetes.com.au/uploads/2024/07/The-State-of-Diabetes-Mellitus-in-Australia-in-2024.pdf',
+      title: '',
+      href: '',
     },
     {
-      title: 'Diabetes: Australian facts',
-      href: 'https://www.aihw.gov.au/reports/diabetes/diabetes/contents/how-common-is-diabetes/type-2-diabetes#_Toc97889422',
+      title: '',
+      href: '',
     },
-    
   ];
 
   return (
@@ -33,12 +32,11 @@ const DiabetesPage = () => {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div className="lg:pr-4">
-
               {/* image */}
               <div className="relative overflow-hidden rounded-3xl bg-gray-900 px-6 pt-64 pb-9 shadow-2xl sm:px-12 lg:max-w-lg lg:px-8 lg:pb-8 xl:px-10 xl:pb-10">
                 <img
-                  alt='assorted pills'
-                  src={diabetes}
+                  alt="broccoli, kale, cabbage"
+                  src={exercise}
                   className="absolute inset-0 size-full object-cover brightness-100 object-center"
                 />
 
@@ -47,43 +45,30 @@ const DiabetesPage = () => {
                 <div
                   aria-hidden="true"
                   className="absolute top-1/2 left-1/2 -ml-16 -translate-x-1/2 -translate-y-1/2 transform-gpu blur-3xl"
-                > 
-                </div>
+                ></div>
               </div>
 
               {/* quote */}
               <figure className="mt-6 lg:max-w-lg">
-                <blockquote className="text-base/8 font-bold text-gray-900 sm:text-lg/8">
-                  <p>
-                  "Over 1.3 million people were newly diagnosed (incidence) with type 2 diabetes between 2000 and 2021. This is approximately 60,400 people each year, an average of 165 newly diagnosed people a day."
-                  </p>
+                <blockquote className="text-base/7 font-bold text-gray-900 sm:text-lg/8">
+                  <p>""</p>
                 </blockquote>
               </figure>
-              
             </div>
 
             {/* text */}
             <div>
               <div className="text-base/7 text-gray-700 lg:max-w-lg">
                 <p className="text-base/7 font-semibold text-indigo-600">
-                  Diabetes Mellitus
+                  Exercise
                 </p>
                 <h1 className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
                   Empower the consumer to make informed choices
                 </h1>
                 <div className="max-w-xl">
                   <p className="mt-8">
-                    <strong>Type 2 Diabetes Mellitus</strong> 
-                     
+                    <strong>Exercise</strong>
                   </p>
-                  <p className="mt-8">
-                   {' '}
-                    <strong>Ultra-processed foods and type 2 diabetes</strong> 
-                  </p>
-                  <p className="mt-8">
-                    <strong>Behavioural approaches to managing type 2 diabetes</strong> 
-                  </p>
-                  <p></p>
                 </div>
               </div>
 
@@ -129,4 +114,4 @@ const DiabetesPage = () => {
   );
 };
 
-export default DiabetesPage;
+export default ExercisePage;

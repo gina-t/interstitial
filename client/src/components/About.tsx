@@ -71,7 +71,7 @@ export default function About() {
                       fructose, lactose, hydrogenated oils, hydrolysed proteins,
                       soya protein isolate, gluten and whey protein.
                       Fractionated components do not retain the matrix of the
-                      food from which it is milled, or its nutrients.
+                      food from which it is extracted, or its nutrients and water.
                     </p>
                     <p>
                       These components, typically not found in your pantry, are
@@ -109,87 +109,7 @@ export default function About() {
                     </span>
                   </span>
                 </li>
-
-                {/* accessibility to whole-foods */}
-                <li className="flex gap-x-3">
-                  <Link
-                    to="/whole-foods"
-                    className="mt-1 flex-none text-indigo-600 hover:text-indigo-900"
-                    aria-label="Learn more about Whole-Foods"
-                  >
-                    <LinkIcon
-                      aria-hidden="true"
-                      className="mt-1 size-4 flex-none text-indigo-600"
-                    />
-                  </Link>
-                  <span>
-                    <Link to="/whole-foods">
-                      <strong className="font-semibold text-gray-900 hover:text-indigo-600">
-                        Whole Foods.
-                      </strong>{' '}
-                    </Link>
-                    <p>
-                    Whole foods are obtained directly from plants and animals and do not undergo any alteration. Minimally processed foods are those submitted to cleaning, removal of inedible parts, grinding, fermentation, pasteurisation and processes that do not add substances. Whole foods or minimally processed foods are more satiating and less hyperglycemic than ultra-processed foods.
-                    </p>
-                    <span className="ml-1 inline-flex items-center text-indigo-600">
-                      <Link
-                        to="/whole-foods"
-                        className="inline-flex items-center hover:text-indigo-900"
-                      >
-                        Read more
-                        <ChevronRightIcon
-                          aria-hidden="true"
-                          className="size-4 ml-1 align-text-bottom"
-                        />
-                      </Link>
-                    </span>
-                  </span>
-                </li>
-
-                {/* food labelling */}
-                <li className="flex gap-x-3">
-                  <Link
-                    to="/food-labelling"
-                    className="mt-1 flex-none text-indigo-600 hover:text-indigo-900"
-                    aria-label="Learn more about Food Labelling"
-                  >
-                    <LinkIcon
-                      aria-hidden="true"
-                      className="mt-1 size-4 flex-none text-indigo-600"
-                    />
-                  </Link>
-                  <span>
-                    <Link to="/food-labelling">
-                      <strong className="font-semibold text-gray-900 hover:text-indigo-600">
-                        Food labelling.
-                      </strong>{' '}
-                    </Link>
-                    <p>
-                      Food labelling is opaque and the manufacturers of
-                      ultra-processed foods are not obligated to describe the
-                      industrial processes used in production of their products.
-                      Furthermore the listing of 5 or more ingredients with
-                      chemical names, is not meaningful to the uninformed
-                      consumer. Frequently, nutritional information is
-                      cryptically written in small print, and food labels
-                      promote misleading claims, cherry picking positive
-                      nutrients and omitting negative ingredients.
-                    </p>
-                    <span className="ml-1 inline-flex items-center text-indigo-600">
-                      <Link
-                        to="/food-labelling"
-                        className="inline-flex items-center hover:text-indigo-900"
-                      >
-                        Read more
-                        <ChevronRightIcon
-                          aria-hidden="true"
-                          className="size-4 ml-1 align-text-bottom"
-                        />
-                      </Link>
-                    </span>
-                  </span>
-                </li>
-
+                
                 {/* marketing strategies */}
                 <li className="flex gap-x-3">
                   <Link
@@ -230,12 +150,12 @@ export default function About() {
                   </span>
                 </li>
 
-                {/* behavioural economics */}
+                {/* whole-foods */}
                 <li className="flex gap-x-3">
                   <Link
-                    to="/behavioral-economics"
+                    to="/whole-foods"
                     className="mt-1 flex-none text-indigo-600 hover:text-indigo-900"
-                    aria-label="Learn more about Behavioral Economics"
+                    aria-label="Learn more about Whole-Foods"
                   >
                     <LinkIcon
                       aria-hidden="true"
@@ -243,59 +163,17 @@ export default function About() {
                     />
                   </Link>
                   <span>
-                    <Link to="/behavioral-economics">
+                    <Link to="/whole-foods">
                       <strong className="font-semibold text-gray-900 hover:text-indigo-600">
-                        Behavioural Economics and the psychology of consumer
-                        decision-making.
+                        Whole Foods.
                       </strong>{' '}
                     </Link>
                     <p>
-                      Behavioural economics is about studying patterns of human
-                      behaviour, gaining valuable insights. In the context of
-                      diet,such insights include knowledge about the effects of
-                      social norms, discounting of delayed consequences, neglect
-                      of sustainability and health information, and nudging.
+                    Whole foods are obtained directly from plants and animals and do not undergo any alteration. Minimally processed foods are those submitted to cleaning, removal of inedible parts, grinding, fermentation, pasteurisation and processes that do not add substances. Whole foods or minimally processed foods are more satiating and less hyperglycemic than ultra-processed foods.
                     </p>
                     <span className="ml-1 inline-flex items-center text-indigo-600">
                       <Link
-                        to="/behavioral-economics"
-                        className="inline-flex items-center hover:text-indigo-900"
-                      >
-                        Read more
-                        <ChevronRightIcon
-                          aria-hidden="true"
-                          className="size-4 ml-1 align-text-bottom"
-                        />
-                      </Link>
-                    </span>
-                  </span>
-                </li>
-                {/* calorie literacy */}
-                <li className="flex gap-x-3">
-                  <Link
-                    to="/calorie-literacy"
-                    className="mt-1 flex-none text-indigo-600 hover:text-indigo-900"
-                    aria-label="Learn more about Calorie Literacy"
-                  >
-                    <LinkIcon
-                      aria-hidden="true"
-                      className="mt-1 size-4 flex-none text-indigo-600"
-                    />
-                  </Link>
-                  <span>
-                    <Link to="/calorie-literacy">
-                      <strong className="font-semibold text-gray-900 hover:text-indigo-600">
-                        Calorie Literacy.
-                      </strong>{' '}
-                    </Link>
-                    <p>
-                      Know the appropriate calorie intake for your body, age and
-                      energy expenditure. Know what constitutes a whole-food
-                      diet.
-                    </p>
-                    <span className="ml-1 inline-flex items-center text-indigo-600">
-                      <Link
-                        to="/calorie-literacy"
+                        to="/whole-foods"
                         className="inline-flex items-center hover:text-indigo-900"
                       >
                         Read more
@@ -308,10 +186,128 @@ export default function About() {
                   </span>
                 </li>
 
-                {/* exercise literacy */}
+                {/* food labels */}
                 <li className="flex gap-x-3">
                   <Link
-                    to="/exercise-literacy"
+                    to="/food-labels"
+                    className="mt-1 flex-none text-indigo-600 hover:text-indigo-900"
+                    aria-label="Learn more about Food Labelling"
+                  >
+                    <LinkIcon
+                      aria-hidden="true"
+                      className="mt-1 size-4 flex-none text-indigo-600"
+                    />
+                  </Link>
+                  <span>
+                    <Link to="/food-labels">
+                      <strong className="font-semibold text-gray-900 hover:text-indigo-600">
+                        Food Labels.
+                      </strong>{' '}
+                    </Link>
+                    <p>
+                      The manufacturers of
+                      ultra-processed foods are not obligated to describe the degree of 
+                      industrial processing used in production of their products.
+                      Furthermore the listing of 5 or more ingredients with
+                      chemical names, is not meaningful to the uninformed
+                      consumer. Frequently, nutritional information is
+                      cryptically written in small print, and food labels
+                      promote misleading claims, cherry picking positive
+                      nutrients and omitting negative ingredients.
+                    </p>
+                    <span className="ml-1 inline-flex items-center text-indigo-600">
+                      <Link
+                        to="/food-labels"
+                        className="inline-flex items-center hover:text-indigo-900"
+                      >
+                        Read more
+                        <ChevronRightIcon
+                          aria-hidden="true"
+                          className="size-4 ml-1 align-text-bottom"
+                        />
+                      </Link>
+                    </span>
+                  </span>
+                </li>
+
+                
+                {/* behavioural economics */}
+                <li className="flex gap-x-3">
+                  <Link
+                    to="/behavioural-economics"
+                    className="mt-1 flex-none text-indigo-600 hover:text-indigo-900"
+                    aria-label="Learn more about Behavioral Economics"
+                  >
+                    <LinkIcon
+                      aria-hidden="true"
+                      className="mt-1 size-4 flex-none text-indigo-600"
+                    />
+                  </Link>
+                  <span>
+                    <Link to="/behavioural-economics">
+                      <strong className="font-semibold text-gray-900 hover:text-indigo-600">
+                        Behavioural Economics.
+                      </strong>{' '}
+                    </Link>
+                    <p>
+                      Behavioural economics is about studying and understanding patterns of human behaviour, and merging insights from psychology and cognitive science with economic principles. Consumer behaviour is influenced by structural, socially conditioned, and cognitive factors.
+                    </p>
+                    <span className="ml-1 inline-flex items-center text-indigo-600">
+                      <Link
+                        to="/behavioural-economics"
+                        className="inline-flex items-center hover:text-indigo-900"
+                      >
+                        Read more
+                        <ChevronRightIcon
+                          aria-hidden="true"
+                          className="size-4 ml-1 align-text-bottom"
+                        />
+                      </Link>
+                    </span>
+                  </span>
+                </li>
+                {/* calorie */}
+                <li className="flex gap-x-3">
+                  <Link
+                    to="/calorie"
+                    className="mt-1 flex-none text-indigo-600 hover:text-indigo-900"
+                    aria-label="Learn more about Calorie Literacy"
+                  >
+                    <LinkIcon
+                      aria-hidden="true"
+                      className="mt-1 size-4 flex-none text-indigo-600"
+                    />
+                  </Link>
+                  <span>
+                    <Link to="/calorie">
+                      <strong className="font-semibold text-gray-900 hover:text-indigo-600">
+                        Calorie Literacy.
+                      </strong>{' '}
+                    </Link>
+                    <p>
+                      Know the appropriate calorie intake for your body, age and
+                      energy expenditure. Know what constitutes a whole-food
+                      diet.
+                    </p>
+                    <span className="ml-1 inline-flex items-center text-indigo-600">
+                      <Link
+                        to="/calorie"
+                        className="inline-flex items-center hover:text-indigo-900"
+                      >
+                        Read more
+                        <ChevronRightIcon
+                          aria-hidden="true"
+                          className="size-4 ml-1 align-text-bottom"
+                        />
+                      </Link>
+                    </span>
+                  </span>
+                </li>
+
+                {/* exercise */}
+                <li className="flex gap-x-3">
+                  <Link
+                    to="/exercise"
                     className="mt-1 flex-none text-indigo-600 hover:text-indigo-900"
                     aria-label="Learn more about Exercise Literacy"
                   >
@@ -321,9 +317,9 @@ export default function About() {
                     />
                   </Link>
                   <span>
-                    <Link to="/exercise-literacy">
+                    <Link to="/exercise">
                       <strong className="font-semibold text-gray-900 hover:text-indigo-600">
-                        Exercise literacy.
+                        Exercise.
                       </strong>{' '}
                     </Link>
                     <p>
@@ -339,7 +335,7 @@ export default function About() {
                     </p>
                     <span className="ml-1 inline-flex items-center text-indigo-600">
                       <Link
-                        to="/exercise-literacy"
+                        to="/exercise"
                         className="inline-flex items-center hover:text-indigo-900"
                       >
                         Read more
@@ -354,7 +350,7 @@ export default function About() {
               </ul>
 
               <p className="mt-8">
-                Knowledge about the foods we consume, literacy about calories
+                Knowledge about the foods we consume, about calories
                 and energy expenditure, and incorporating exercise into our
                 daily lives, are pathways to maintaining our well-being.
               </p>
@@ -366,7 +362,7 @@ export default function About() {
                 Library of Medicine, peer-reviewed journals, and the Australian
                 Institute of Health and Welfare, about nutrition and exercise.
                 To give you access to an external nutrition API, and total daily
-                enery expenditure calculator.
+                energy expenditure calculator.
               </p>
             </div>
           </div>

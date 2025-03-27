@@ -5,9 +5,9 @@ import { ChevronRightIcon } from '@heroicons/react/20/solid';
 
 const MarketingStrategiesPage = () => {
   const stats = [
-    { label: '', value: '' },
-    { label: '', value: '' },
-    { label: '', value: '' },
+    { label: 'Market share of global seeds held by 4 corporations', value: '67%' },
+    { label: 'Market share of global agrochemicals held by 4 corporations', value: '70%' },
+    { label: 'Market share of global grain trading held by 4 corporations', value: '90%' },
   ];
   const resources = [
     {
@@ -23,18 +23,15 @@ const MarketingStrategiesPage = () => {
       href: 'https://www.tandfonline.com/doi/full/10.1080/19460171.2023.2191859#abstract',
     },
     {
-      title:
-        'Ultra-Processed Profits: The Political Economy of Countering the Global Spread of Ultra-Processed Foods – A Synthesis Review on the Market and Political Practices of Transnational Food Corporations and Strategic Public Health Responses',
+      title: 'Ultra-Processed Profits: The Political Economy of Countering the Global Spread of Ultra-Processed Foods – A Synthesis Review on the Market and Political Practices of Transnational Food Corporations and Strategic Public Health Responses',
       href: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC9309965/',
     },
     {
-      title:
-        'Involvement of the food industry in nutrition conferences in Latin America and Caribbean',
+      title: 'Involvement of the food industry in nutrition conferences in Latin America and Caribbean',
       href: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC10195453/',
     },
     {
-      title:
-        'The role of transnational food and agriculture corporations in creating and responding to food crises',
+      title: 'The role of transnational food and agriculture corporations in creating and responding to food crises',
       href: 'https://canadianfoodstudies.uwaterloo.ca/index.php/cfs/article/view/91',
     },
     {
@@ -45,6 +42,10 @@ const MarketingStrategiesPage = () => {
       title: 'Transnational Corporations and the Global Food System',
       href: 'https://awellfedworld.org/wp-content/uploads/pdf/McLaughlin%20TNCs%20and%20the%20Global%20Food%20System.pdf',
     },
+    {
+      title: 'Gene-editing technology is owned and controlled by big corporations',
+      href: 'https://www.greens-efa.eu/files/assets/docs/chapter_6_gene-editing_technology_is_owned_and_controlled_by_big_corporations.pdf',
+    }
   ];
 
   return (
@@ -97,15 +98,18 @@ const MarketingStrategiesPage = () => {
                   <p className="mt-8">
                     <strong>Big Food</strong> is a term coined by Neil Hamilton
                     (2004) to describe the agrifood transnational corporations (TNCs)
-                    that dominate global food production. Big Food corporations,
+                    that dominate global food production. Big Food TNCs,
                     including Nestlé, PepsiCo, Mondelez International,
                     Coca-Cola, Cargill, Kraft Heinz, General Mills, Kellog's,
                     Tyson Foods, Unilever, and Mars are the largest producers of
                     ultra-processed foods re-shaping traditional and culturally
-                    appropriate dietary patterns. An agrifood TNC may contract with the farmer to produce meat, dairy products, grain, vegetables, fruit, using seeds, chicks, or other “inputs” provided by the corporation; feeding or fertilizing according to the corporation's computerized schedule using the corporation's feed or fertilizer; and borrowing money, frequently from the same corporation, to construct the buildings and buy or lease the equipment needed to fulfill the contract. 
-                    Profit-driven with political might, Big Food are transmogrifying food production and food
-                    presentation, and the consumer is utterly disconnected from
-                    the facts:
+                    appropriate dietary patterns. 
+                    An agrifood TNC may contract with the farmer to produce meat, dairy products, grain, vegetables, fruit, using inputs supplied by the corporation; feeding or fertilizing according to the corporation's computerized schedule using the corporation's feed or fertilizer; and borrowing money, frequently from the same corporation, to construct the buildings and buy or lease the equipment needed to fulfill the contract. 
+                    Inputs for eg. genetically modified seeds and agrochemicals, are controlled by Bayer, DowDuPont and SinoChem-ChemChina. These corporations successfully secured licensing agreements with the holders of foundational CRISPR technology patents for gene-editing and plant breeding. DowDuPont combined 48 basic patents into a patent pool, thus gaining unprecedented market power due to its ability to grant access to this patent pool, with conditions including appropriate fees, reporting
+                    obligations, compliance with guidelines, and confidentiality. DowDuPont is now the 'gatkeeper of an international patent cartel' (Patente-Kartell für große Konzerne, 2019).
+ 
+                    Profit-driven with unprecedented market share and political might, Big Food are transmogrifying food production and food
+                    presentation, and the consumer is utterly disconnected from the facts:
                     <li>
                       Monoculture crops or monocropping, defined as planting the
                       same crops in the same fields year after year (typically
@@ -134,9 +138,12 @@ const MarketingStrategiesPage = () => {
                       crammed into barren battery cages with their beaks removed
                       and no place to roost. Salmon are farmed in overcrowded
                       pens, fed antibiotics and growth hormones, suffer from
-                      bacterial outbreaks and large mortality events, and dying
+                      bacterial outbreaks and large mortality events, dying
                       and dead salmon are harvested and sold for human
-                      consumption.
+                      consumption, and due to oxygen depletion endanger species such as the Tasmanian Maugean skate.
+                    </li>
+                    <li>
+                      Gene-editing technologies for major row crops are owned and controlled by agrifood TNCs through patent pools. DowDuPont's agricultural division was spun off in 2019 as an independent entity named Corteva. Corteva currently dominates CRISPR technologies in the agricultural sector.
                     </li>
                     <li>
                       Packaging of ultra-processed foods, whilst convenient and practical to
