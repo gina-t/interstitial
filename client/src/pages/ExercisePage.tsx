@@ -5,22 +5,22 @@ import { ChevronRightIcon } from '@heroicons/react/20/solid';
 
 const ExercisePage = () => {
   const stats = [
-    { label: '', value: '' },
-    { label: '', value: '' },
-    { label: '', value: '' },
+    { label: 'Global estimate of physical inactivity in adults', value: '27.5%' },
+    { label: 'Global estimate of physical inactivity in adolescents', value: '81%' },
+    { label: 'Minutes per week of moderate-intensity physical activity recommended by WHO', value: '150-300' },
   ];
   const resources = [
     {
-      title: '',
-      href: '',
+      title: 'Exercise sustains the hallmarks of health',
+      href: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC9923435/#:~:text=Exercise%20impacts%20the%20major%20hallmarks,well%20as%20repair%20and%20regeneration.',
     },
     {
-      title: '',
-      href: '',
+      title: '2020 WHO guidelines on physical activity and sedentary behaviour',
+      href: 'https://iris.who.int/bitstream/handle/10665/336656/9789240015128-eng.pdf?sequence=1',
     },
     {
-      title: '',
-      href: '',
+      title: 'Vigorous physical activity, incident heart disease, and cancer: how little is enough?',
+      href: 'https://academic.oup.com/eurheartj/article/43/46/4801/6771381',
     },
   ];
 
@@ -35,7 +35,7 @@ const ExercisePage = () => {
               {/* image */}
               <div className="relative overflow-hidden rounded-3xl bg-gray-900 px-6 pt-64 pb-9 shadow-2xl sm:px-12 lg:max-w-lg lg:px-8 lg:pb-8 xl:px-10 xl:pb-10">
                 <img
-                  alt="broccoli, kale, cabbage"
+                  alt="bodybuilder"
                   src={exercise}
                   className="absolute inset-0 size-full object-cover brightness-100 object-center"
                 />
@@ -45,13 +45,14 @@ const ExercisePage = () => {
                 <div
                   aria-hidden="true"
                   className="absolute top-1/2 left-1/2 -ml-16 -translate-x-1/2 -translate-y-1/2 transform-gpu blur-3xl"
-                ></div>
+                >
+                </div>
               </div>
 
               {/* quote */}
               <figure className="mt-6 lg:max-w-lg">
                 <blockquote className="text-base/7 font-bold text-gray-900 sm:text-lg/8">
-                  <p>""</p>
+                  <p>"Regular exercise is essentially considered a non-pharmacological polypill for patients with certain comorbidities."</p>
                 </blockquote>
               </figure>
             </div>
@@ -67,7 +68,54 @@ const ExercisePage = () => {
                 </h1>
                 <div className="max-w-xl">
                   <p className="mt-8">
-                    <strong>Exercise</strong>
+                    <strong>WHO</strong> defines physical activity as any bodily movement produced by skeletal muscles that requires energy expenditure. The energy expenditure can be measured in calories. Physical activity in daily life can be categorized into occupational, sports, conditioning, household chores, or other activities. Exercise is a subset of physical activity that is planned, structured, and repetitive, with an objective to improve physical fitness. Levels of physical activity are described as sedentary, light, moderate, very active and vigorous (athlete). 
+                  </p>
+                  <p className="mt-8">  
+                    Globally, we are leading increasingly sedentary lifestyles due to the rise of technology (screen time) and urbanization (motorised transport). Sedentary behaviour is associated with obesity, type 2 diabetes, cardiovascular disease, and increased mortality rates. Incorporating scheduled exercise may appear burdensome to our demanding lifestyles, but we can achieve physical activity through short bouts in our daily lives, without specialised equipment or expensive gym memeberships. Walking about 5000 steps per day (about 3km) or a 20 minute bout of body weight exercises can be sufficient to achieve the recommended levels of physical activity to improve our health and well-being.
+                  </p>
+                  <p className="mt-8">
+                    For adults aged 18-64 years, WHO recommends at least: 
+                    <li>
+                      150 to 300 minutes of moderate-intensity aerobic physical activity;
+                    </li>
+                    <li>
+                      or 75 to 150 minutes of vigorous-intensity aerobic physical activity;
+                    </li>
+                    <li>
+                      or an equivalent combination of moderate- and vigorous- intensity activity; 
+                    </li>
+                    throughout the week for substantial health benefits. For additional health benefits, adults should also do muscle strengthening activities at moderate or vigorous intensity that involve major muscle groups, for 2 or more days a week. 
+                  </p>
+                  <p className="mt-8">
+                    The <strong>biological mechanisms</strong> through which regular moderate-intensity exercise sustains the major hallmarks of health was investigated by Qiu et al (2022). 
+                    <li>
+                      Protects the integrity of barriers: organelles (mitochondria and nuclei) cell membranes, internal barriers (blood-brain), and external barriers (intestinal, respiratory, skin).
+                    </li>
+                    <li>
+                      Contributes to the maintenance of local and systemic homeostasis (promotes wound healing, decreases risk of infection, anti-inflammatory, modulates innate and adaptive immune responses, decreases risk of certain cancers ).
+                    </li>
+                    <li>
+                      Benefits recycling and turnover of cells, organelles and proteins (cellular remodelling, turnover of dysfunctional organelles ).
+                    </li>
+                    <li>
+                      Stimulates coordination and adaptation of intracellular (metaboloic changes) and systemic (endocrine) circuitries.
+                    </li>
+                    <li>
+                      Modulates circadian rhythms: a nonphotic cue capable of restoring the transiently disturbed clock.
+                    </li>
+                    <li>
+                      Promotes homeostatic resilience and beneficial adapations in response to stress: modifies neural mechanisms, increases mobilisation of substrates, increases insulin sensitivity, enhances immunosurveillance and immunocompetence, alters intestinal microbiome.
+                    </li>
+                    <li>
+                      Benefits hormetic regulation:
+                    </li>
+                    <li>
+                      Modulates cellular repair and regeneration: 
+                    </li>
+                    
+                  </p>
+                  <p className="mt-8">
+                    A <strong>prospective cohort study</strong> of 71 893 adults (median age 62.5 years; 55.9% female), determined that vigorous physical activity bouts of 15-20 min/week are associated with a 16-40% lower mortality hazard ratio, with further decreases up to 50-57 min/week. These findings suggest reduced health risks may be attainable through relatively modest amounts of vigorous physical activity accrued in short bouts across the week.
                   </p>
                 </div>
               </div>

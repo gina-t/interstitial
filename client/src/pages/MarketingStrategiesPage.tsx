@@ -89,7 +89,7 @@ const MarketingStrategiesPage = () => {
             <div>
               <div className="text-base/7 text-gray-700 lg:max-w-lg">
                 <p className="text-base/7 font-semibold text-indigo-600">
-                  Marketing Strategies
+                  Big Food
                 </p>
                 <h1 className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
                   Empower the consumer to make informed choices
@@ -104,10 +104,15 @@ const MarketingStrategiesPage = () => {
                     Tyson Foods, Unilever, and Mars are the largest producers of
                     ultra-processed foods re-shaping traditional and culturally
                     appropriate dietary patterns. 
+                  </p>
+                  <p className="mt-8">
                     An agrifood TNC may contract with the farmer to produce meat, dairy products, grain, vegetables, fruit, using inputs supplied by the corporation; feeding or fertilizing according to the corporation's computerized schedule using the corporation's feed or fertilizer; and borrowing money, frequently from the same corporation, to construct the buildings and buy or lease the equipment needed to fulfill the contract. 
+                  </p>
+                  <p className="mt-8">
                     Inputs for eg. genetically modified seeds and agrochemicals, are controlled by Bayer, DowDuPont and SinoChem-ChemChina. These corporations successfully secured licensing agreements with the holders of foundational CRISPR technology patents for gene-editing and plant breeding. DowDuPont combined 48 basic patents into a patent pool, thus gaining unprecedented market power due to its ability to grant access to this patent pool, with conditions including appropriate fees, reporting
                     obligations, compliance with guidelines, and confidentiality. DowDuPont is now the 'gatkeeper of an international patent cartel' (Patente-Kartell für große Konzerne, 2019).
- 
+                  </p>
+                  <p className="mt-8">
                     Profit-driven with unprecedented market share and political might, Big Food are transmogrifying food production and food
                     presentation, and the consumer is utterly disconnected from the facts:
                     <li>
