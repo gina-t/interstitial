@@ -18,6 +18,8 @@ import MarketingStrategiesPage from "./pages/MarketingStrategiesPage.tsx";
 import BehaviouralApproachesPage from "./pages/BehaviouralApproachesPage.tsx";
 import FoodLabelsPage from "./pages/FoodLabelsPage.tsx";
 import ExercisePage from "./pages/ExercisePage.tsx";
+import CaloriesPage from "./pages/CaloriesPage.tsx";
+import LearnMorePage from "./pages/LearnMorePage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -87,6 +89,14 @@ const router = createBrowserRouter([
         path: 'exercise',
         element: <ExercisePage />,
       },  
+      {
+        path: 'calories',
+        element: <CaloriesPage />,
+      },  
+      {
+        path: 'learn-more',
+        element: <LearnMorePage />,
+      },
     ],
   },
 ]);

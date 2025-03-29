@@ -33,15 +33,15 @@ export default function Hero() {
               </span>
             </Link>
 
-            <Link to='/resources' className='ml-4'>
-              <span className="inline-flex items-center space-x-2 text-sm/6 font-medium text-gray-600">
+            {/* <Link to='/resources' className='ml-4'>
+              <span className="inline-flex items-center text-sm/6 font-medium text-gray-600">
                 <span className='whitespace-nowrap'>Evidence Based</span>
                 <ChevronRightIcon
                   aria-hidden="true"
-                  className="size-5 text-gray-400"
+                  className="size-5 text-gray-400 ml-1"
                 />
               </span>
-            </Link>
+            </Link> */}
               
           
           </div>
@@ -66,7 +66,7 @@ export default function Hero() {
               <span aria-hidden="true">→</span>
             </Link> */}
 
-            <Link to='/about' className='ml-4'>
+            <Link to='/learn-more' className='ml-4'>
               <span className="inline-flex items-center space-x-2 text-sm/6 font-medium text-gray-600">
                 <span className='whitespace-nowrap'>Learn More</span>
                 <ChevronRightIcon

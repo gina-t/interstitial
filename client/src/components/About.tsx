@@ -211,7 +211,7 @@ export default function About() {
                       Furthermore the listing of 5 or more ingredients with
                       chemical names, is not meaningful to the uninformed
                       consumer. Frequently, nutritional information is
-                      cryptically written in small print, and food labels
+                      cryptically written in small font, and food labels
                       promote misleading claims, cherry picking positive
                       nutrients and omitting negative ingredients.
                     </p>
@@ -266,10 +266,10 @@ export default function About() {
                     </span>
                   </span>
                 </li>
-                {/* calorie */}
+                {/* calories */}
                 <li className="flex gap-x-3">
                   <Link
-                    to="/calorie"
+                    to="/calories"
                     className="mt-1 flex-none text-indigo-600 hover:text-indigo-900"
                     aria-label="Learn more about Calorie Literacy"
                   >
@@ -279,7 +279,7 @@ export default function About() {
                     />
                   </Link>
                   <span>
-                    <Link to="/calorie">
+                    <Link to="/calories">
                       <strong className="font-semibold text-gray-900 hover:text-indigo-600">
                         Calorie Literacy.
                       </strong>{' '}
@@ -291,7 +291,7 @@ export default function About() {
                     </p>
                     <span className="ml-1 inline-flex items-center text-indigo-600">
                       <Link
-                        to="/calorie"
+                        to="/calories"
                         className="inline-flex items-center hover:text-indigo-900"
                       >
                         Read more
