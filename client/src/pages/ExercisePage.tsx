@@ -107,15 +107,15 @@ const ExercisePage = () => {
                       Promotes homeostatic resilience and beneficial adapations in response to stress: modifies neural mechanisms, increases mobilisation of substrates, increases insulin sensitivity, enhances immunosurveillance and immunocompetence, alters intestinal microbiome.
                     </li>
                     <li>
-                      Benefits hormetic regulation:
+                      Benefits hormetic regulation. Hormesis is the concept of an adaptive biphasic dose response that may be applied to various fields including biology. At low doses, a stimulus can positively promote or regulate the physiological functions of organisms, and at high doses disrupts balance and leads to harmful effects.
                     </li>
                     <li>
-                      Modulates cellular repair and regeneration: 
+                      Modulates cellular repair and regeneration: enhances oxidative DNA damage repair, promotes proteostasis in skeletal and cardiac muscle, decreases endoplasmic reticulum stress, stimulates mitochondrial remodelling.
                     </li>
                     
                   </p>
                   <p className="mt-8">
-                    A <strong>prospective cohort study</strong> of 71 893 adults (median age 62.5 years; 55.9% female), determined that vigorous physical activity bouts of 15-20 min/week are associated with a 16-40% lower mortality hazard ratio, with further decreases up to 50-57 min/week. These findings suggest reduced health risks may be attainable through relatively modest amounts of vigorous physical activity accrued in short bouts across the week.
+                    A <strong>prospective UK cohort study</strong> of 71 893 adults (median age 62.5 years; 55.9% female), found that the adjusted 5-year absolute mortality risk was 4.17% for no vigorous physical ativity, compared to 1.10% for vigorous physical activity of ≥60 min/week. The study concluded that vigorous physical activity of 15-20 min/week is associated with a 16-40% lower mortality hazard ratio, with further decreases up to 50-57 min/week. 'These findings suggest reduced health risks may be attainable through relatively modest amounts of vigorous physical activity accrued in short bouts across the week'.
                   </p>
                 </div>
               </div>
