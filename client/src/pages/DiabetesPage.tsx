@@ -2,27 +2,57 @@ import { GradientBackground } from '../components/Gradient';
 import GridPattern from '../components/GridPattern';
 import diabetes from '../assets/diabetes.jpg';
 import { ChevronRightIcon } from '@heroicons/react/20/solid';
+import { Link } from 'react-router-dom';
 
 const DiabetesPage = () => {
   const stats = [
-    { label: '', value: '' },
-    { label: '', value: '' },
-    { label: '', value: '' },
+    {
+      label:
+        'Number of Australians living with diagnosed type 2 diabetes (prevalence, 2021)',
+      value: '1.2 million',
+    },
+    {
+      label:
+        'Number of Aboriginal and Torres Strait Islanders living with type 2 diabetes (2019)',
+      value: '51,900',
+    },
+    {
+      label:
+        'Number of Australians newly diagnosed with type 2 diabetes (incidence, 2021)',
+      value: '45,700 or 125 a day',
+    },
+    {
+      label:
+        'Number of hospitalisations associated with type 2 diabetes (2021-2022)',
+      value: '1.1 million',
+    },
   ];
   const resources = [
-    {
-      title: 'Behavioral approaches to nutrition and eating patterns for managing type 2 diabetes: A review',
-      href: 'https://www.sciencedirect.com/science/article/pii/S2667036423000043',
-    },
     {
       title: 'The State of Diabetes Mellitus in Australia in 2024',
       href: 'https://westernsydneydiabetes.com.au/uploads/2024/07/The-State-of-Diabetes-Mellitus-in-Australia-in-2024.pdf',
     },
     {
+      title: 'Report: The State of Diabetes Mellitus in Australia in 2024',
+      href: 'https://www.aph.gov.au/Parliamentary_Business/Committees/House/Health_Aged_Care_and_Sport/Inquiry_into_Diabetes/Report'
+    },
+    {
       title: 'Diabetes: Australian facts',
       href: 'https://www.aihw.gov.au/reports/diabetes/diabetes/contents/how-common-is-diabetes/type-2-diabetes#_Toc97889422',
     },
-    
+    {
+      title: 'Australian Bureau of Statistics: Diabetes',
+      href: 'https://www.abs.gov.au/statistics/health/health-conditions-and-risks/diabetes/latest-release',
+    },
+    {
+      title: 'Australian Bureau of Statistics: Socioeconomic Indexes for Areas (SEIFA)',
+      href: 'https://www.abs.gov.au/statistics/people/people-and-communities/socio-economic-indexes-areas-seifa-australia/latest-release',
+    },
+    {
+      title:
+        'Behavioral approaches to nutrition and eating patterns for managing type 2 diabetes',
+      href: 'https://www.sciencedirect.com/science/article/pii/S2667036423000043',
+    },
   ];
 
   return (
@@ -33,11 +63,10 @@ const DiabetesPage = () => {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div className="lg:pr-4">
-
               {/* image */}
               <div className="relative overflow-hidden rounded-3xl bg-gray-900 px-6 pt-64 pb-9 shadow-2xl sm:px-12 lg:max-w-lg lg:px-8 lg:pb-8 xl:px-10 xl:pb-10">
                 <img
-                  alt='assorted pills'
+                  alt="assorted pills"
                   src={diabetes}
                   className="absolute inset-0 size-full object-cover brightness-100 object-center"
                 />
@@ -47,19 +76,20 @@ const DiabetesPage = () => {
                 <div
                   aria-hidden="true"
                   className="absolute top-1/2 left-1/2 -ml-16 -translate-x-1/2 -translate-y-1/2 transform-gpu blur-3xl"
-                > 
-                </div>
+                ></div>
               </div>
 
               {/* quote */}
               <figure className="mt-6 lg:max-w-lg">
                 <blockquote className="text-base/8 font-bold text-gray-900 sm:text-lg/8">
                   <p>
-                  "Over 1.3 million people were newly diagnosed (incidence) with type 2 diabetes between 2000 and 2021. This is approximately 60,400 people each year, an average of 165 newly diagnosed people a day."
+                    'Modifiable risk factors for type 2 diabetes in Australia
+                    are: overweight, obesity, physical inactivity,
+                    ultra-processed food consumption, cigarette smoking,
+                    hypertension, dyslipidaemia.'
                   </p>
                 </blockquote>
               </figure>
-              
             </div>
 
             {/* text */}
@@ -73,15 +103,100 @@ const DiabetesPage = () => {
                 </h1>
                 <div className="max-w-xl">
                   <p className="mt-8">
-                    <strong>Type 2 Diabetes Mellitus</strong> 
-                     
+                    <strong>Diabetes Mellitus (diabetes)</strong> is a chronic
+                    metabolic disease characterised by elevated blood glucose
+                    due to an inability to produce insulin, or to use insulin
+                    effectively, or both. The primary types of diabetes are:
+                    <li>
+                      type 1 diabetes: an autoimmnune disease that destroys the
+                      insulin-producing beta cells in the pancreas, leading to
+                      absolute insulin deficiency, typically diagnosed under the
+                      age of 30.
+                    </li>
+                    <li>
+                      type 2 diabetes: a progressive disease characterised by
+                      insulin resistance and relative insulin deficiency.
+                      Typically diagnosed over the age of 30, type 2 diabetes is
+                      associated with modifiable risk factors such as
+                      overweight, obesity, physical inactivity, ultra-processed
+                      food consumption, cigarette smoking, hypertension,
+                      dyslipidaemia. Risk factors that are not modifiable are:
+                      age (≥40 years), family history of diabetes, ethnicity
+                      (Aboriginal, Torres Strait Islander, Pacific Islander,
+                      Indian subcontinent), history of gestational diabetes or
+                      polycystic ovarian syndrome.
+                    </li>
+                    <li>gestational diabetes: diagnosed during pregnancy.</li>
                   </p>
                   <p className="mt-8">
-                   {' '}
-                    <strong>Ultra-processed foods and type 2 diabetes</strong> 
+                    Type 2 diabetes accounts for 87.6%, with type 1
+                    diabetes accounting for 9.6% (ABS 2022). The
+                    information henceforth is about type 2 diabetes in
+                    Australia. Burden of disease is a measure of the years of
+                    healthy life lost from living with or dying from disease. In
+                    2024, type 2 diabetes was responsible for 128,000 years of
+                    healthy life lost and accounted for 2.2% of total disease
+                    burden. Equity of access to diabetes educators, podiatrists,
+                    dietitians, general practitioners, endocrinologists, and
+                    community outreach services is variable, with outer
+                    metropolitan, rural and regional areas being problematic.
+                    The highest rates of Type 2 diabetes are found in South
+                    Western Sydney, Western Queensland, Country South Australia,
+                    Western NSW, Gippsland and remote Aboriginal communities,
+                    correlating with areas of most disadvantage (SEIFA, 2021).
+                    Data from the ABS (2022) reports that people with diabetes
+                    are more likely to:
+                    <li>
+                      Live in araes of most disadvantage (many households with low
+                      income, many people without qualifications, or many people
+                      in low skilled occupations)
+                    </li>
+                    <li>Live with disability</li>
+                    <li>Not be employed</li>
+                    <li>Completed year 10 or below only</li>
+                    <li>
+                      Measured waist circumference that increases risk of
+                      disease (≥94 cm for males, ≥80 cm for females)
+                    </li>
                   </p>
                   <p className="mt-8">
-                    <strong>Behavioural approaches to managing type 2 diabetes</strong> 
+                    The House of Representatives Standing Committee inquiry into the state of diabetes in Australia 2024 submitted 23 <strong>recommendations</strong> including:
+                    <li>
+                    That the NHMRC expedites a review of the Australian Dietary Guidelines, and ensures that the revised guidelines include adequate information for Australians living with diabetes.
+                    </li>
+                    <li>
+                    That the Australian Government implements food labelling reforms targeting added sugar to allow consumers to clearly identify the content of added sugar from front-of-pack labelling.
+                    </li>
+                    <li>
+                    That the Australian Government implements a levy on sugar-sweetened beverages, graduated accpording to the sugar content.
+                    </li>
+                    <li>
+                    That the Australian Government considers regulating the marketing and advertising of unhealthy food to children.
+                    </li>
+                    <li>
+                    That the Australian Government develops a best practice framework to tackle the problem of obesogenic environments, including through better urban planning and the development of physical activity initiatives and supports efforts to increase access to regular exercise in schools and neighbourhoods as a matter of urgency.
+                    </li>
+                    <li>
+                    That the Australian Government funds the development of education-based obesity screening information and resources.
+                    </li>
+                  </p>
+                  <p className="mt-8">
+                    <strong>Ultra-processed food consumption</strong> is correlated with overweight, obesity and type 2 diabetes.
+                    <span className="ml-1 inline-flex items-center text-indigo-600">
+                      <Link
+                        to="/ultraprocessed-foods"
+                        className="inline-flex items-center hover:text-indigo-900"
+                      >
+                        Ultra-Processed Foods
+                        <ChevronRightIcon
+                          aria-hidden="true"
+                          className="size-4 ml-1 align-text-bottom"
+                        />
+                      </Link>
+                    </span>
+                  </p>
+                  <p className="mt-8">
+                    <strong>Behavioural approaches</strong> to managing type 2 diabetes
                   </p>
                   <p></p>
                 </div>
