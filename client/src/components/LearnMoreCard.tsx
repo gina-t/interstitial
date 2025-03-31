@@ -1,36 +1,40 @@
-import { ChevronRightIcon } from "@heroicons/react/20/solid"
-import { Link } from "react-router-dom"
+import { ChevronRightIcon } from '@heroicons/react/20/solid';
+import { Link } from 'react-router-dom';
 
 const resources = [
   {
-    title: 'Ultra-Processed Foods', 
+    title: 'Ultra-Processed Foods',
     href: '/ultraprocessed-foods',
   },
   {
-    title: 'Big Food', 
+    title: 'Big Food',
     href: '/marketing-strategies',
   },
   {
-    title: 'Whole Foods', 
+    title: 'Whole Foods',
     href: '/whole-foods',
   },
   {
-    title: 'Food Labels', 
+    title: 'Food Labels',
     href: '/food-labels',
   },
   {
     title: 'Behavioural Economics',
-    href: '/behavioural-economics', 
+    href: '/behavioural-economics',
   },
   {
     title: 'Calorie Literacy',
-    href: '/calorie-literacy', 
+    href: '/calories',
   },
   {
-    title: 'Exercise', 
+    title: 'Exercise',
     href: '/exercise',
-  },  
-]
+  },
+  {
+    title: 'Diabetes Mellitus',
+    href: '/diabetes',
+  },
+];
 
 export default function ResourceCard() {
   return (
@@ -40,27 +44,28 @@ export default function ResourceCard() {
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
               <h4 className="text-base/7 font-semibold text-indigo-600">
-               Learn more about specific topics
+                Learn more about specific topics
               </h4>
-    
-              {resources.map((resource) => (
-                resource.title && resource.href && (
-                  <div key={resource.title} className="mt-3 text-sm/6">
-                    <Link 
-                      to={resource.href}
-                      className="font-semibold text-gray-900 hover:text-gray-500 inline-flex items-center"
-                    >
-                      {resource.title}
-                      <ChevronRightIcon className="h-4 w-4 ml-0.5" />
-                    </Link>
-                  </div>
-                )
-              ))}
+
+              {resources.map(
+                (resource) =>
+                  resource.title &&
+                  resource.href && (
+                    <div key={resource.title} className="mt-3 text-sm/6">
+                      <Link
+                        to={resource.href}
+                        className="font-semibold text-gray-900 hover:text-gray-500 inline-flex items-center"
+                      >
+                        {resource.title}
+                        <ChevronRightIcon className="h-4 w-4 ml-0.5" />
+                      </Link>
+                    </div>
+                  )
+              )}
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
-

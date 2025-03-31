@@ -361,7 +361,7 @@ export default function About() {
                 To give you evidence-based information sourced from the National
                 Library of Medicine, peer-reviewed journals, and the Australian
                 Institute of Health and Welfare, about nutrition and exercise.
-                To give you access to an external nutrition API, and total daily
+                To give you access to an external Nutrition API, calorie tracker, and total daily
                 energy expenditure calculator.
               </p>
             </div>

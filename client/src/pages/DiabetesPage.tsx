@@ -49,6 +49,19 @@ const DiabetesPage = () => {
       href: 'https://www.abs.gov.au/statistics/people/people-and-communities/socio-economic-indexes-areas-seifa-australia/latest-release',
     },
     {
+      title: 'AIHW: Type 2 diabetes prevalence—variation by Primary Health Network (PHN) Adults 18+ years, 2018',
+      href: 'https://www.arcgis.com/apps/dashboards/cc511c075a474b2dbc07cc8d6d6b2edf',
+    },
+    {
+      title: 'Western Sydney Hotspot',
+      href: 'https://westernsydneydiabetes.com.au/western-sydney/western-sydney-hotspot/',
+    },
+    {
+      title:
+        'The House of Representatives Standing Committee inquiry into the state of diabetes in Australia 2024',
+      href: 'https://www.aph.gov.au/Parliamentary_Business/Committees/House/Health_Aged_Care_and_Sport/Inquiry_into_Diabetes/Report',
+    },
+    {
       title:
         'Behavioral approaches to nutrition and eating patterns for managing type 2 diabetes',
       href: 'https://www.sciencedirect.com/science/article/pii/S2667036423000043',
@@ -86,7 +99,7 @@ const DiabetesPage = () => {
                     'Modifiable risk factors for type 2 diabetes in Australia
                     are: overweight, obesity, physical inactivity,
                     ultra-processed food consumption, cigarette smoking,
-                    hypertension, dyslipidaemia.'
+                    hypertension, and dyslipidaemia.'
                   </p>
                 </blockquote>
               </figure>
@@ -108,42 +121,42 @@ const DiabetesPage = () => {
                     due to an inability to produce insulin, or to use insulin
                     effectively, or both. The primary types of diabetes are:
                     <li>
-                      type 1 diabetes: an autoimmnune disease that destroys the
+                      Type 1 diabetes: an autoimmnune disease that destroys the
                       insulin-producing beta cells in the pancreas, leading to
-                      absolute insulin deficiency, typically diagnosed under the
+                      absolute insulin deficiency. Typically diagnosed under the
                       age of 30.
                     </li>
                     <li>
-                      type 2 diabetes: a progressive disease characterised by
+                      Type 2 diabetes: a progressive disease characterised by
                       insulin resistance and relative insulin deficiency.
                       Typically diagnosed over the age of 30, type 2 diabetes is
                       associated with modifiable risk factors such as
                       overweight, obesity, physical inactivity, ultra-processed
-                      food consumption, cigarette smoking, hypertension,
+                      food consumption, cigarette smoking, hypertension, and
                       dyslipidaemia. Risk factors that are not modifiable are:
                       age (≥40 years), family history of diabetes, ethnicity
                       (Aboriginal, Torres Strait Islander, Pacific Islander,
                       Indian subcontinent), history of gestational diabetes or
                       polycystic ovarian syndrome.
                     </li>
-                    <li>gestational diabetes: diagnosed during pregnancy.</li>
+                    <li>Gestational diabetes: diagnosed during pregnancy.</li>
                   </p>
                   <p className="mt-8">
-                    Type 2 diabetes accounts for 87.6%, with type 1
-                    diabetes accounting for 9.6% (ABS 2022). The
+                    Type 2 accounts for 87.6% of diabetes and type 1 for 9.6% (ABS 2022). The
                     information henceforth is about type 2 diabetes in
                     Australia. Burden of disease is a measure of the years of
-                    healthy life lost from living with or dying from disease. In
+                    healthy life lost from living with, or dying from disease. In
                     2024, type 2 diabetes was responsible for 128,000 years of
                     healthy life lost and accounted for 2.2% of total disease
                     burden. Equity of access to diabetes educators, podiatrists,
-                    dietitians, general practitioners, endocrinologists, and
+                    dietitians, general practitioners, endocrinologists, ophthalmologists and
                     community outreach services is variable, with outer
                     metropolitan, rural and regional areas being problematic.
-                    The highest rates of Type 2 diabetes are found in South
-                    Western Sydney, Western Queensland, Country South Australia,
-                    Western NSW, Gippsland and remote Aboriginal communities,
-                    correlating with areas of most disadvantage (SEIFA, 2021).
+                  </p>
+                  <p className="mt-8">
+                    The highest rates of type 2 diabetes by primary health network are found in Country South Australia, Western Queensland, South Western Sydney, Gippsland, Western New South Wales, Northern Territory, Murrumbidgee, Western Sydney, Murray, Darling Downs and Moreton, correlating with areas of most disadvantage (AIHW, 2018).
+                  </p>
+                  <p className="mt-8">
                     Data from the ABS (2022) reports that people with diabetes
                     are more likely to:
                     <li>
@@ -153,7 +166,7 @@ const DiabetesPage = () => {
                     </li>
                     <li>Live with disability</li>
                     <li>Not be employed</li>
-                    <li>Completed year 10 or below only</li>
+                    <li>Attained year 10 or below in education</li>
                     <li>
                       Measured waist circumference that increases risk of
                       disease (≥94 cm for males, ≥80 cm for females)
@@ -165,16 +178,16 @@ const DiabetesPage = () => {
                     That the NHMRC expedites a review of the Australian Dietary Guidelines, and ensures that the revised guidelines include adequate information for Australians living with diabetes.
                     </li>
                     <li>
-                    That the Australian Government implements food labelling reforms targeting added sugar to allow consumers to clearly identify the content of added sugar from front-of-pack labelling.
+                    That the Australian Government implements food labelling reforms targeting added sugar to allow consumers to clearly identify the content of added sugar from front-of-package labelling.
                     </li>
                     <li>
-                    That the Australian Government implements a levy on sugar-sweetened beverages, graduated accpording to the sugar content.
+                    That the Australian Government implements a levy on sugar-sweetened beverages, graduated according to the sugar content.
                     </li>
                     <li>
                     That the Australian Government considers regulating the marketing and advertising of unhealthy food to children.
                     </li>
                     <li>
-                    That the Australian Government develops a best practice framework to tackle the problem of obesogenic environments, including through better urban planning and the development of physical activity initiatives and supports efforts to increase access to regular exercise in schools and neighbourhoods as a matter of urgency.
+                    That the Australian Government develops a best practice framework to tackle the problem of obesogenic environments, including through thoughtful urban planning and the development of physical activity initiatives, and supports efforts to increase access to regular exercise in schools and neighbourhoods as a matter of urgency.
                     </li>
                     <li>
                     That the Australian Government funds the development of education-based obesity screening information and resources.
@@ -196,9 +209,14 @@ const DiabetesPage = () => {
                     </span>
                   </p>
                   <p className="mt-8">
-                    <strong>Behavioural approaches</strong> to managing type 2 diabetes
+                    <strong>Behavioural approaches</strong> for managing type 2 diabetes (Salvia et al 2023) subscribe to a patient centred model:
+                    <li>Treatment plans are individualized and respectful of cultural, social, economic, and environmental factors</li>
+                    <li>Continuing support and education to adopt lifestyle behaviours that promote well-being.</li>
+                    <li>Expansion of the team surrounding the client to include diabetes educators, dieticians, mental health providers</li>
+                    <li>A balanced eating pattern emphasizing fiber-rich plant foods (legumes, nuts, seeds, herbs), a diversity of non-starchy vegetables, nutrient-dense carbohydrate foods (whole grains), fish, and unsaturated vegetable oils</li>
+                    <li>Physical activity</li>
                   </p>
-                  <p></p>
+                 
                 </div>
               </div>
 
