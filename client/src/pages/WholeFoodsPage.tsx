@@ -5,7 +5,7 @@ import { ChevronRightIcon } from '@heroicons/react/20/solid';
 
 const WholeFoodsPage = () => {
   const stats = [
-    { label: '', value: '' },
+    { label: 'Neighbourhoods in Western Sydney where fast food and alcohol outlets outnumber greengrocers and supermarkets', value: '28%' },
     { label: '', value: '' },
     { label: '', value: '' },
   ];
@@ -19,10 +19,13 @@ const WholeFoodsPage = () => {
       href: 'https://pubmed.ncbi.nlm.nih.gov/7498104/',
     },
     {
-      title: '',
-      href: '',
+      title: 'Geographic inequity in healthy food environment and type 2 diabetes: can we please turn off the tap?',
+      href: 'https://www.mja.com.au/journal/2015/203/6/geographic-inequity-healthy-food-environment-and-type-2-diabetes-can-we-please',
     },
-    
+    {
+      title: 'Western Sydney Diabetes: Food Deserts and Mapping',
+      href: 'https://www.westernsydneydiabetes.com.au/western-sydney/food-deserts-and-mapping/',
+    },
   ];
 
   return (
@@ -53,28 +56,39 @@ const WholeFoodsPage = () => {
 
               {/* quote */}
               <figure className="mt-6 lg:max-w-lg">
-                <blockquote className="text-base/7 font-bold text-gray-900 sm:text-lg/8">
+                <blockquote className="text-base/7 font-medium text-gray-900 sm:text-lg/8">
                   <p>
-                    "Raw or minimally processed foods correlate with decreased glycaemic glucose equivalent and increased satiety index, compared to ultra-processed foods."
+                    "Takeaway and alcohol outlets outnumber greengrocers and supermarkets in Western Sydney neighbourhoods."
                   </p>
                 </blockquote>
-              </figure>
-                
+              </figure>    
             </div>
 
-            {/* text */}
+            {/* Main text container*/}
             <div>
-              <div className="text-base/7 text-gray-700 lg:max-w-lg">
-                <p className="text-base/7 font-semibold text-indigo-600">
+              <div className="text-lg/7 text-gray-700 lg:max-w-lg">
+                <p className="text-lg/7 font-semibold text-indigo-600">
                   Whole Foods
                 </p>
-                <h1 className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
+                <h1 className="mt-2 text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
                   Empower the consumer to make informed choices
                 </h1>
                 <div className="max-w-xl">
                   <p className="mt-8">
-                    <strong>Food structure or matrix</strong> contributes to satiety and glycaemic responses. Whole foods or minimally processed foods (NOVA Group 1) maintain their original structure and contents such as water. Ultra-processed foods (NOVA Group 4) are industrially assembled from multiple fractionated substances and additives, with the matrix of the original food, including water, entirely replaced or depleted. A study by Fardet (2016) found that highly deconstructed foods register higher glycaemic responses, measured through glycaemic index (related to carbohydrates), glycaemic load (related to amount of food consumed) and glycaemic glucose equivalent (GGE). GGE is a newer concept that can be used quantitatively and is explained as follows: if a serving of food contributes 15 GGE (g per 100 g), it is equivalent to consuming 15 grams of glucose. Higher glycaemic responses produce a 'sugar high', release of insulin, followed by a 'sugar crash', resulting in a cyclical increase in hunger and decrease in satiety. The GGE is significantly and positively correlated with the processing group, and significantly and inversely correlated with the satiety index. Raw and minimally proceessed foods are associated with decreased GGE, and increased satiety index, compared to ultra-processed foods.
-                     
+                    <strong className="text-indigo-600">Food structure or matrix</strong> contributes to satiety and glycaemic responses. Whole foods or minimally processed foods (NOVA Group 1) maintain their original structure and water content. Ultra-processed foods (NOVA Group 4) are industrially assembled from multiple fractionated substances and additives, with the matrix of the original food, including water, entirely replaced or depleted. A study by Fardet (2016) found that <strong className="text-indigo-600">highly deconstructed foods register higher glycaemic responses,</strong> measured through glycaemic index (related to carbohydrates), glycaemic load (related to amount of food consumed) and glycaemic glucose equivalent (GGE). GGE is a newer concept that can be used quantitatively and is explained as follows: if a serving of food contributes 15 GGE (g per 100 g), it is equivalent to consuming 15 grams of glucose. 
+                    </p>
+                  <p className="mt-8">
+                    <strong className="text-indigo-600">Higher glycaemic responses</strong> produce a 'sugar high', release of insulin, followed by a 'sugar crash', resulting in a cyclical increase in hunger and decrease in satiety. The GGE is significantly and positively correlated with the processing group, and significantly and inversely correlated with the satiety index. Raw and minimally proceessed foods are associated with decreased GGE, and increased satiety index, compared to ultra-processed foods. 
+                  </p>
+                  <p className="mt-8">
+                    <strong className="text-indigo-600">The Mapping Food Inequalities in Australian Localities (MEAL) Project</strong> was initiated in 2014 to explore geographical inequities in food environment in metropolitan Sydney. The researches investigated the number of greengrocers, supermarkets, takeaway outlets and alcohol outlets in Western Sydney compared with North Sydney and unsurprisingly found that:
+                    <li>
+                      In Western Sydney neighbourhoods, access to a greengrocer or supermarket (defined as 1.6 km from a person's home, or walking distance), was restricted.
+                    </li>
+                    <li> 
+                      In Western Sydney neighbourhoods, fast food and alcohol outlets outnumbered greengrocers and supermarkets.
+                    </li>
+                    The reasearches conclude that there is a geographic disparity to access of whole foods in Western Sydney, a notable hotspot for type 2 diabetes, social disadvantage, and poor public transport.
                   </p>
                   
                 </div>
