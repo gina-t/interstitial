@@ -32,6 +32,7 @@ const ExercisePage = () => {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div className="lg:pr-4">
+
               {/* image */}
               <div className="relative overflow-hidden rounded-3xl bg-gray-900 px-6 pt-64 pb-9 shadow-2xl sm:px-12 lg:max-w-lg lg:px-8 lg:pb-8 xl:px-10 xl:pb-10">
                 <img
@@ -57,37 +58,41 @@ const ExercisePage = () => {
               </figure>
             </div>
 
-            {/* text */}
+            {/* Main text container */}
             <div>
-              <div className="text-base/7 text-gray-700 lg:max-w-lg">
-                <p className="text-base/7 font-semibold text-indigo-600">
+              <div className="text-lg/7 text-gray-700 lg:max-w-lg">
+                <p className="text-lg/7 font-semibold text-indigo-600">
                   Exercise
                 </p>
-                <h1 className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
+                <h1 className="mt-2 text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
                   Empower the consumer to make informed choices
                 </h1>
                 <div className="max-w-xl">
                   <p className="mt-8">
-                    <strong>WHO</strong> defines physical activity as any bodily movement produced by skeletal muscles that requires energy expenditure. The energy expenditure can be measured in calories. Physical activity in daily life can be categorized into occupational, sports, conditioning, household chores, or other activities. Exercise is a subset of physical activity that is planned, structured, and repetitive, with an objective to improve physical fitness. Levels of physical activity are described as sedentary, light, moderate, very active and vigorous (athlete). 
+                     The World Health Organisation (WHO) defines <strong className="text-indigo-600">physical activity</strong> as any bodily movement produced by skeletal muscles that requires energy expenditure. The energy expenditure can be measured in calories. Physical activity in daily life can be categorized into occupational, sports, conditioning, household chores, or other activities. <strong className="text-indigo-600">Exercise</strong> is a subset of physical activity that is planned, structured, and repetitive, with an objective to improve physical fitness. Levels of physical activity are described as sedentary, light, moderate, vigorous and athlete. 
                   </p>
                   <p className="mt-8">  
-                    Globally, we are leading increasingly sedentary lifestyles due to the rise of technology (screen time) and urbanization (motorised transport). Sedentary behaviour is associated with obesity, type 2 diabetes, cardiovascular disease, and increased mortality rates. Incorporating scheduled exercise may appear burdensome to our demanding lifestyles, but we can achieve physical activity through short bouts in our daily lives, without specialised equipment or expensive gym memeberships. Walking about 5000 steps per day (about 3km) or a 20 minute bout of body weight exercises can be sufficient to achieve the recommended levels of physical activity to improve our health and well-being.
+                    Globally, we are leading <strong className="text-indigo-600">increasingly sedentary lifestyles</strong> due to the rise of technology (screen time) and urbanization (motorised transport). Sedentary behaviour is associated with obesity, type 2 diabetes, cardiovascular disease, and increased mortality rates. Incorporating scheduled exercise may appear burdensome to our demanding lifestyles, but we can achieve physical activity through short bouts without specialised equipment or expensive gym memeberships. Walking 5000 steps per day (about 3km) or a 20 minute bout of body weight exercises can be sufficient to achieve the recommended levels of physical activity to improve our health and well-being.
                   </p>
                   <p className="mt-8">
-                    For adults aged 18-64 years, WHO recommends at least: 
+                    For substantial health benefits in adults aged 18-64 years, WHO recommends at least: 
                     <li>
-                      150 to 300 minutes of moderate-intensity aerobic physical activity;
+                      <strong className="text-indigo-600">150 to 300 minutes</strong> of moderate intensity aerobic physical activity throughout the week;
                     </li>
+                    or
                     <li>
-                      or 75 to 150 minutes of vigorous-intensity aerobic physical activity;
+                      <strong className="text-indigo-600">75 to 150 minutes</strong> of vigorous intensity aerobic physical activity throughout the week;
                     </li>
+                    or
                     <li>
-                      or an equivalent combination of moderate- and vigorous- intensity activity; 
+                      <strong className="text-indigo-600">equivalent combination</strong> of moderate and vigorous intensity activity; 
                     </li>
-                    throughout the week for substantial health benefits. For additional health benefits, adults should also do muscle strengthening activities at moderate or vigorous intensity that involve major muscle groups, for 2 or more days a week. 
+                    </p>
+                    <p className="mt-8">
+                     For additional health benefits, adults should also do <strong className="text-indigo-600">muscle strengthening activities</strong> at moderate or vigorous intensity that involve major muscle groups, for 2 or more days a week. 
                   </p>
                   <p className="mt-8">
-                    The <strong>biological mechanisms</strong> through which regular moderate-intensity exercise sustains the major hallmarks of health was investigated by Qiu et al (2022). 
+                    The <strong className="text-indigo-600">biological mechanisms</strong> through which regular moderate-intensity exercise sustains the major hallmarks of health was investigated by Qiu et al (2022). 
                     <li>
                       Protects the integrity of barriers: organelles (mitochondria and nuclei) cell membranes, internal barriers (blood-brain), and external barriers (intestinal, respiratory, skin).
                     </li>
@@ -115,7 +120,7 @@ const ExercisePage = () => {
                     
                   </p>
                   <p className="mt-8">
-                    A <strong>prospective UK cohort study</strong> of 71 893 adults (median age 62.5 years; 55.9% female), found that the adjusted 5-year absolute mortality risk was 4.17% for no vigorous physical ativity, compared to 1.10% for vigorous physical activity of ≥60 min/week. The study concluded that vigorous physical activity of 15-20 min/week is associated with a 16-40% lower mortality hazard ratio, with further decreases up to 50-57 min/week. 'These findings suggest reduced health risks may be attainable through relatively modest amounts of vigorous physical activity accrued in short bouts across the week'.
+                    A <strong className="text-indigo-600">prospective UK cohort study</strong> of 71 893 adults (median age 62.5 years; 55.9% female), found that the adjusted 5-year absolute mortality risk was 4.17% for no vigorous physical ativity, compared to 1.10% for vigorous physical activity of ≥60 min/week. The study concluded that vigorous physical activity of 15-20 min/week is associated with a 16-40% lower mortality hazard ratio, with further decreases up to 50-57 min/week. 'These findings suggest reduced health risks may be attainable through relatively modest amounts of vigorous physical activity accrued in short bouts across the week'.
                   </p>
                 </div>
               </div>
