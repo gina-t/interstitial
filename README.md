@@ -3,140 +3,117 @@
 ## Table of Contents
 
 - [Description](#description)
+- [Technologies Used](#technologies-used)
+- [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
 - [Contributing Guidelines](#contributing-guidelines)
 - [Testing](#testing)
 - [Authors and Acknowledgements](#authors-and-acknowledgements)
+- [Questions](#questions)
 
 ## Description
 
-A responsive, full-stack health application built on the MERN stack with TypeScript. Interstitial features real-time nutrition data through the FatSecret API, secure user authentication, and a modern UI built with Vite and Tailwind CSS. The app helps users make informed dietary choices by providing detailed nutritional information and educational content about food processing.
+A responsive, full-stack health application built on the MERN stack with TypeScript. Interstitial features real-time nutrition data through the FatSecret API, secure user authentication, and a modern UI built with Vite and Tailwind CSS. The app helps users make informed choices around nutrition and exercise, by providing detailed nutritional information and educational content.
+
+## Technologies Used
+
+- Frontend: React, TypeScript, Vite, Tailwind CSS
+- Backend: Node.js, Express, MongoDB
+- Authentication: JWT (JSON Web Tokens)
+- API: FatSecret Platform REST API
+- Deployment: Render
+
+
+## Features
+
+- Real-time nutrition data lookup
+- Personalized food favorites and tracking
+- Calorie counting and meal planning
+- Educational content on nutrition and health
+- Responsive design for mobile and desktop
+- Secure user authentication
 
 ## Installation
 
-1. Create package.json for root directory and install dependencies:
+To get started with this project, implement the following steps:
+
+1. Clone the repo:
 
 ```zsh
-npm install express dotenv mongoose colors express-async-handler bcryptjs jsonwebtoken
-npm install nodemon --save-dev
+git clone git@github.com:gina-t/interstitial.git
 ```
 
-Add the following scripts:
+2. In `root` directory install dependencies:
+
+```zsh
+npm install 
+```
+
+3. In `root` directory create .env file:
 
 ```javascript
-"scripts": {
-    "start": "node server/server.js",
-    "server": "nodemon server/server.js"
-  }
+NODE_ENV=development
+PORT=3001
+MONGO_URI= 
+JWT_SECRET= 
+FATSECRET_CLIENT_ID= 
+FATSECRET_CLIENT_SECRET=
 ```
 
-2. In root directory create .gitignore file and add:
-
-node_modules
-.env
-
-3. In root directory create .env file:
-
-```javascript
-NODE_ENV = development;
-PORT = 3001;
-```
-
-4. In server folder, generate secret token for JWT:
+4. In `server` directory generate secret token for JWT and paste into JWT_SECRET field in the .env file:
 
 ```zsh
 node -e "console.log(require('crypto').randomBytes(64).toString('hex'))"
 ```
 
-5. Copy the generated secret token and paste into JWT_SECRET_KEY field in the .env file.
+5. Navigate to `https://www.fatsecret.com/#fatsecret-platform` and under Nutrition API, register and log in to generate 3 API keys:
 
-6. In server directory, create the following folders:
+- Consumer Key copy and paste to FATSECRET_CLIENT_ID in .env file
+- Consumer Secret copy and paste to FATSECRET_CLIENT_SECRET in .env file
+- Add the Render Static Outbound IP Addresses to ypur Fatsecret Platform's OAuth 2.0 whitelisted IP addresses list
 
-- `config`
-- `controllers`
-- `middleware`
-- `models`
-- `utils`
-
-7. In server.js, define routes and middleware:
-
-```javascript
-app.use('/api/food', foodRoutes);
-app.use('/api/user', userRoutes);
-app.use(express.json());
-```
-
-8. In client directory, initialize a new Vite + React project:
+6. In `client` directory install dependencies:
 
 ```zsh
 cd client
-npm create vite@latest
+npm install
 ```
 
-9. In client directory, install dependancies:
+7. Copy and paste your MongoDB Atlas connection string to `MONGO_URI` in .env file. Replace <db_password> with the password for the database user, and after the / add the name of the database.
+
+8. After installation, you can start the development server:
 
 ```zsh
-cd interstitial-vite
-npm install react-icons
+# Start backend server
+npm run server
+
+# Start frontend development server in another terminal
+npm run client
+
+# Or run both concurrently
 npm run dev
 ```
 
-10. In client directory, install Tailwind CSS and its dependancies:
+9. Successful Render deployment requires the following environment variables:
 
-```zsh
-npm install -D tailwindcss postcss autoprefixer
-```
+- `FATSECRET_CLIENT_ID` value=
 
-11. In client directory, initialise Tailwind CSS:
+- `FATSECRET_CLIENT_SECRET` value=
 
-```zsh
-npx tailwindcss init -p
-```
+- `JWT_SECRET` value=
 
-12. Update tailwind.config.js file to specify the paths to template files:
+- `MONGO_URI` value=
 
-```javascript
-export default {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-};
-```
+- `NODE_ENV` value=production
 
-13. Create a CSS file src/index.css and add @tailwind directives:
-
-```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-```
-
-14. In client directory delete App.css and vite.svg.
-
-15. In `client/src`, create the following folders:
-
-- `components`
-- `context`
-- `hooks`
-- `pages`
-- `routes`
-- `utils`
-
-16. In client directory, install:
-
-```zsh
-npm install react-router-dom @tailwindcss/forms @tailwindcss/line-clamp @headlessui/react @heroicons/react
-```
 
 ## Usage
 
-Link to render deployment:
+Link to deployed app url:
 
-[interstitial](https://interstitial.onrender.com/)
+[interstitial](https://interstitial.onrender.com)
 
 Screenshots of app demonstrating functionality:
 
@@ -150,40 +127,98 @@ Screenshots of app demonstrating functionality:
 
 ### screenshot-3
 
-![log in page](./client/src/assets/screenshot-3.png)
+![food search page](./client/src/assets/screenshot-3.png)
 
 ### screenshot-4
 
-![album search page](./client/src/assets/screenshot-4.png)
+![my favourite foods page](./client/src/assets/screenshot-4.png)
 
 ### screenshot-5
 
-![saved playlists page](./client/src/assets/screenshot-5.png)
+![calorie tracker](./client/src/assets/screenshot-5.png)
 
 ### screenshot-6
 
-![spotify api page](./client/src/assets/screenshot-6.png)
+![calorie literacy page](./client/src/assets/screenshot-6.png)
+
 
 ## License
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+
 ## Contributing Guidelines
 
-Create a new branch for the commit and start a pull request.
+To contribute, please follow these steps:
+
+1. **Fork the Repository**:
+   - Navigate to `https://github.com/gina-t/interstitial`
+   - Click "Fork" to create a copy of the repository in your GitHub account.
+
+2. **Clone the Forked Repository**:
+   ```zsh
+   git clone https://github.com/YOUR-USERNAME/interstitial.git
+   cd interstitial
+   ```
+
+3. **Create a New Feature Branch**:
+   - Create a new branch for your feature or bug fix:
+     ```zsh
+     git checkout -b feature/your-feature-name
+     ```
+
+4. **Make Changes**:
+   - Make your changes to the codebase.
+   - Ensure your changes follow the project's coding standards and guidelines.
+
+5. **Commit Your Changes**:
+   - Stage your changes:
+     ```zsh
+     git add -A
+     ```
+   - Commit your changes with a descriptive commit message:
+     ```zsh
+     git commit -m "Add your descriptive commit message here"
+     ```
+
+6. **Push Your Changes**:
+   - Push your changes to your forked repository:
+     ```zsh
+     git push origin feature/your-feature-name
+     ```
+
+7. **Create a Pull Request**:
+   - Navigate to the original repository.
+   - Click the "New Pull Request" button.
+   - Select your feature branch from your forked repository and compare it with the Develop branch of the original repository.
+   - Click "Create Pull Request" to submit your changes for review.
+
+8. **Review Process**:
+   - Your pull request will be reviewed by the project maintainer.
+   - Once your pull request is approved, it will be merged into the `develop` branch.
+
+Thank you for contributing to the project.
+
 
 ## Testing
 
+Component testing can be performed using Cypress.
+
+To install and run tests:
+
+```zsh
+npm install --save-dev cypress
+npx cypress open
+```
+
 ## Authors and Acknowledgements
 
-[email] (ginadrcoder@gmail.com)
-
-[email] (mitchjoelklein@hotmail.com)
+- Email: [ginadrcoder@gmail.com](mailto:ginadrcoder@gmail.com)
 
 ## Questions
 
 For enquiries, please contact me at:
 
-[email] (ginadrcoder@gmail.com)
+- Email: [ginadrcoder@gmail.com](mailto:ginadrcoder@gmail.com)
 
-[github] (https://github.com/gina-t)
+- GitHub: [gina-t](https://github.com/gina-t)
