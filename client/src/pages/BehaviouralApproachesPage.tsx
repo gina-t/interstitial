@@ -37,7 +37,7 @@ const BehaviouralApproachesPage = () => {
               {/* image */}
               <div className="relative overflow-hidden rounded-3xl bg-gray-900 px-6 pt-64 pb-9 shadow-2xl sm:px-12 lg:max-w-lg lg:px-8 lg:pb-8 xl:px-10 xl:pb-10">
                 <img
-                  alt=''
+                  alt='graph'
                   src={behaviour}
                   className="absolute inset-0 size-full object-cover brightness-100 object-center"
                 />
@@ -53,74 +53,73 @@ const BehaviouralApproachesPage = () => {
 
               {/* quote */}
               <figure className="mt-6 lg:max-w-lg">
-                <blockquote className="text-base/7 font-bold text-gray-900 sm:text-lg/8">
+                <blockquote className="text-base/7 font-medium text-gray-900 sm:text-lg/8">
                   <p>
-                  "Nudge: any aspect of the choice architecture that alters people's behaviour in a predictable way without forbidding any options or significantly changing their economic incentives” 
+                  "Nudge: any aspect of the choice architecture that alters people's behaviour in a predictable way without forbidding any options or significantly changing their economic incentives.” 
                   </p>
                 </blockquote>
-              </figure>  
-              
+              </figure>     
             </div>
 
-            {/* text */}
+            {/* Main text container */}
             <div>
               <div className="text-base/7 text-gray-700 lg:max-w-lg">
                 <p className="text-base/7 font-semibold text-indigo-600">
-                  Behavioural economics 
+                  Behavioural Economics 
                 </p>
-                <h1 className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
+                <h1 className="mt-2 text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
                   Empower the consumer to make informed choices
                 </h1>
                 <div className="max-w-xl">
                   <p className="mt-8">
-                    <strong>Consumer behaviour</strong> is characterised by:
+                    <strong className="text-indigo-600">Consumer behaviour</strong> is characterised by:
                     <li>
-                      Social norms and conforming with peer groups.
+                      <strong className="text-indigo-600">Social norms</strong> Conforming with peer groups.
                     </li>
                     <li>
-                      Priming. Priming is informed by anchoring bias, whereby initial information heavily influences perception, overriding subsequent insights. Thus, first impressions hold more sway than later learnings. 
+                      <strong className="text-indigo-600">Priming</strong> The concept of priming is informed by anchoring bias, whereby initial information heavily influences perception, overriding subsequent insights. Thus, first impressions hold more sway than later learnings. 
                     </li>
                     <li>
-                      Free-rider problem. Consumers are hesitant to sacrifice their unsustainable consumption habits for the benefit of society. 
+                      <strong className="text-indigo-600">Free-rider problem</strong> Consumers are hesitant to sacrifice their unsustainable consumption habits for the benefit of society. 
                     </li>
                     <li>
-                      Mental accounting. Despite the value of money remaining constant, consumers treat money differently depending upon how it was earned or gained.
+                      <strong className="text-indigo-600">Mental accounting</strong> Despite the value of money remaining constant, consumers treat money differently depending upon how it was earned or gained.
                     </li>
                     <li>
-                      Present bias. The belief that future prudence will compensate for current indulgence. This bias is compounded by factors like “hyperbolic discounting” and “money discounting,” when consumers overestimate future savings or accept smaller financial gains to satisfy immediate desires.
+                      <strong className="text-indigo-600">Present bias</strong> The belief that future prudence will compensate for current indulgence. This bias is compounded by factors like “hyperbolic discounting” and “money discounting,” where consumers overestimate future savings or accept smaller financial gains to satisfy immediate desires.
                     </li>
                     <li>
-                      Overconfidence and optimism. Consumers over estimate their abilities and disregard potential risks and negative outcomes.
+                      <strong className="text-indigo-600">Overconfidence and optimism</strong> Consumers over estimate their abilities and disregard potential risks and negative outcomes.
                     </li>
                     <li>
-                      Scarcity bias. The concept of scarcity is  a matter of perception that can be manipulated by creative marketing. When a known brand announces a limited-edition product drop, consumers are likely to respond simply because of the perceived scarcity of the product. 
+                      <strong className="text-indigo-600">Scarcity bias</strong> The concept of scarcity is  a matter of perception that can be manipulated by creative marketing. When a known brand announces a limited-edition product drop, consumers are likely to respond simply because of the perceived scarcity of the product. 
                     </li>
                     <li>
-                      Loss aversion and status quo bias. A tendency for consumers to stick with familiar choices, rather than exploring alternatives. 
+                      <strong className="text-indigo-600">Loss aversion and status quo bias</strong> A tendency for consumers to stick with familiar choices, rather than exploring alternatives. 
                     </li>
                     <li>
-                      Reference point. Consumers tend to evaluate outcomes relative to a reference point.
+                      <strong className="text-indigo-600">Reference point</strong> Consumers tend to evaluate outcomes relative to a reference point.
                     </li>   
                   </p>
                   <p className="mt-8">
-                    <strong>Nudging</strong> is a concept introduced by Thaler and Sustein (2008) whereby behavioural interventions can be leveraged to steer people subtly towards choices that improve their welfare whilst still respecting their freedom of choice. Consumers can be 'nudged" through the following behavioural interventions: 
+                    <strong className="text-indigo-600">Nudging</strong> is a concept introduced by Thaler and Sustein (2008) whereby behavioural interventions can be leveraged to steer people subtly towards choices that improve their welfare whilst still respecting their freedom of choice. Consumers can be 'nudged' through the following behavioural interventions: 
                     <li>
-                     The power of now. Identifying timely moments when consumers are most receptive to changing their habits and consumption patterns.
+                     <strong className="text-indigo-600">The power of now.</strong> Identifying timely moments when consumers are most receptive to changing their habits and consumption patterns.
                     </li>
                     <li>
-                      The power of norms. The use of dynamic norms highlighting culture shifts to more mindful consumption.
+                      <strong className="text-indigo-600">The power of norms.</strong> The use of dynamic norms highlighting culture shifts to more mindful consumption.
                     </li>
                     <li>
-                      The power of emotions. Increasing positive feelings around mindful consumption and negative feelings about overconsumption.
+                      <strong className="text-indigo-600">The power of emotions.</strong> Increasing positive feelings around mindful consumption and negative feelings around overconsumption.
                     </li>
                     <li>
-                      The power of collective action. Conditional cooperation and collective action encourages the selfish consumer to make more sustainable choices.
+                      <strong className="text-indigo-600">The power of collective action.</strong> Conditional cooperation and collective action encourages the selfish consumer to make more sustainable choices.
                     </li>
                     <li>
-                      The power of framing. Re-framing messages can change consumer's perspectives and choices.
+                      <strong className="text-indigo-600">The power of framing.</strong> Re-framing messages can change consumer's perspectives and choices.
                     </li>
                     <li>
-                      The power of priming. Exposing consumers to a stimulus (“prime”) to temporarily activate specific mental concepts.
+                      <strong className="text-indigo-600">The power of priming.</strong> Exposing consumers to a stimulus to temporarily activate specific mental concepts.
                     </li>
                   </p>
                   

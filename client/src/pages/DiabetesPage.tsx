@@ -76,6 +76,7 @@ const DiabetesPage = () => {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div className="lg:pr-4">
+
               {/* image */}
               <div className="relative overflow-hidden rounded-3xl bg-gray-900 px-6 pt-64 pb-9 shadow-2xl sm:px-12 lg:max-w-lg lg:px-8 lg:pb-8 xl:px-10 xl:pb-10">
                 <img
@@ -89,12 +90,13 @@ const DiabetesPage = () => {
                 <div
                   aria-hidden="true"
                   className="absolute top-1/2 left-1/2 -ml-16 -translate-x-1/2 -translate-y-1/2 transform-gpu blur-3xl"
-                ></div>
+                >
+                </div>
               </div>
 
               {/* quote */}
               <figure className="mt-6 lg:max-w-lg">
-                <blockquote className="text-base/8 font-bold text-gray-900 sm:text-lg/8">
+                <blockquote className="text-base/7 font-bold text-gray-900 sm:text-lg/8">
                   <p>
                     'Modifiable risk factors for type 2 diabetes in Australia
                     are: overweight, obesity, physical inactivity,
@@ -105,60 +107,59 @@ const DiabetesPage = () => {
               </figure>
             </div>
 
-            {/* text */}
+            {/* Main text container */}
             <div>
-              <div className="text-base/7 text-gray-700 lg:max-w-lg">
-                <p className="text-base/7 font-semibold text-indigo-600">
+              <div className="text-lg/7 text-gray-700 lg:max-w-lg">
+                <p className="text-lg/7 font-semibold text-indigo-600">
                   Diabetes Mellitus
                 </p>
-                <h1 className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
+                <h1 className="mt-2 text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
                   Empower the consumer to make informed choices
                 </h1>
                 <div className="max-w-xl">
                   <p className="mt-8">
-                    <strong>Diabetes Mellitus (diabetes)</strong> is a chronic
+                    <strong className="text-indigo-600">Diabetes Mellitus (diabetes)</strong> is a chronic
                     metabolic disease characterised by elevated blood glucose
                     due to an inability to produce insulin, or to use insulin
                     effectively, or both. The primary types of diabetes are:
                     <li>
-                      Type 1 diabetes: an autoimmnune disease that destroys the
+                      <strong className="text-indigo-600">Type 1 diabetes</strong> An autoimmnune disease that destroys the
                       insulin-producing beta cells in the pancreas, leading to
-                      absolute insulin deficiency. Typically diagnosed under the
-                      age of 30.
+                      absolute insulin deficiency. Typically diagnosed under the age of 30.
                     </li>
                     <li>
-                      Type 2 diabetes: a progressive disease characterised by
-                      insulin resistance and relative insulin deficiency.
-                      Typically diagnosed over the age of 30, type 2 diabetes is
-                      associated with modifiable risk factors such as
-                      overweight, obesity, physical inactivity, ultra-processed
-                      food consumption, cigarette smoking, hypertension, and
-                      dyslipidaemia. Risk factors that are not modifiable are:
-                      age (≥40 years), family history of diabetes, ethnicity
-                      (Aboriginal, Torres Strait Islander, Pacific Islander,
-                      Indian subcontinent), history of gestational diabetes or
-                      polycystic ovarian syndrome.
+                      <strong className="text-indigo-600">Type 2 diabetes</strong> A progressive disease characterised by insulin resistance and relative insulin deficiency. Typically diagnosed over the age of 30.
                     </li>
-                    <li>Gestational diabetes: diagnosed during pregnancy.</li>
+                    <li>
+                      <strong className="text-indigo-600">Gestational diabetes</strong> Diagnosed during pregnancy.
+                    </li>
+                    Type 2 accounts for 87.6% of diabetes and type 1 for 9.6% (ABS 2022). The information henceforth is about type 2 diabetes in Australia.
                   </p>
                   <p className="mt-8">
-                    Type 2 accounts for 87.6% of diabetes and type 1 for 9.6% (ABS 2022). The
-                    information henceforth is about type 2 diabetes in
-                    Australia. Burden of disease is a measure of the years of
-                    healthy life lost from living with, or dying from disease. In
-                    2024, type 2 diabetes was responsible for 128,000 years of
-                    healthy life lost and accounted for 2.2% of total disease
-                    burden. Equity of access to diabetes educators, podiatrists,
-                    dietitians, general practitioners, endocrinologists, ophthalmologists and
-                    community outreach services is variable, with outer
-                    metropolitan, rural and regional areas being problematic.
+                    Type 2 diabetes is associated with <strong className="text-indigo-600">modifiable risk factors</strong>:
+                    <li>Overweight and obesity</li>
+                    <li>Physical inactivity</li>
+                    <li>Ultra-processed food consumption</li> 
+                    <li>Cigarette smoking</li> 
+                    <li>Hypertension</li>
+                    <li>Dyslipidaemia</li> 
+                    Risk factors that are not modifiable are:
+                    <li>Age (≥40 years)</li>
+                    <li>Family history of diabetes</li> 
+                    <li>Ethnicity of Aboriginal and Torres Strait Islander, Pacific Islander, Indian subcontinent, Southeast Asian </li>
+                    <li>Medical history of gestational diabetes or
+                    polycystic ovarian syndrome</li>
                   </p>
                   <p className="mt-8">
-                    The highest rates of type 2 diabetes by primary health network are found in Country South Australia, Western Queensland, South Western Sydney, Gippsland, Western New South Wales, Northern Territory, Murrumbidgee, Western Sydney, Murray, Darling Downs and Moreton, correlating with areas of most disadvantage (AIHW, 2018).
+                    <strong className="text-indigo-600">Burden of disease</strong> is a measure of the years of
+                    healthy life lost from living with, or dying from disease. In 2024, type 2 diabetes was responsible for 128,000 years of healthy life lost and accounted for 2.2% of total disease burden. Equity of access to diabetes educators, podiatrists, dietitians, general practitioners, endocrinologists, ophthalmologists and community outreach services is variable, with outer metropolitan, rural and regional areas being problematic.
                   </p>
                   <p className="mt-8">
-                    Data from the ABS (2022) reports that people with diabetes
-                    are more likely to:
+                    The highest rates of type 2 diabetes by <strong className="text-indigo-600">primary health network</strong> are found in Country South Australia, Western Queensland, South Western Sydney, Gippsland, Western New South Wales, Northern Territory, Murrumbidgee, Western Sydney, Murray, Darling Downs and Moreton, correlating with areas of most disadvantage (AIHW, 2018).
+                  </p>
+                  <p className="mt-8">
+                    Data from the ABS (2022) reports that people with diabetes are more likely to be :
+                    <li>Male</li>
                     <li>
                       Live in araes of most disadvantage (many households with low
                       income, many people without qualifications, or many people
@@ -173,7 +174,7 @@ const DiabetesPage = () => {
                     </li>
                   </p>
                   <p className="mt-8">
-                    The House of Representatives Standing Committee inquiry into the state of diabetes in Australia 2024 submitted 23 <strong>recommendations</strong> including:
+                    The House of Representatives Standing Committee inquiry into <strong className="text-indigo-600">the state of diabetes in Australia 2024</strong> submitted 23 <strong>recommendations</strong> including:
                     <li>
                     That the NHMRC expedites a review of the Australian Dietary Guidelines, and ensures that the revised guidelines include adequate information for Australians living with diabetes.
                     </li>
@@ -209,12 +210,12 @@ const DiabetesPage = () => {
                     </span>
                   </p>
                   <p className="mt-8">
-                    <strong>Behavioural approaches</strong> for managing type 2 diabetes (Salvia et al 2023) subscribe to a patient centred model:
-                    <li>Treatment plans are individualized and respectful of cultural, social, economic, and environmental factors</li>
+                    <strong className="text-indigo-600">Behavioural approaches</strong> for managing type 2 diabetes (Salvia et al 2023) subscribe to a patient centred model:
+                    <li>Treatment plans are individualized and respectful of cultural, social, economic, and environmental factors.</li>
                     <li>Continuing support and education to adopt lifestyle behaviours that promote well-being.</li>
-                    <li>Expansion of the team surrounding the client to include diabetes educators, dieticians, mental health providers</li>
-                    <li>A balanced eating pattern emphasizing fiber-rich plant foods (legumes, nuts, seeds, herbs), a diversity of non-starchy vegetables, nutrient-dense carbohydrate foods (whole grains), fish, and unsaturated vegetable oils</li>
-                    <li>Physical activity</li>
+                    <li>Expansion of the team surrounding the client to include diabetes educators, dieticians, mental health providers.</li>
+                    <li>A balanced eating pattern emphasizing fiber-rich plant foods (legumes, nuts, seeds, herbs), a diversity of non-starchy vegetables, nutrient-dense carbohydrate foods (whole grains), fish, and unsaturated vegetable oils.</li>
+                    <li>Physical activity is encouraged.</li>
                   </p>
                  
                 </div>

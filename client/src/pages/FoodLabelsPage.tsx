@@ -5,8 +5,8 @@ import { ChevronRightIcon } from '@heroicons/react/20/solid';
 
 const FoodLabelsPage = () => {
   const stats = [
-    { label: '', value: '' },
-    { label: '', value: '' },
+    { label: 'Perecentage of ultra-processed foods displaying a HSR of ≥ 2.5', value: '73%' },
+    { label: 'Percentage of discretionary foods displaying a HSR of ≥ 2.5', value: '52.8%' },
     { label: '', value: '' },
   ];
   const resources = [
@@ -53,7 +53,7 @@ const FoodLabelsPage = () => {
               {/* image */}
               <div className="relative overflow-hidden rounded-3xl bg-gray-900 px-6 pt-64 pb-9 shadow-2xl sm:px-12 lg:max-w-lg lg:px-8 lg:pb-8 xl:px-10 xl:pb-10">
                 <img
-                  alt=''
+                  alt='fries'
                   src={fries}
                   className="absolute inset-0 size-full object-cover brightness-100 object-center"
                 />
@@ -69,62 +69,66 @@ const FoodLabelsPage = () => {
 
               {/* quote */}
               <figure className="mt-6 lg:max-w-lg">
-                <blockquote className="text-base/7 font-bold text-gray-900 sm:text-lg/8">
+                <blockquote className="text-base/7 font-medium text-gray-900 sm:text-lg/8">
                   <p>
                     "Front-of-package labels are not currently legislated to include degree of food processing in Australia"
                   </p>
                 </blockquote>
               </figure>
-
             </div>
 
-            {/* text */}
+            {/* Main text container */}
             <div>
-              <div className="text-base/7 text-gray-700 lg:max-w-lg">
-                <p className="text-base/7 font-semibold text-indigo-600">
+              <div className="text-lg/7 text-gray-700 lg:max-w-lg">
+                <p className="text-lg/7 font-semibold text-indigo-600">
                   Front-of-package labels and Health Star Rating.
                 </p>
-                <h1 className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
+                <h1 className="mt-2 text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
                   Empower the consumer to make informed choices
                 </h1>
                 <div className="max-w-xl">
                   <p className="mt-8">
-                    The Australian government's policy statement for <strong>front-of-package labels (FOPL)</strong> published in 2009, was designed to:
+                    The Australian Government's policy statement for <strong className="text-indigo-600">front-of-package labels (FOPL)</strong> published in 2009, was designed to:
                     <li>
-                      Guide consumer choice
+                      Guide consumer choice.
                     </li>
                     <li>
-                      Be consistent with the Australian Dietary Guidelines 
+                      Be consistent with the Australian Dietary Guidelines. 
                     </li>
                     <li>
-                      Modify the environment in which consumers make choices for eg. layout of supermarkets, ambience, marketing strategies, whole food availability across demographics, food prices.
+                      Modify the environment in which consumers make choices for eg. layout of supermarkets, marketing strategies, whole food availability across demographics, food prices.
                     </li>  
                   </p>
-                  <br />
-                  <p>
-                    The current legislation mandates the inclusion of a nutrition information panel describing the amount of nutrients (energy, protein, total fat and saturated fat, carbohydrates, sugars and sodium) in 100g or 100ml and per serve of a product specified by the manufacturer. However, manufactureres typically display nutrition information panels back-of-package in small font, and in a format that can not be readily interpreted. The Health Star Rating (HSR) System was developed and endorsed by the Australian governement (2014) but not mandated to the food industry. The HSR system is a voluntary front-of-pack labelling system that rates the overall nutritient profile of packaged and processed food and assigns it a rating from 0.5 to 5 stars.  The nutritent profile is determined by an algorithm. The purpose is to help consumers gain a snapshot and compare the nutritional profile of the product. The HSR system utilises an algorithm to assign eligible packaged foods a star rating between 0.5 and 5 determined by the content of selected 'beneficial' and 'risk' nutrients and food components. 
-                  </p> 
-                  <br />
-                  <p>
-                    The five year review report of the HSR (2019) recommended: <br />
-                      A. Fruits and vegetables that are fresh, frozen or canned (with no additions) should
-                      automatically receive an HSR of 5. <br />
-                      B. Total sugars should be more strongly penalised. <br />
-                      C. Sodium sensitivity should be improved. <br />
-                      D. Dairy categories should be redefined to increase the HSRs of Four/Five Food Group (FFG) dairy foods
-                      (such as cheeses and yoghurts) and decrease the HSRs of some dairy desserts and other chilled dairy
-                      products, improving comparability between dairy products. <br />
-                      E. Jellies and water-based ice confections should be recategorised to decrease their HSRs. <br />
-                      F. Changes to discern water from high energy drinks.
+                  <p className="mt-8">
+                    The current legislation mandates the inclusion of a <strong className="text-indigo-600">nutrition information panel</strong> describing the amount of nutrients (energy, protein, total fat and saturated fat, carbohydrates, sugars and sodium) in 100g or 100ml and per serve of a product specified by the manufacturer. However, manufacturers typically display nutrition information panels back-of-package in small font, and in a format that can not be readily interpreted. 
                   </p>
-                  <br />
-                  <p>
-                    However, the Health Star Rating system is failing to discourage ultra-processed food consumption because:
+                  <p className="mt-8">
+                    <strong className="text-indigo-600">The Health Star Rating (HSR)</strong> system was developed and endorsed by the Australian governement (2014) but not mandated to the food industry. The HSR system is a voluntary front-of-pack labelling system that rates the overall nutritient profile of packaged and processed food and assigns it a rating from 0.5 to 5 stars.  The nutritent profile is determined by an algorithm. The purpose is to help consumers gain a snapshot and compare the nutritional profile of the product. The HSR system utilises an algorithm to assign eligible packaged foods a star rating between 0.5 and 5 determined by the content of selected 'beneficial' and 'risk' nutrients and food components. 
+                  </p> 
+                  <p className="mt-8">
+                    The <strong className="text-indigo-600">five year review report</strong> of the HSR sytem (2019) recommended: 
+                      <li>Fruits and vegetables that are fresh, frozen or canned (with no additions) should
+                      automatically receive an HSR of 5.
+                      </li> 
+                      <li>Total sugars should be more strongly penalised.</li> 
+                      <li>Sodium sensitivity should be improved. 
+                      </li>
+                      <li>Dairy categories should be redefined to increase the HSRs of Four/Five Food Group (FFG) dairy foods
+                      (such as cheeses and yoghurts) and decrease the HSRs of some dairy desserts and other chilled dairy
+                      products, improving comparability between dairy products. 
+                      </li>
+                      <li>Jellies and water-based ice confections should be recategorised to decrease their HSRs. 
+                      </li>
+                      <li>Changes to discern water from high energy drinks.
+                      </li>
+                  </p>
+                  <p className="mt-8">
+                    Despite these recommendations, the HSR system is <strong className="text-indigo-600">widely criticised</strong> in its failure to discourage ultra-processed food consumption:
                     <li>
                       It does not reflect the degree of industrial food processing.
                     </li> 
                     <li>
-                      It is voluntary and therefore inherently biased. The most frequently displayed rating is 4 stars, representing 22.7% of products, followed by 3.5 stars, representing 17.6%. The rating of 1 star is displayed least frequently, 3.9% of products. Ultra-processed foods are scoring misaligned values of at or above 2.5 stars.
+                      It is voluntary and therefore inherently biased. The most frequently displayed rating is 4 stars, representing 22.7% of products, followed by 3.5 stars, representing 17.6% of products. The rating of 1 star is displayed least frequently, 3.9% of products. Ultra-processed foods are scoring misaligned values of ≥ 2.5 stars.
                     </li>
                     <li>
                       Defines total sugar and not added sugar as a 'risk' nutrient.
@@ -145,17 +149,16 @@ const FoodLabelsPage = () => {
                       Although the interpretive format of the HSR is easily understood, it does not include an informative element for eg. calories, saturated fat, sugars, sodium.
                     </li>
                     <li>
-                      Consumer trust in the HSR system is diminished.
+                      Consumer trust in the HSR system is diminishing.
                     </li>
 
                   </p>
-                  <br />
-                  <p>
-                    A study (Campos et al, 2024) comparing three front-of-package labels (control label, 'ultraprocessed' label, and 'ultraprocessed' label combined with 'high in sugar' label), found that the combined label discouraged participants from selecting ultra-processed foods. It is incumbent upon front-of-package labelling schemes to enforce transparency around the degree of industrial food processing.
+                  <p className="mt-8">
+                    A study (Campos et al, 2024) comparing three front-of-package labels (control label, 'ultraprocessed' label, and 'ultraprocessed' label combined with 'high in sugar' label), found that the <strong className="text-indigo-600">'ultraprocessed and high in sugar'</strong> label discouraged participants from selecting ultra-processed foods. It is incumbent upon front-of-package labelling schemes to enforce transparency around the degree of industrial food processing, and include an informative element.
                   </p>
-                  <br />
-                  <p>
-                    The Australian Dietary Guidelines (2013) recommend water and a selection of foods from the following five groups: vegetables and legumes/beans, fruit, wholegrains and/or high cereal fibre varieties, lean meats and poultry, fish, eggs, tofu, nuts and seeds, and legumes/beans, and milk, yoghurt, cheese and/or alternatives. These guidelines are outdated and do not reflect the emerging evidence of negative health outcomes associated with ultra-processed food consumption.
+                
+                  <p className="mt-8">
+                    The <strong className="text-indigo-600">Australian Dietary Guidelines</strong> (2013) recommend water and a selection of foods from the following five groups: vegetables and legumes/beans, fruit, wholegrains and/or high cereal fibre varieties, lean meats and poultry, fish, eggs, tofu, nuts and seeds, and legumes/beans, and milk, yoghurt, cheese and/or alternatives. These guidelines are <strong className="text-indigo-600">outdated</strong> and do not reflect the emerging evidence of negative health outcomes associated with ultra-processed food consumption.
                   </p>
                   
                 </div>

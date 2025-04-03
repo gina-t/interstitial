@@ -32,6 +32,7 @@ const CaloriesPage = () => {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div className="lg:pr-4">
+
               {/* image */}
               <div className="relative overflow-hidden rounded-3xl bg-gray-900 px-6 pt-64 pb-9 shadow-2xl sm:px-12 lg:max-w-lg lg:px-8 lg:pb-8 xl:px-10 xl:pb-10">
                 <img
@@ -45,12 +46,13 @@ const CaloriesPage = () => {
                 <div
                   aria-hidden="true"
                   className="absolute top-1/2 left-1/2 -ml-16 -translate-x-1/2 -translate-y-1/2 transform-gpu blur-3xl"
-                ></div>
+                >
+                </div>
               </div>
 
               {/* quote */}
               <figure className="mt-6 lg:max-w-lg">
-                <blockquote className="text-base/7 font-bold text-gray-900 sm:text-lg/8">
+                <blockquote className="text-base/7 font-medium text-gray-900 sm:text-lg/8">
                   <p>
                     "Knowledge about the number of calories in a food product
                     helps the consumer manage their weight"
@@ -59,41 +61,42 @@ const CaloriesPage = () => {
               </figure>
             </div>
 
-            {/* text */}
+            {/* Main text container */}
             <div>
-              <div className="text-base/7 text-gray-700 lg:max-w-lg">
-                <p className="text-base/7 font-semibold text-indigo-600">
+              <div className="text-lg/7 text-gray-700 lg:max-w-lg">
+                <p className="text-lg/7 font-semibold text-indigo-600">
                   Calorie Literacy
                 </p>
-                <h1 className="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
+                <h1 className="mt-2 text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
                   Empower the consumer to make informed choices
                 </h1>
                 <div className="max-w-xl">
                   <p className="mt-8">
-                    <strong>Calorie or kilocalorie</strong> is a unit of energy
+                    <strong className="text-indigo-600">Calorie or kilocalorie</strong> is a unit of energy
                     defined as the amount of energy needed to increase the
                     temperature of 1 litre of water by 1 degree celcius. In a
                     nutritional context, a calorie is a unit of energy derived
                     from metabolising a quantity of food. The metric unit
                     equivalent is a kilojoule. One kilocalorie is the same
-                    amount of energy as 4.18 kilojoules. Your energy
-                    requirements vary depending upon height, weight, gender,
+                    amount of energy as 4.18 kilojoules. 
+                  </p>
+                  <p className="mt-8">
+                    <strong className="text-indigo-600">Your daily energy
+                    requirements</strong> vary depending upon height, weight, gender,
                     age, body composition, pregnancy and breast feeding, and
                     physical activity. You can measure your total daily energy
-                    expenditure using the calculator referenced in the Resources
+                    expenditure using the <strong className="text-indigo-600">TDEE calculator</strong> referenced in the Resources
                     page. You can choose from five activity levels: sedentary,
-                    light exercise (1-2 days a week), moderate exercise(3-5 days
-                    a week), very active (6-7 days a week), and athlete (twice
-                    daily). After determining your total daily energy
-                    expenditure, you can measure the number of calories you
-                    consume a day to maintain, gain, or lose weight. An average adult female (age 21 to 60) who does moderate exercise may require around 2200 to 1800 calories per day, and an average
-                    adult male (age 21 to 60) who does moderate exercise may require around 2800 to 2400 calories per day. A calorie tracker
-                    is avaialble in the Food Search page to monitor the number
+                    light activity (1-2 days a week), moderate activity (3-5 days a week), vigorous activity (6-7 days a week), and athlete (twice daily). 
+                  </p>
+                  <p className="mt-8"> 
+                    After determining your total daily energy expenditure, you can measure the number of calories you consume per day to maintain, gain, or lose weight. A <strong className="text-indigo-600">calorie tracker</strong> is avaialble in the Food Search page to monitor the number
                     of calories you consume and to determine the amount of
-                    calories typically present in your favourite foods. Learning
+                    calories typically present in your favourite foods. An <strong className="text-indigo-600">average adult female</strong> (age 21 to 60) who does moderate activity may require around 1800 to 2200 calories per day, and an <strong className="text-indigo-600">average adult male</strong> (age 21 to 60) who does moderate actvity may require around 2400 to 2800 calories per day. Learning
                     about calories and your daily energy expenditure is
                     important for managing your weight.
                   </p>
+
                   {/* Calorie Needs Table */}
                   <div className="mt-10 overflow-x-auto pb-4">
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">Estimated Calorie Needs per Day, by Age, Sex, and Physical Activity Level, Ages 21 and Older</h3>
@@ -211,12 +214,12 @@ const CaloriesPage = () => {
                   </div>
 
                   <p className="mt-8">
-                    Becoming familiar with calories is only one aspect of the 'managing weight' equation. <strong>Waist circumference (WC) and weight measurements</strong> are other aspects of the equation. Measuring your waist once a month tracks abdominal obesity. Abdominal obesity is defined as WC ≥88 cm for women and ≥102 cm for men. Weighing yourself with digital scales once a week, upon waking, after toileting and prior to consuming food, is a useful tool in managing your weight. The very act of measuring positively influences your weight goals. Body mass index (weight (kg)/height (m)²) and WC (cm) are indicators of adiposity. For adults, the WHO defines overweight and obesity as follows:
-                    <li>
-                      Overweight is defined as a BMI ≥ 25
+                    Becoming familiar with calories is only one aspect of the managing weight equation: 
+                    <li><strong className="text-indigo-600">Waist circumference</strong> Measuring your waist once a month tracks abdominal obesity. Abdominal obesity is defined as WC ≥88 cm for women and ≥102 cm for men.
+                    </li>   
+                    <li><strong className="text-indigo-600">Weighing yourself with digital scales</strong> once a week, upon waking, after toileting and prior to consuming food, is a useful tool in managing your weight. The very act of measuring positively influences your weight goals. 
                     </li>
-                    <li>
-                      Obesity is defined as a BMI ≥ 30
+                    <li><strong className="text-indigo-600">Body mass index</strong> For adults, the WHO defines overweight as a BMI ≥ 25 and obesity is defined as a BMI ≥ 30.
                     </li>
                   </p>
                 </div>
