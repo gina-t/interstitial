@@ -45,6 +45,7 @@ export default function About() {
           <div className="lg:pr-4">
             <div className="max-w-xl text-base/7 text-gray-700 lg:max-w-lg">
               <ul role="list" className="mt-0 space-y-8 text-gray-600">
+
                 {/* ultra-processed foods */}
                 <li className="flex gap-x-3">
                   <Link
@@ -60,7 +61,7 @@ export default function About() {
                   <span>
                     <Link to="/ultraprocessed-foods">
                       <strong className="font-semibold text-gray-900 hover:text-indigo-600">
-                        Ultra-Processed Foods.
+                        Ultra-Processed Foods
                       </strong>{' '}
                     </Link>
                     <p>
@@ -125,7 +126,7 @@ export default function About() {
                   <span>
                     <Link to="/marketing-strategies">
                       <strong className="font-semibold text-gray-900 hover:text-indigo-600">
-                        Big Food.
+                        Big Food
                       </strong>{' '}
                     </Link>
                     <p>
@@ -165,7 +166,7 @@ export default function About() {
                   <span>
                     <Link to="/whole-foods">
                       <strong className="font-semibold text-gray-900 hover:text-indigo-600">
-                        Whole Foods.
+                        Whole Foods
                       </strong>{' '}
                     </Link>
                     <p>
@@ -201,7 +202,7 @@ export default function About() {
                   <span>
                     <Link to="/food-labels">
                       <strong className="font-semibold text-gray-900 hover:text-indigo-600">
-                        Food Labels.
+                        Food Labels
                       </strong>{' '}
                     </Link>
                     <p>
@@ -246,7 +247,7 @@ export default function About() {
                   <span>
                     <Link to="/behavioural-economics">
                       <strong className="font-semibold text-gray-900 hover:text-indigo-600">
-                        Behavioural Economics.
+                        Behavioural Economics
                       </strong>{' '}
                     </Link>
                     <p>
@@ -281,7 +282,7 @@ export default function About() {
                   <span>
                     <Link to="/calories">
                       <strong className="font-semibold text-gray-900 hover:text-indigo-600">
-                        Calorie Literacy.
+                        Calorie Literacy
                       </strong>{' '}
                     </Link>
                     <p>
@@ -319,7 +320,7 @@ export default function About() {
                   <span>
                     <Link to="/exercise">
                       <strong className="font-semibold text-gray-900 hover:text-indigo-600">
-                        Exercise.
+                        Exercise
                       </strong>{' '}
                     </Link>
                     <p>
@@ -359,9 +360,8 @@ export default function About() {
               </h2>
               <p className="mt-6">
                 To give you evidence-based information sourced from the National
-                Library of Medicine, peer-reviewed journals, and the Australian
-                Institute of Health and Welfare, about nutrition and exercise.
-                To give you access to an external Nutrition API, calorie tracker, and total daily
+                Library of Medicine, peer-reviewed journals, the Australian
+                Institute of Health and Welfare (AIHW), the Australian Bureau of Statistics (ABS), and the World Health Organisation (WHO), about nutrition and exercise. To give you access to an external Nutrition API, calorie tracker, and total daily
                 energy expenditure calculator.
               </p>
             </div>
