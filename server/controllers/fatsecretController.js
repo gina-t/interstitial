@@ -72,7 +72,7 @@ export const searchFoods = asyncHandler(async (req, res) => {
       method: 'foods.search',
       search_expression: query,
       format: 'json',
-      max_results: 20
+      max_results: 10
     },
     headers: {
       'Authorization': `Bearer ${token}`

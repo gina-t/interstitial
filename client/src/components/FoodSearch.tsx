@@ -7,7 +7,7 @@ import {
   addToFavourites,
   removeFromFavourites,
 } from '../utils/favourites';
-import { HeartIcon as HeartOutline } from '@heroicons/react/24/outline';
+import { ArrowRightIcon, HeartIcon as HeartOutline } from '@heroicons/react/24/outline';
 import { HeartIcon as HeartSolid } from '@heroicons/react/24/solid';
 
 export default function FoodSearch() {
@@ -17,6 +17,8 @@ export default function FoodSearch() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
   const [favourites, setFavourites] = useState<Record<string, boolean>>({});
+  const [showViewFavouritesButton, setShowViewFavouritesButton] = useState(false);
+  const [searchTerm, setSearchTerm] = useState<string>('');
 
   // useEffect to handle URL query parameters
   useEffect(() => {
@@ -146,6 +148,7 @@ export default function FoodSearch() {
           ...prev,
           [food.food_id]: true,
         }));
+        setShowViewFavouritesButton(true);
       }
     }
   }
@@ -161,9 +164,17 @@ export default function FoodSearch() {
               </h4>
 
               <div className="mt-2 max-w-xl text-sm text-gray-500">
-                <p>To display its nutritional value, search for a food item.</p>
+                <p className="mb-1">Find nutritional information and track your daily intake:</p>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>Search for any food to view detailed nutrition facts</li>
+                  <li>Save favourites with the 
+                    <HeartOutline className="h-4 w-4 text-gray-400 inline align-text-bottom mx-1 " /> 
+                    heart icon
+                  </li>
+                  <li>Track your daily calories in the "My Favourites" section</li>
+                </ul>
               </div>
-
+            
               {/* Search form */}
               <form onSubmit={search} className="mt-5 sm:flex sm:items-center">
                 <div className="w-full sm:max-w-xs">
@@ -171,6 +182,8 @@ export default function FoodSearch() {
                     id="search"
                     name="search"
                     type="text"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
                     placeholder="hummus"
                     aria-label="Food search"
                     className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
@@ -215,6 +228,7 @@ export default function FoodSearch() {
                         </div>
 
                         <div className="flex items-center space-x-2">
+
                           {/* View details button */}
                           <button
                             type="button"
@@ -225,6 +239,7 @@ export default function FoodSearch() {
                           >
                             View
                           </button>
+
                           {/* Add to Favourites button */}
                           <button
                             type="button"
@@ -247,11 +262,26 @@ export default function FoodSearch() {
                     </li>
                   ))}
                 </ul>
+
+                {/* Navigate to favourites button */}
+                {showViewFavouritesButton && (
+                 <div className="mt-6 flex justify-start">
+                  <button 
+                    onClick={() => navigate('/favourites')}
+                    type="button"
+                    className="inline-flex items-center justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-indigo-600 shadow-xs ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                    // className="inline-flex items-center justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  >
+                    View My Favourites
+                    <ArrowRightIcon className="h-3 w-3 ml-2" />
+                  </button>
+                </div>
+              )}
               </div>
             )}
           </div>
-        </div>
-      </div>
+        </div> 
+      </div> 
     </div>
   );
 }
