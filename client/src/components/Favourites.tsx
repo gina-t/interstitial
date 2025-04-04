@@ -4,6 +4,7 @@ import { getFavourites, removeFromFavourites } from '../utils/favourites';
 import { type FavouriteFoodItem } from '../interfaces/FavouriteFoodItem';
 import useCalorieTracker from '../hooks/useCalorieTracker';
 import { XMarkIcon, CheckIcon } from '@heroicons/react/24/outline';
+import { ArrowLeftIcon } from '@heroicons/react/24/outline';
 
 // Extract calories from food description string
 function extractCalories(description: string | undefined): number {
@@ -119,7 +120,7 @@ export default function Favourites() {
           </div>
         </div>
 
-        {/* Content area for favorites display */}
+        {/* Content area for favourites display */}
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             {isLoading ? (
@@ -206,10 +207,22 @@ export default function Favourites() {
                   </li>
                 ))}
               </ul>
+
             )}
+              <div className="mt-6 flex justify-start">
+                <button 
+                  onClick={() => navigate('/foodsearch')}
+                  className="inline-flex items-center justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-indigo-600 shadow-xs ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                  // className="inline-flex items-center justify-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                >
+                  <ArrowLeftIcon className="h-3 w-3 mr-2" aria-hidden="true" />
+                  Return to Food Search
+                </button>
+              </div>
           </div>
         </div>
       </div>
     </div>
   );
 }
+
