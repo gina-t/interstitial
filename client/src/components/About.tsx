@@ -369,7 +369,7 @@ export default function About() {
                 </li>
               </ul>
 
-              <p className="mt-8">
+              <p className="mt-8 text-base/7 font-semibold tracking-tight text-pretty text-gray-900 sm:text-base/8">
                 Knowledge about the foods we consume, about calories
                 and energy expenditure, and how to incorporate exercise into our
                 daily lives, are pathways to maintaining our well-being.

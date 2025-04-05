@@ -53,7 +53,7 @@ const BehaviouralApproachesPage = () => {
 
               {/* quote */}
               <figure className="mt-6 lg:max-w-lg">
-                <blockquote className="text-base/7 font-medium text-gray-900 sm:text-lg/8">
+                <blockquote className="text-base/7 font-bold text-gray-900 sm:text-lg/8">
                   <p>
                   "Nudge: any aspect of the choice architecture that alters people's behaviour in a predictable way without forbidding any options or significantly changing their economic incentives.” 
                   </p>
@@ -63,7 +63,7 @@ const BehaviouralApproachesPage = () => {
 
             {/* Main text container */}
             <div>
-              <div className="text-base/7 text-gray-700 lg:max-w-lg">
+              <div className="text-base/7 text-gray-900 lg:max-w-lg">
                 <p className="text-lg/7 font-semibold text-indigo-600">
                   Behavioural Economics 
                 </p>
