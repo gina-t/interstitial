@@ -20,11 +20,11 @@ export default function ResourceCard() {
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
-              <h4 className="text-base/7 font-semibold text-indigo-600">
+              <h4 className="text-lg/7 font-semibold text-indigo-600">
                 Total Daily Energy Expenditure Calculator
               </h4>
 
-              <div className="mt-2 max-w-xl text-sm text-gray-500">
+              <div className="mt-3 max-w-xl text-base/7 text-gray-700">
                 <p>
                   Total daily energy expenditure (TDEE) is the number of calories your body needs to maintain your current weight. It is an estimate of the number of calories you burn per day, and is calculated by factoring your basal metabolic rate at rest, physical activity and thermic qualities of food consumed.
                 </p>

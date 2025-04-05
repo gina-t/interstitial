@@ -10,20 +10,33 @@ export default function About() {
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
-              <h4 className="text-base/7 font-semibold text-indigo-600">
+
+              {/* well-being */}
+              <h4 className="text-lg/7 font-semibold text-indigo-600">
                 Well-Being
               </h4>
 
-              <h1 className="mt-2 text-base/7 font-semibold tracking-tight text-pretty text-gray-900 sm:text-base/8">
+              <h1 className="mt-3 text-base/7 font-semibold tracking-tight text-pretty text-gray-900 sm:text-base/8">
                 Well-being describes a complex homeostatsis of biological,
                 psychological and social factors. It is not merely an absence of
-                disease, but as described by the WHO, a state in which a person
+                disease, but as described by WHO, a state in which a person
                 realises their own abilities, can cope with the normal stressors
                 of life, can work productively and fruitfully, and can
-                contribute meaningfully to ther community. Diet and exercise are
+                contribute meaningfully to ther community. Nutrition and exercise are
                 important pathways to maintaining your well-being.
               </h1>
-              <p className="mt-6 text-xl/8 text-gray-700">
+
+              {/* interstitial goals */}
+              <h2 className="mt-8 text-lg/7 font-semibold text-indigo-600">
+                Interstitial Goals
+              </h2>
+              <p className="mt-3 text-base/7 font-semibold tracking-tight text-pretty text-gray-900 sm:text-base/8">
+                Interstitial is a platform that helps you navigate evidence-based information about nutrition and exercise. Our content is sourced from the National
+                Library of Medicine, peer-reviewed journals, the Australian
+                Institute of Health and Welfare (AIHW), the Australian Bureau of Statistics (ABS), and the World Health Organisation (WHO). Additionally, Interstitial provides practical tools including access to a Nutrition API, a personalised calorie tracker, and a total daily energy expenditure calculator.
+              </p>
+
+              <p className="mt-6 text-lg/8 text-gray-800">
                 Learn about the multitude of factors contributing to your
                 choices around nutrition and exercise.
               </p>
@@ -43,8 +56,8 @@ export default function About() {
         {/* list section */}
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
-            <div className="max-w-xl text-base/7 text-gray-700 lg:max-w-lg">
-              <ul role="list" className="mt-0 space-y-8 text-gray-600">
+            <div className="max-w-xl text-base/7 text-gray-900 lg:max-w-lg">
+              <ul role="list" className="mt-0 space-y-8 text-gray-700">
 
                 {/* ultra-processed foods */}
                 <li className="flex gap-x-3">
@@ -71,11 +84,11 @@ export default function About() {
                       live-stock farming) into base components, for eg.
                       fructose, lactose, hydrogenated oils, hydrolysed proteins,
                       soya protein isolate, gluten and whey protein.
-                      Fractionated components do not retain the matrix of the
-                      food from which it is extracted, or its nutrients and water.
+                      Fractionated substances do not retain the matrix of the
+                      food from which it is extracted, nor its nutrients and water.
                     </p>
-                    <p>
-                      These components, typically not found in your pantry, are
+                    <p className='mt-2'>
+                      These substances, typically not found in your pantry, are
                       submitted to a series of industrial processing techniques
                       such as hydrolysis and hydrogenation, followed by
                       re-assembly using extrusion and moulding, and lastly
@@ -84,11 +97,11 @@ export default function About() {
                       hyper-palatable products with high calorific and low
                       nutritional value, and extended shelf-lives.
                     </p>
-                    <p>
-                      Combined with sophisticated and convenient packaging,
-                      labels highlighting positive components, ultra-processed
-                      foods attract and obfuscate consumers, and promote
-                      over-consumption. Ultra-processed foods are contributing
+                    <p className='mt-2'>
+                      Ultra-processed foods use sophisticated packaging and misleading labels to attract consumers. Health star ratings are frequently inaccurate, and front-of-package labels highlight only positive ingredients whilst obscuring nutritional facts. These marketing tactics deliberately obfuscate information and encourage over-consumption.
+                    </p>
+                    <p className='mt-2'>
+                      Ultra-processed foods are contributing
                       to an obesity epidemic and associated morbidities such as
                       type 2 diabetes mellitus, and alarmingly an increase in
                       its prevalence in childern. Furthermore, fractionation of
@@ -99,7 +112,7 @@ export default function About() {
                     <span className="ml-1 inline-flex items-center text-indigo-600">
                       <Link
                         to="/ultraprocessed-foods"
-                        className="inline-flex items-center hover:text-indigo-900"
+                        className="inline-flex items-center hover:text-indigo-900 -ml-1"
                       >
                         Read more
                         <ChevronRightIcon
@@ -133,13 +146,14 @@ export default function About() {
                       Big Food employs corporate and political strategies to increase ultr-processed food consumption. These strategies include establishing global production networks, establishing hyperlocal distribution networks, digital marketing benefiting from data harvesting of social media platforms, fostering favourable regulatory policies, funding scientific reseearch, and sponsoring community organisations and sports groups that can lobby for industry positions.  
                     </p>
                     
-                    <p>
-                      Ultra-processed foods are designed to be convenient and practical, able to be consumed anytime and anywhere, and as snacks replacing regular meals, are accessible, affordable, aggressively marketed (children and adolescents are specifically targeted) and their portion sizes are increasing over time. Labels promoting vibes and energy, false representations of being "organic" with "no artificial colours or flavours", and targeting of positive ingredients (for eg. vitamins in energy drinks) attract and obfuscate consumers as to the nutritional facts of ultra-processed foods. For eg, the front packaging of sliced chicken breast states in green cursive writing that the product contains no artificial colours or flavours. However, the back packaging displays the ingredients as chicken breast, water, modified starch (maize or tapioca), acidity regulators, salt, sugar, soy protein, vegetable gum, natural flavours, preservatives, egg. The consumer does not read the back packaging, and therfore remains ignorant, or does read the back packaging and loses confidence and trust in the industrial food system.
+                    <p className='mt-2'>
+                      Ultra-processed foods are designed to be convenient and practical, able to be consumed anywhere and at anytime, as snacks replacing regular meals, are accessible, affordable, aggressively marketed (children and adolescents are specifically targeted) and their portion sizes are increasing over time. Labels promoting vibes and energy, false representations of being "organic" with "no artificial colours or flavours", and targeting of positive ingredients (for eg. vitamins in energy drinks) attract and obfuscate consumers as to the nutritional facts of ultra-processed foods. 
                     </p>
+                    
                     <span className="ml-1 inline-flex items-center text-indigo-600">
                       <Link
                         to="/marketing-strategies"
-                        className="inline-flex items-center hover:text-indigo-900"
+                        className="inline-flex items-center hover:text-indigo-900 -ml-1"
                       >
                         Read more
                         <ChevronRightIcon
@@ -170,12 +184,15 @@ export default function About() {
                       </strong>{' '}
                     </Link>
                     <p>
-                    Whole foods are obtained directly from plants and animals and do not undergo any alteration. Minimally processed foods are those submitted to cleaning, removal of inedible parts, grinding, fermentation, pasteurisation and processes that do not add substances. Whole foods or minimally processed foods are more satiating and less hyperglycemic than ultra-processed foods.
+                      Whole foods are obtained directly from plants and animals and do not undergo any alteration. Minimally processed foods are those submitted to cleaning, removal of inedible parts, grinding, fermentation, pasteurisation and processes that do not add substances. Whole foods or minimally processed foods are more satiating and less hyperglycemic than ultra-processed foods.
+                    </p>
+                    <p className='mt-2'>
+                      There are geographical inequities in access to whole foods, with food deserts in low socio-economic areas. For eg, in Western Sydney, takeaway and alcohol outlets outnumber greengrocers and supermarkets. 
                     </p>
                     <span className="ml-1 inline-flex items-center text-indigo-600">
                       <Link
                         to="/whole-foods"
-                        className="inline-flex items-center hover:text-indigo-900"
+                        className="inline-flex items-center hover:text-indigo-900 -ml-1"
                       >
                         Read more
                         <ChevronRightIcon
@@ -210,16 +227,20 @@ export default function About() {
                       ultra-processed foods are not obligated to describe the degree of 
                       industrial processing used in production of their products.
                       Furthermore the listing of 5 or more ingredients with
-                      chemical names, is not meaningful to the uninformed
+                      chemical names is not meaningful to the uninformed
                       consumer. Frequently, nutritional information is
                       cryptically written in small font, and food labels
                       promote misleading claims, cherry picking positive
                       nutrients and omitting negative ingredients.
                     </p>
+                    <p className='mt-2'>
+                      For eg, the front-of-package label of sliced chicken breast states in green cursive writing that the product contains no artificial colours or flavours. However, the back-of-package label displays the ingredients as chicken breast, water, modified starch (maize or tapioca), acidity regulators, salt, sugar, soy protein, vegetable gum, natural flavours, preservatives, egg. The consumer does not read the back-of-package label, and therfore remains ignorant, or does read it and loses confidence and trust in the industrial food system.
+                    </p>
+
                     <span className="ml-1 inline-flex items-center text-indigo-600">
                       <Link
                         to="/food-labels"
-                        className="inline-flex items-center hover:text-indigo-900"
+                        className="inline-flex items-center hover:text-indigo-900 -ml-1"
                       >
                         Read more
                         <ChevronRightIcon
@@ -256,7 +277,7 @@ export default function About() {
                     <span className="ml-1 inline-flex items-center text-indigo-600">
                       <Link
                         to="/behavioural-economics"
-                        className="inline-flex items-center hover:text-indigo-900"
+                        className="inline-flex items-center hover:text-indigo-900 -ml-1"
                       >
                         Read more
                         <ChevronRightIcon
@@ -286,14 +307,12 @@ export default function About() {
                       </strong>{' '}
                     </Link>
                     <p>
-                      Know the appropriate calorie intake for your body, age and
-                      energy expenditure. Know what constitutes a whole-food
-                      diet.
+                    Learning about calories and your total daily energy expenditure is important for managing your weight. 
                     </p>
                     <span className="ml-1 inline-flex items-center text-indigo-600">
                       <Link
                         to="/calories"
-                        className="inline-flex items-center hover:text-indigo-900"
+                        className="inline-flex items-center hover:text-indigo-900 -ml-1"
                       >
                         Read more
                         <ChevronRightIcon
@@ -326,7 +345,7 @@ export default function About() {
                     <p>
                       We are increasingly leading sedentary and demanding
                       lifestyles. Dedicating a 20 minute block of exersise
-                      duirng a 24 hour period, should be integral and
+                      during a 24 hour period, should be integral and
                       sustainable in our daily lives. It does not necessiatate a
                       gym memebership or specialised equipment, but can entail
                       vigorous walking or body weight exercises. Exercise does
@@ -337,7 +356,7 @@ export default function About() {
                     <span className="ml-1 inline-flex items-center text-indigo-600">
                       <Link
                         to="/exercise"
-                        className="inline-flex items-center hover:text-indigo-900"
+                        className="inline-flex items-center hover:text-indigo-900 -ml-1"
                       >
                         Read more
                         <ChevronRightIcon
@@ -352,18 +371,10 @@ export default function About() {
 
               <p className="mt-8">
                 Knowledge about the foods we consume, about calories
-                and energy expenditure, and incorporating exercise into our
+                and energy expenditure, and how to incorporate exercise into our
                 daily lives, are pathways to maintaining our well-being.
               </p>
-              <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">
-                Interstitial Goals
-              </h2>
-              <p className="mt-6">
-                To give you evidence-based information sourced from the National
-                Library of Medicine, peer-reviewed journals, the Australian
-                Institute of Health and Welfare (AIHW), the Australian Bureau of Statistics (ABS), and the World Health Organisation (WHO), about nutrition and exercise. To give you access to an external Nutrition API, calorie tracker, and total daily
-                energy expenditure calculator.
-              </p>
+              
             </div>
           </div>
         </div>

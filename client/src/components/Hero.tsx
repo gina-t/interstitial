@@ -31,7 +31,7 @@ export default function Hero() {
           <h1 className="mt-10 text-5xl font-medium tracking-tight text-pretty text-gray-900 sm:text-7xl">
             Interstitial
           </h1>
-          <p className="mt-8 text-lg font-medium text-pretty text-gray-600 sm:text-xl/8">
+          <p className="mt-8 text-lg font-medium text-pretty text-gray-900 sm:text-xl/8">
             The compact, continuous space between cells. The infinite space
             between existence and well-being. Interstitial guides you through
             the uncertainty to help you reach your health goals.
@@ -45,7 +45,7 @@ export default function Hero() {
             </Link>
 
             <Link to='/learn-more' className='ml-4'>
-              <span className="inline-flex items-center space-x-2 text-sm/6 font-medium text-gray-600">
+              <span className="inline-flex items-center space-x-2 text-sm font-semibold text-gray-900">
                 <span className='whitespace-nowrap'>Learn more</span>
                 <ChevronRightIcon
                   aria-hidden="true"
