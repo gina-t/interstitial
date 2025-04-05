@@ -76,18 +76,17 @@ const MarketingStrategiesPage = () => {
 
               {/* quote */} 
               <figure className="mt-6 lg:max-w-lg">
-                <blockquote className="text-base/7 font-medium text-gray-900 sm:text-lg/8">
+                <blockquote className="text-base/7 font-bold text-gray-900 sm:text-lg/8">
                   <p>
                     "Big Food describes the agrifood transnational corporations that dominate global food production."
                   </p>
                 </blockquote>
               </figure>
-             
             </div>
 
             {/* Main text container*/}
             <div>
-              <div className="text-base/7 text-gray-700 lg:max-w-lg">
+              <div className="text-base/7 text-gray-900 lg:max-w-lg">
                 <p className="text-lg/7 font-semibold text-indigo-600">
                   Big Food
                 </p>
