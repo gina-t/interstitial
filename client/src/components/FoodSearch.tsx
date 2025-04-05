@@ -7,8 +7,10 @@ import {
   addToFavourites,
   removeFromFavourites,
 } from '../utils/favourites';
-import { ArrowRightIcon, HeartIcon as HeartOutline } from '@heroicons/react/24/outline';
+import { ArrowRightIcon, ChevronRightIcon, HeartIcon as HeartOutline } from '@heroicons/react/24/outline';
+
 import { HeartIcon as HeartSolid } from '@heroicons/react/24/solid';
+
 
 export default function FoodSearch() {
   const navigate = useNavigate();
@@ -159,19 +161,21 @@ export default function FoodSearch() {
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
-              <h4 className="text-base/7 font-semibold text-indigo-600">
+
+              {/* Food search */}
+              <h4 className="text-lg/7 font-semibold text-indigo-600">
                 Food Search
               </h4>
 
-              <div className="mt-2 max-w-xl text-sm text-gray-500">
+              <div className="mt-3 max-w-xl text-base/7 text-gray-900">
                 <p className="mb-1">Find nutritional information and track your daily intake:</p>
                 <ul className="list-disc pl-5 space-y-1">
                   <li>Search for any food to view detailed nutrition facts</li>
                   <li>Save favourites with the 
-                    <HeartOutline className="h-4 w-4 text-gray-400 inline align-text-bottom mx-1 " /> 
+                    <HeartOutline className="h-4 w-4 text-gray-400 inline mx-1" /> 
                     heart icon
                   </li>
-                  <li>Track your daily calories in the "My Favourites" section</li>
+                  <li>Track your daily calories in the My Favourites page</li>
                 </ul>
               </div>
             
@@ -205,59 +209,60 @@ export default function FoodSearch() {
           </div>
         </div>
 
-        {/* Search results - positioned below the search form */}
+        {/* Search results */}
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             {searchResults.length > 0 && (
               <div className="mt-6">
-                <h4 className="text-base/7 font-semibold text-gray-900">
+                <h4 className="text-lg/7 font-semibold text-indigo-600">
                   Search Results
                 </h4>
-                <ul className="mt-3 divide-y divide-gray-100 border-t border-gray-200">
+
+                <ul className="mt-6 divide-y divide-gray-100 border-t border-gray-200">
                   {searchResults.map((food) => (
-                    <li key={food.food_id} className="py-4">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <p className="text-sm font-medium text-gray-900">
-                            {food.food_name}
-                          </p>
-                          <p className="text-sm text-gray-500">
-                            {food.food_description ||
-                              'No description available'}
-                          </p>
-                        </div>
+                    <li
+                      key={food.food_id}
+                      className="py-4 flex items-center justify-between"
+                    >
+                      <div>
+                        <p className="text-base font-medium text-gray-900">
+                          {food.food_name}
+                        </p>
+                        <p className="text-xs text-gray-500">
+                          {food.food_description || 'No description available'}
+                        </p>
+                        
+                      </div>
 
-                        <div className="flex items-center space-x-2">
+                      <div className="flex items-center space-x-2">
+                        
+                        {/* View button */}
+                        <button
+                          type="button"
+                          className="rounded-md bg-white p-1.5 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                          onClick={() => handleViewDetails(food.food_id, food.food_name)}
+                          aria-label={`View details for ${food.food_name}`}
+                        >
+                          <ChevronRightIcon className="h-4 w-4 text-indigo-600" />
+                        </button>
 
-                          {/* View details button */}
-                          <button
-                            type="button"
-                            className="rounded-md bg-white px-2.5 py-1.5 text-xs font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:text-indigo-600"
-                            onClick={() =>
-                              handleViewDetails(food.food_id, food.food_name)
-                            }
-                          >
-                            View
-                          </button>
-
-                          {/* Add to Favourites button */}
-                          <button
-                            type="button"
-                            className="rounded-md bg-white px-2.5 py-1.5 text-xs font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:text-indigo-600"
-                            onClick={() => handleToggleFavourite(food)}
-                            aria-label={
-                              favourites[food.food_id]
-                                ? 'Remove from favorites'
-                                : 'Add to favorites'
-                            }
-                          >
-                            {favourites[food.food_id] ? (
-                              <HeartSolid className="h-4 w-4 text-indigo-600" />
-                            ) : (
-                              <HeartOutline className="h-4 w-4 text-gray-400" />
-                            )}
-                          </button>
-                        </div>
+                        {/* Add to Favourites button */}
+                        <button
+                          type="button"
+                          className="rounded-md bg-white p-1.5 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                          onClick={() => handleToggleFavourite(food)}
+                          aria-label={
+                            favourites[food.food_id]
+                              ? 'Remove from favorites'
+                              : 'Add to favorites'
+                          }
+                        >
+                          {favourites[food.food_id] ? (
+                            <HeartSolid className="h-4 w-4 text-indigo-600" />
+                          ) : (
+                            <HeartOutline className="h-4 w-4 text-gray-600" />
+                          )}
+                        </button>
                       </div>
                     </li>
                   ))}

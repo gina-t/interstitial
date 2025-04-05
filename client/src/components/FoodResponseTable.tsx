@@ -89,7 +89,7 @@ export default function FoodResponseTable({ food }: FoodResponseTableProps) {
   return (
     <div className="bg-white px-6 py-8 lg:px-8">
       <div className="mx-auto max-w-3xl">
-        <h3 className="text-xl font-semibold mb-6">Nutrition Facts</h3>
+        <h3 className="text-lg font-semibold mb-6">Nutrition Facts</h3>
 
         {/* Add serving size selector if multiple servings are available */}
         {servingsArray.length > 1 && (

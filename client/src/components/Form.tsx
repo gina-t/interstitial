@@ -70,7 +70,7 @@ const Form = ({ type }: FormProps) => {
         setIsSuccess(true);
         setErrorMessage('Login successful.');
         console.log('Login successful', data);
-        navigate('/foodsearch');
+        navigate('/');
       }
     } catch (error: unknown) {
       // Change to unknown type

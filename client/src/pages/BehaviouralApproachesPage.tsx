@@ -64,7 +64,7 @@ const BehaviouralApproachesPage = () => {
             {/* Main text container */}
             <div>
               <div className="text-base/7 text-gray-700 lg:max-w-lg">
-                <p className="text-base/7 font-semibold text-indigo-600">
+                <p className="text-lg/7 font-semibold text-indigo-600">
                   Behavioural Economics 
                 </p>
                 <h1 className="mt-2 text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl">
