@@ -69,7 +69,7 @@ const FoodLabelsPage = () => {
 
               {/* quote */}
               <figure className="mt-6 lg:max-w-lg">
-                <blockquote className="text-base/7 font-medium text-gray-900 sm:text-lg/8">
+                <blockquote className="text-base/7 font-bold text-gray-900 sm:text-lg/8">
                   <p>
                     "Front-of-package labels are not currently legislated to include degree of food processing in Australia"
                   </p>
@@ -79,7 +79,7 @@ const FoodLabelsPage = () => {
 
             {/* Main text container */}
             <div>
-              <div className="text-base/7 text-gray-700 lg:max-w-lg">
+              <div className="text-base/7 text-gray-900 lg:max-w-lg">
                 <p className="text-lg/7 font-semibold text-indigo-600">
                   Front-of-package labels and Health Star Rating.
                 </p>

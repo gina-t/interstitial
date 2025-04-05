@@ -56,7 +56,7 @@ const WholeFoodsPage = () => {
 
               {/* quote */}
               <figure className="mt-6 lg:max-w-lg">
-                <blockquote className="text-base/7 font-medium text-gray-900 sm:text-lg/8">
+                <blockquote className="text-base/7 font-bold text-gray-900 sm:text-lg/8">
                   <p>
                     "Takeaway and alcohol outlets outnumber greengrocers and supermarkets in Western Sydney neighbourhoods."
                   </p>
@@ -66,7 +66,7 @@ const WholeFoodsPage = () => {
 
             {/* Main text container*/}
             <div>
-              <div className="text-base/7 text-gray-700 lg:max-w-lg">
+              <div className="text-base/7 text-gray-900 lg:max-w-lg">
                 <p className="text-lg/7 font-semibold text-indigo-600">
                   Whole Foods
                 </p>

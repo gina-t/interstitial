@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import * as fatsecretService from '../services/fatsecretService';
 import { type FoodItem } from '../interfaces/FoodSearchResult';
 import {
@@ -168,15 +169,34 @@ export default function FoodSearch() {
               </h4>
 
               <div className="mt-3 max-w-xl text-base/7 text-gray-900">
-                <p className="mb-1">Find nutritional information and track your daily intake:</p>
-                <ul className="list-disc pl-5 space-y-1">
-                  <li>Search for any food to view detailed nutrition facts</li>
-                  <li>Save favourites with the 
-                    <HeartOutline className="h-4 w-4 text-gray-400 inline mx-1" /> 
-                    heart icon
+                <p className="mb-1">
+                  Find nutritional information and track your daily calorie intake:
+                </p>
+
+                <ol className="list-decimal pl-5 space-y-2">
+                  <li>
+                    Search for any food to view detailed nutrition facts  
                   </li>
-                  <li>Track your daily calories in the My Favourites page</li>
-                </ul>
+                  <li>
+                    Save your favourites with the 
+                    <HeartOutline className="h-4 w-4 text-gray-400 inline mx-1" /> 
+                    heart icon. 
+                    <div className="text-xs mt-1 text-gray-500 flex items-center">
+                      <span>Login required</span>
+                      <Link
+                        to="/login"
+                        className="ml-2 flex items-center text-indigo-600 hover:text-indigo-900"
+                        aria-label="Login to your account"
+                      >
+                        Login
+                        <ChevronRightIcon className="h-3 w-3 inline ml-0.5" />
+                      </Link>
+                    </div>
+                  </li>
+                  <li>
+                    Track your daily calories in the My Favourites page
+                  </li>
+                </ol>  
               </div>
             
               {/* Search form */}
