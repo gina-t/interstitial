@@ -4,9 +4,10 @@ import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import logo from '../assets/logo.svg'
 import { Link, useLocation } from 'react-router-dom'
+import Auth from '../utils/auth'
 
 const navigation = [
-  { name: 'Dashboard', href: '/' },
+  { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
   { name: 'Food Search', href: '/foodsearch' },
   { name: 'My Favourites', href: '/favourites' },
@@ -22,6 +23,8 @@ export default function Header() {
   return (
     <header className="bg-white">
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
+
+        {/* Logo link */}
         <div className="flex lg:flex-1">
           <Link to="/" 
             className="-m-1.5 p-1.5">
@@ -33,6 +36,8 @@ export default function Header() {
             />
           </Link>
         </div>
+
+        {/* Hamburger menu button for mobile*/}
         <div className="flex lg:hidden">
           <button
             type="button"
@@ -43,9 +48,9 @@ export default function Header() {
             <Bars3Icon aria-hidden="true" className="size-6" />
           </button>
         </div>
-        <div className="hidden lg:flex lg:gap-x-12">
 
-          {/* Desktop navigation links */}
+        {/* Desktop navigation links */}
+        <div className="hidden lg:flex lg:gap-x-12">
           {navigation.map((item) => (
             <Link 
               key={item.name} 
@@ -62,10 +67,13 @@ export default function Header() {
           </Link>
         </div>
       </nav>
+      
+      {/* Mobile navigation menu. Entire component is hidden on large screens. */}
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
         <div className="fixed inset-0 z-10" />
         <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
+
             {/* Logo link in mobile menu */}
             <Link to="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Interstitial</span>
@@ -75,6 +83,7 @@ export default function Header() {
                 className="h-12 w-auto animate-pulse"
               />
             </Link>
+
             {/* Close button in mobile menu */}
             <button
               type="button"
@@ -103,20 +112,33 @@ export default function Header() {
                 ))}
               </div>
               
+              {/* Login/Logout section in mobile menu */}
               <div className="py-6">
-                <Link
-                  to="/login"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Login
-                </Link>
+                {Auth.loggedIn() ? (
+                  <button
+                    onClick={() => {
+                      Auth.logout();
+                      setMobileMenuOpen(false);
+                    }}
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                  >
+                    Logout
+                  </button>
+                ) : (
+                  <Link
+                    to="/login"
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Login
+                  </Link>
+                )}
               </div>
-
             </div>
           </div>
         </DialogPanel>
       </Dialog>
+
     </header>
   )
 }

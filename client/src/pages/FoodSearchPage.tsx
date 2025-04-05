@@ -7,7 +7,7 @@ const FoodSearchPage = () => {
     <div className='relative min-h-screen'>
       <GridPattern />
       <GradientBackground />
-      <div className='relative z-0 px-6 py-24'>
+      <div className='relative z-0 px-6 py-16'>
         <FoodSearch />
       </div> 
     </div>

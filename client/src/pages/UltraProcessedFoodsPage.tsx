@@ -96,7 +96,7 @@ const UltraProcessedFoodsPage = () => {
 
             {/* Main text container */}
             <div>
-              <div className="text-lg/7 text-gray-700 lg:max-w-lg">
+              <div className="text-base/7 text-gray-700 lg:max-w-lg">
                 <p className="text-lg/7 font-semibold text-indigo-600">
                   Ultra-Processed Foods
                 </p>

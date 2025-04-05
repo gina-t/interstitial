@@ -102,18 +102,18 @@ export default function Favourites() {
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
-              <h4 className="text-base/7 font-semibold text-indigo-600">
-                My Favourite Foods
+              <h4 className="text-lg/7 font-semibold text-indigo-600">
+                My Favourites
               </h4>
 
-              <div className="mt-2 max-w-xl text-sm text-gray-500 flex items-center flex-wrap gap-x-4 gap-y-2">
+              <div className="mt-3 max-w-xl text-base/7 text-gray-700 flex items-center flex-wrap gap-x-4 gap-y-2">
                 <div className="flex items-center">
                   <CheckIcon className="h-4 w-4 text-green-600 mr-1" />
-                  <span>Add calories</span>
+                  <span>Add calories to Calorie Tracker</span>
                 </div>
                 <div className="flex items-center">
                   <XMarkIcon className="h-4 w-4 text-indigo-600 mr-1" />
-                  <span>Remove food</span>
+                  <span>Remove food from My Favourites</span>
                 </div>
               </div>
             </div>
@@ -148,14 +148,14 @@ export default function Favourites() {
                 </button>
               </div>
             ) : (
-              <ul className="mt-6 divide-y divide-gray-100">
+              <ul className="mt-6 divide-y divide-gray-100 border-t border-gray-200">
                 {favourites.map((food) => (
                   <li
                     key={food.food_id}
                     className="py-4 flex items-center justify-between"
                   >
                     <div>
-                      <p className="text-sm font-medium text-gray-900">
+                      <p className="text-base font-medium text-gray-900">
                         {food.food_name}
                       </p>
                       <p className="text-xs text-gray-500">
@@ -175,6 +175,7 @@ export default function Favourites() {
                     </div>
 
                     <div className="flex items-center space-x-2">
+                      
                       {/* CheckIcon Button */}
                       <button
                         type="button"
