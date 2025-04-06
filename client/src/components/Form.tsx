@@ -1,14 +1,11 @@
 import { useNavigate } from 'react-router-dom';
 import { useState, type FormEvent, type ChangeEvent } from 'react';
-// Import eye icons for password visibility
 import { LuEye, LuEyeClosed } from "react-icons/lu";
 import Auth from '../utils/auth';
 import { type FormProps } from '../interfaces/FormProps';
 import { registerUser, loginUser } from '../services/authService';
-import {
-  type RegisterResponse,
-  LoginResponse,
-} from '../interfaces/AuthInterfaces';
+import { type RegisterResponse, LoginResponse } from '../interfaces/AuthInterfaces';
+import ForgotPasswordModal from './ForgotPasswordModal';
 
 interface ApiError {
   response?: {
@@ -27,12 +24,10 @@ const Form = ({ type }: FormProps) => {
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [isSuccess, setIsSuccess] = useState(false);
-  // Add state for password visibility
   const [showPassword, setShowPassword] = useState(false);
+  const [showForgotPasswordModal, setShowForgotPasswordModal] = useState(false);
   const navigate = useNavigate();
-
   const isRegister = type === 'register';
-
   // Toggle password visibility
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -255,14 +250,16 @@ const Form = ({ type }: FormProps) => {
                       Remember me
                     </label>
                   </div>
-
+                  
+                  {/* forgot password link */}
                   <div className="text-sm/6">
-                    <a
-                      href="#"
+                    <button
+                      type="button"
+                      onClick={() => setShowForgotPasswordModal(true)}
                       className="font-semibold text-indigo-600 hover:text-indigo-500"
                     >
                       Forgot password?
-                    </a>
+                    </button>
                   </div>
                 </div>
               )}
@@ -377,6 +374,12 @@ const Form = ({ type }: FormProps) => {
           </p>
         </div>
       </div>
+      {showForgotPasswordModal && (
+        <ForgotPasswordModal
+          isOpen={showForgotPasswordModal}
+          onClose={() => setShowForgotPasswordModal(false)}
+        />
+      )}
     </>
   );
 };
