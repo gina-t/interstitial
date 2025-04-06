@@ -16,6 +16,12 @@ const userSchema = new Schema({
     type: String,
     required: [true, 'Please add a password'],
   },
+  resetPasswordToken: {
+    type: String,
+  },
+  resetPasswordExpires: {
+    type: Date,
+  },
   isAdmin: {
     type: Boolean,
     required: false,

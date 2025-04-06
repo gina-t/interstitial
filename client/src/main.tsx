@@ -20,6 +20,7 @@ import FoodLabelsPage from "./pages/FoodLabelsPage.tsx";
 import ExercisePage from "./pages/ExercisePage.tsx";
 import CaloriesPage from "./pages/CaloriesPage.tsx";
 import LearnMorePage from "./pages/LearnMorePage.tsx";
+import ResetPasswordPage from "./pages/ResetPasswordPage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: 'register',
         element: <RegisterPage />,
+      },
+      {
+        path: 'reset-password/:token',
+        element: <ResetPasswordPage />, 
       },
       {
         path: 'about',
